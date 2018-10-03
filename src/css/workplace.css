@@ -1,0 +1,431 @@
+.workplace-page .button {
+  padding: 15px 20px;
+  font-size: 100%;
+}
+
+.workplace-page h1 {
+  font-size: 2.75em;
+}
+
+.workplace-section-intro {
+  min-height: 85vh;
+  padding: 100px 0;
+  padding-top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, .55);
+  background-attachment: fixed;
+  background-position: right;
+}
+
+.workplace-section-intro p {
+  font-size: 125%;
+}
+
+.workplace-section-intro__content {
+  padding: 30px;
+  padding-top: 80px;
+  margin-left: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.workplace-section-onepass {
+  background-color: #EB1F2E;
+  text-align: center;
+  padding: 25px 0;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.workplace-section-onepass h2 {
+  margin-top: 0.5em;
+  font-style: italic;
+  font-size: 1.75em;
+}
+
+.workplace-section-about {
+  padding: 100px 20%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: hue;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.workplace-section-employees {
+  padding: 100px 0;
+  background-color: #efefef;
+}
+
+.workplace-section-employees__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.workplace-section-employees__row>div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.workplace-section-employees__row--img {
+  text-align: center;
+}
+
+.workplace-section-why {
+  padding: 100px 0;
+  background-blend-mode: hue;
+  background-color: rgba(255, 255, 255, .9);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.workplace-section-why__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.workplace-section-why__item {
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.workplace-section-why__item--left>img {
+  width: 75px;
+}
+
+.workplace-section-why__item--right,
+.workplace-section-why__item--left {
+  font-size: 130%;
+}
+
+.workplace-section-classes {
+  padding: 100px 0;
+  text-align: center;
+  background-size: cover;
+  background-blend-mode: hue;
+  background-color: rgba(0, 0, 0, .85);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+.workplace-section-classes__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.workplace-section-classes__item {
+  -webkit-box-flex: 20%;
+  -ms-flex: 20%;
+  flex: 20%;
+  cursor: default;
+  border: solid 2px rgba(255, 255, 255, .15);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .05);
+  padding: 20px 10px;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.workplace-section-classes__item p {
+  margin: 0;
+}
+
+.workplace-section-classes__item:hover {
+  border: solid 2px rgba(255, 255, 255, .25);
+}
+
+.workplace-section-happy {
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, .9);
+  background-blend-mode: hue;
+  text-align: center;
+  padding: 50px 0;
+  background-repeat: no-repeat;
+}
+
+.workplace-section-plans {
+  padding: 100px 0;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.workplace-section-plans__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.workplace-section-plans__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  min-width: 250px;
+}
+
+.workplace-section-plans__item--title {
+  padding: 20px;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  border-radius: 3px 3px 0 0;
+}
+
+.workplace-section-plans__item--title h3 {
+  margin: 0;
+}
+
+.workplace-section-plans__item--content {
+  padding: 30px 20px;
+}
+
+.workplace-section-app {
+  padding: 100px 0;
+}
+
+.workplace-section-app>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.workplace-section-app__item {
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 10px;
+  min-width: 250px;
+}
+
+.workplace-section-cta {
+  padding: 100px 15%;
+  text-align: center;
+  background-color: #dddddd;
+  text-align: center;
+}
+
+.workplace-modalbg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  -webkit-animation-name: headeranimbg;
+  animation-name: headeranimbg;
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
+  display: none;
+}
+
+.workplace-modal {
+  position: absolute;
+  top: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin: auto;
+  width: 50%;
+  left: 25%;
+  -webkit-animation-name: headeranim;
+  animation-name: headeranim;
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+
+.workplace-modal__title {
+  padding: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.workplace-modal__title h3 {
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.workplace-modal__form {
+  padding: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.workplace-locations {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.workplace-locations .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.workplace-locations__heading, .workplace-locations__imgs {
+  flex: 1;
+}
+
+.workplace-locations__heading {
+  text-align: right;
+  padding: 0 25px;
+}
+
+.workplace-locations__imgs {
+  padding: 0 15px;
+  border-left: 1px solid #dddddd;
+}
+
+.workplace-locations__img {
+  display: inline-block;
+  text-align: center;
+}
+
+.workplace-locations__img img {
+  width: 90px;
+  margin: 15px;
+}
+
+.workplace-section-clients {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #efefef;
+}
+
+.workplace-section-clients__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.workplace-section-clients__item {
+  flex: 1;
+  padding: 30px;
+}
+
+.workplace-section-clients__item>img {
+  width: 110px;
+  filter: grayscale(100%);
+}
+.workplace-section-clients__item>img:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 979px) {
+  .workplace-section-about {
+    padding: 100px 15%;
+  }
+}
+
+@media (max-width: 767px) {
+  .workplace-section-intro {
+    min-height: 70vh;
+    padding: 100px 0;
+    padding-top: 0;
+  }
+  .workplace-section-intro__content {
+    padding: 30px;
+    padding-top: 50px;
+    margin-left: 0%;
+  }
+  .workplace-section-about {
+    padding: 100px 10%;
+  }
+  .workplace-section-why__item {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+  .workplace-section-employees__row>div {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+  .workplace-section-employees__row--img2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .workplace-section-employees__row--c2 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .workplace-section-cta {
+    padding: 100px 10%;
+  }
+  
+  .workplace-section-clients__item {
+    flex: 33%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workplace-section-about {
+    padding: 100px 5%;
+  }
+  .workplace-section-why__item--left {
+    -webkit-box-flex: 30%;
+    -ms-flex: 30%;
+    flex: 30%;
+  }
+  .workplace-section-why__item--right {
+    -webkit-box-flex: 70%;
+    -ms-flex: 70%;
+    flex: 70%;
+  }
+  .workplace-section-cta {
+    padding: 100px 5%;
+  }
+  
+  .workplace-section-clients__item {
+    flex: 50%;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,61 @@
+Colors:
+Red - #EB1F2E
+Dark Grey - #1E1E1E
+Light Grey - #EFEFEF
+
+/
+/download
+/pricing
+/contact
+/partners
+/reviews
+/faq
+/privacy-policy
+/workplace
+/become-a-parter
+/404
+
+what is fitato? - short & long
+how it works?
+where does it work? - partners
+what are all the things i can do with it? - all activities
+why should i buy?
+is it worth it? why?
+what other people think about it? - testimonials, media
+how do i buy?
+is it easy to use and get started?
+is there somebody to help me about it? - contact, blog, faq
+what is the price? plans?
+who are the people behind fitato?
+  
+https://www.gatsbyjs.org/packages/gatsby-plugin-nprogress/
+https://github.com/daviferreira/react-sanfona
+https://classpass.com/
+https://classpass.com/venues/5nwcXu13Wco-adelaide-fitness-classes
+
+pricing
+hero
+
+
+
+SOURCE FILESYSTEM
+
+gatsby-config plugin:
+
+{
+  resolve: 'gatsby-source-filesystem',
+  options: {
+    name: 'assets',
+    path: `${__dirname}/src/assets/`
+  }
+}
+
+query:
+
+allFile {
+  edges {
+    node {
+      publicURL
+    }
+  }
+}
