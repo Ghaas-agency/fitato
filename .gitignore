@@ -1,7 +1,9 @@
 /node_modules/
+/functions/node_modules/
 .cache
 .firebase
 /build/
 public/*
 !/public/static
 .prettierrc
+firebase-degub.log
