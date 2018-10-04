@@ -6,4 +6,6 @@
 public/*
 !/public/static
 .prettierrc
-firebase-degub.log
+firebase-debug.log
+package-lock.json
+i.txt

@@ -18,6 +18,7 @@ class Topbar extends React.Component {
     this.setState({showTopbar: false});
     if(!(typeof(sessionStorage) === "undefined")) {
       sessionStorage.setItem("topbarToggle", false);
+      document.querySelector('.main-header-placeholder').style.height = '80px';
     }
   }
 
@@ -30,6 +31,17 @@ class Topbar extends React.Component {
       }
     } else {
       return true;
+    }
+  }
+
+  componentDidMount() {
+    // Add height to the header placeholder if topbar is active.
+    if(!(typeof(document) === "undefined")) {
+      if(this.state.showTopbar === 'false' || this.state.showTopbar === false) {
+        document.querySelector('.main-header-placeholder').style.height = '80px';
+      } else {
+        document.querySelector('.main-header-placeholder').style.height = '150px';
+      }
     }
   }
 
