@@ -5,7 +5,7 @@ const hbs = require('express-handlebars');
 admin.initializeApp(functions.config().firebase);
 
 // Get rid of timestamp warning.
-admin.firestore().settings( { timestampsInSnapshots: true });
+admin.firestore().settings({ timestampsInSnapshots: true });
 const db = admin.firestore();
 
 const app = express();
@@ -33,6 +33,6 @@ getData().then(arr => {
       data: arr
     });
   });
-});
+}).catch(err => console.log(err));
 
 exports.app = functions.https.onRequest(app);

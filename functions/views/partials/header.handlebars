@@ -1,0 +1,24 @@
+<div class="main-header">
+  <div class="main-header-container">
+    <img src={withPrefix('/static/icons/menu.svg')} onClick={this.handleMenuClick} class="main-header-menu-icon" alt="menu" />
+    <a class="menu-logo" href="/">
+      <img
+        src='/static/fitato-logo-colored.svg'
+        title='Fitato'
+        alt="fitato"
+      />
+    </a>
+    <div class="menu-links" style={(this.state.toggleMenu) ? displayBlock : displayNone}>
+      <a href="/partners" class="menu-link-item">Facilities</a>
+      <a href="/purchase-fitato" class="menu-link-item">Pricing</a>
+      <a href="http://blog.fitato.fit" target="_blank" rel="noopener noreferrer" class="menu-link-item">Blog</a>
+      <a href="/contact" class="menu-link-item">Contact Us</a>
+      <a href="/faq" class="menu-link-item">FAQ</a>
+      <a href="/download" class="button" style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left: 10px">
+        Download now
+      </a>
+    </div>
+    <div class="menu-close-x">x</div>
+  </div>
+  <div class="mobile-menu-bg"></div>
+</div>
