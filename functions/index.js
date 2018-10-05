@@ -6,30 +6,33 @@ admin.initializeApp(functions.config().firebase);
 
 // Get rid of timestamp warning.
 admin.firestore().settings( { timestampsInSnapshots: true });
+const db = admin.firestore();
 
 const app = express();
 
-const db = admin.firestore();
-
-db.collection('activities').get()
-  .then(snap => {
-    let arr = [];
-    snap.forEach(doc => {
-      arr.push(doc.id);
-    });
-    console.log(arr);
-    return arr;
-  })
-  .catch(err => console.log(err));
-
-console.log('it ran');
+async function getData() {
+  return await db.collection('activities').get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push(doc.id);
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+}
 
 // Handlebars middleware.
 app.engine('handlebars', hbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
 
-app.get('/partners', (req, res) => {
-  res.render('home');
+// Routes
+getData().then(arr => {
+  app.get('/partner', (req, res) => {
+    res.render('home', {
+      data: arr
+    });
+  });
 });
 
 exports.app = functions.https.onRequest(app);
