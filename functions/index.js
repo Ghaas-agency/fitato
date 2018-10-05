@@ -10,6 +10,7 @@ const db = admin.firestore();
 
 const app = express();
 
+// Get options for search form.
 async function getOptions() {
   const activities = await db.collection('activities').get()
     .then(snap => {
@@ -40,12 +41,10 @@ app.engine('handlebars', hbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
 
 // Routes
-getOptions().then(arr => {
-  app.get('/partner', (req, res) => {
-    res.render('home', {
-      data: arr
-    });
+app.get('/partner', async (req, res) => {
+  res.render('home', {
+    data: await getOptions()
   });
-}).catch(err => console.log(err));
+});
 
 exports.app = functions.https.onRequest(app);
