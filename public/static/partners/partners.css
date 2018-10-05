@@ -994,14 +994,11 @@ input[type=submit]:hover {
   padding: 100px 0;
 }
 
-.partners-search-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+/* .partners-search-form {
+
+} */
 
 .partners-search-form>div {
-  flex: 1;
-  padding: 20px;
+  display: inline-block;
+  max-width: 250px;
 }
