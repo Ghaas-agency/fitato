@@ -10,16 +10,29 @@ const db = admin.firestore();
 
 const app = express();
 
-async function getData() {
-  return await db.collection('activities').get()
+async function getOptions() {
+  const activities = await db.collection('activities').get()
     .then(snap => {
       let arr = [];
       snap.forEach(doc => {
-        arr.push(doc.id);
+        arr.push({id: doc.id, text: doc.data().text});
       });
       return arr;
     })
     .catch(err => console.log(err));
+
+  const locations = await db.collection('facilities-pune').get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+  
+  const both = await {activities, locations};
+  return both;
 }
 
 // Handlebars middleware.
@@ -27,7 +40,7 @@ app.engine('handlebars', hbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
 
 // Routes
-getData().then(arr => {
+getOptions().then(arr => {
   app.get('/partner', (req, res) => {
     res.render('home', {
       data: arr
