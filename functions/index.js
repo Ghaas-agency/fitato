@@ -50,6 +50,28 @@ app.get('/partner', async (req, res) => {
   });
 });
 
+app.get('/partner/pune/:loc', async (req, res) => {
+  const location = req.params.loc;
+  res.render('home', {
+    data: await getOptions(),
+    
+  })
+});
+
+// Handle search form submission.
+app.post('/partners/search', (req, res) => {
+  const { activity, location } = req.body;
+  if(activity === 'all' && location === 'all') {
+    res.redirect('/partners/pune');
+  } else if (activity === 'all' && location ==! 'all') {
+    res.redirect(`/partners/pune/${location}`);
+  } else if (activity ==! 'all' && location === 'all') {
+    res.redirect(`/partners/pune/${activity}`);
+  } else {
+    res.redirect(`/partners/pune/${location}/${activity}`);
+  }
+});
+
 // Handle 404 error
 app.use((req, res, next) => {
   res.status(404);

@@ -1,19 +1,19 @@
-<form action="/partner/search" method="POST" class="partners-search-form">
+<form action="/partners/search" method="POST" class="partners-search-form">
   <div>
-    <select name="select-activity" id="partners-select-activity">
+    <select name="activity" id="partners-select-activity">
       {{#each data.activities}}
       <option value="{{this.id}}">{{this.text}}</option>
       {{/each}}
     </select>
   </div>
   <div>
-    <select name="select-location" id="partners-select-location">
+    <select name="location" id="partners-select-location">
       {{#each data.locations}}
       <option value="{{this.id}}">{{this.text}}</option>
       {{/each}}
     </select>
   </div>
   <div>
-    <button type="submit" class="button">Search</button>
+    <button type="submit" class="button">Go</button>
   </div>
 </form>
