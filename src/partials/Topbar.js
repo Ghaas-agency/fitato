@@ -38,9 +38,9 @@ class Topbar extends React.Component {
     // Add height to the header placeholder if topbar is active.
     if(!(typeof(document) === "undefined")) {
       if(this.state.showTopbar === 'false' || this.state.showTopbar === false) {
-        document.querySelector('.main-header-placeholder').style.height = '80px';
+        document.getElementsByClassName('main-header-placeholder')[0].style.height = '80px';
       } else {
-        document.querySelector('.main-header-placeholder').style.height = '150px';
+        document.getElementsByClassName('main-header-placeholder')[0].style.height = '150px';
       }
     }
   }
