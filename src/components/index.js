@@ -52,13 +52,7 @@ export default ({ children }) => (
           <meta name="al:android:package" content="fit.fitato.health"/>
           <meta name="al:android:app_name" content="Fitato: One Pass to Fitness"/>
 
-          <script type="text/javascript">{`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-M6HNZB');
-          `}</script>
+          <script type="text/javascript">{`!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`}</script>
           <link rel="shortcut icon" type="image/png" href={withPrefix('/static/fitato-icon-16.png')}></link>
           <link rel="apple-touch-icon" href={withPrefix('/static/fitato-icon-57.png')} />
           <link rel="apple-touch-icon" sizes="72x72" href={withPrefix('/static/fitato-icon-72.png')} />
@@ -66,9 +60,7 @@ export default ({ children }) => (
           <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet" />
           
         </Helmet>
-        <noscript>{`
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        `}</noscript>
+        <noscript>{`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}</noscript>
         <Header />
         <div>
           {children}

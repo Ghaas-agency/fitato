@@ -8,12 +8,14 @@ admin.initializeApp(functions.config().firebase);
 // Get rid of timestamp warning.
 admin.firestore().settings({ timestampsInSnapshots: true });
 const db = admin.firestore();
+const activitiesRef = db.collection('activities');
+const locationsPuneRef = db.collection('facilities-pune');
 
 const app = express();
 
 // Get options for search form.
 async function getOptions() {
-  const activities = await db.collection('activities').get()
+  const activities = await activitiesRef.get()
     .then(snap => {
       let arr = [];
       snap.forEach(doc => {
@@ -24,7 +26,7 @@ async function getOptions() {
     })
     .catch(err => console.log(err));
 
-  const locations = await db.collection('facilities-pune').get()
+  const locations = await locationsPuneRef.get()
     .then(snap => {
       let arr = [];
       snap.forEach(doc => {
@@ -39,6 +41,38 @@ async function getOptions() {
   return both;
 }
 
+// Returns the ID of the current location, if found.
+async function checkLocation(id) {
+  const c = await locationsPuneRef.where('value', '==', id).get()
+    .then(snap => {
+      let re;
+      snap.forEach(doc => {
+        re = doc.id;
+      });
+      return re;
+    })
+    .catch(err => console.log(err));
+  
+  const r = await c;
+  return r;
+}
+
+// Returns the ID of the current activity, if found.
+async function checkActivity(id) {
+  const c = await activitiesRef.where('value', '==', id).get()
+    .then(snap => {
+      let re;
+      snap.forEach(doc => {
+        re = doc.id;
+      });
+      return re;
+    })
+    .catch(err => console.log(err));
+
+  const r = await c;
+  return r;
+}
+
 // Handlebars middleware.
 app.engine('handlebars', hbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
@@ -46,16 +80,55 @@ app.set('view engine', 'handlebars');
 // Routes
 app.get('/partner', async (req, res) => {
   res.render('home', {
-    data: await getOptions()
+    options: await getOptions()
   });
 });
 
-app.get('/partner/pune/:loc', async (req, res) => {
-  const location = req.params.loc;
-  res.render('home', {
-    data: await getOptions(),
+app.get('/partner/pune/:id', async (req, res) => {
+  const { id } = req.params;
+  const currentLoc = await checkLocation(id);
+  const currentAct = await checkActivity(id);
+
+  // Check current route.
+  if(currentLoc) {
+    // render facility
+    console.log(currentLoc);
+  } else {
+    if(currentAct) {
+      // render activity
+      console.log(currentAct);
+    } else {
+      // none found
+      console.log('not found');
+    };
+  }
+
+  res.render('results', {
+    options: await getOptions(),
     
   })
+});
+
+app.get('/partner/pune/:loc/:act', async (req, res) => {
+  const { loc, act } = req.params;
+
+  const currentLoc = await checkLocation(loc);
+  const currentAct = await checkActivity(act);
+
+  // Check current route.
+  if(currentLoc && currentAct) {
+    // render results
+    console.log(currentLoc, currentAct);
+  } else {
+    // none found
+    console.log('not found');
+  }
+
+  res.render('results', {
+    options: await getOptions(),
+    
+  })
+
 });
 
 // Handle search form submission.
