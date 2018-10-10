@@ -69,9 +69,9 @@ router.post('/search', (req, res) => {
   console.log(activity, location);
   if(activity === 'all' && location === 'all') {
     res.redirect('/partner/pune');
-  } else if (activity === 'all' && location ==! 'all') {
+  } else if (activity === 'all' && location !== 'all') {
     res.redirect(`/partner/pune/${location}`);
-  } else if (activity ==! 'all' && location === 'all') {
+  } else if (activity !== 'all' && location === 'all') {
     res.redirect(`/partner/pune/${activity}`);
   } else {
     res.redirect(`/partner/pune/${location}/${activity}`);
