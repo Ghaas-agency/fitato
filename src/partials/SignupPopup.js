@@ -59,7 +59,7 @@ class SignupPopup extends React.Component {
               className="partial-signup-popup__content--close"
               onClick={this.handlePopupClose}
             >X</span>
-            <h3>Let Us Create A Customized Fitness Plan For You</h3>
+            <h3>Discover The Best Fitness Options Your City Has To Offer</h3>
             <MCForm />
           </div>
         </div>

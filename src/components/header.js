@@ -87,12 +87,12 @@ class Header extends Component {
               />
             </Link>
             <div className="menu-links" style={(this.state.toggleMenu) ? displayBlock : displayNone}>
-              <Link to="/partners" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Facilities</Link>
-              <Link to="/purchase-fitato" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Pricing</Link>
+              <Link to="/partners/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Facilities</Link>
+              <Link to="/purchase-fitato/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Pricing</Link>
               <a href="http://blog.fitato.fit" target="_blank" rel="noopener noreferrer" className="menu-link-item">Blog</a>
-              <Link to="/contact" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Contact Us</Link>
-              <Link to="/faq" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>FAQ</Link>
-              <Link to="/download" className="button" onClick={this.handleMenuClick}
+              <Link to="/contact/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Contact Us</Link>
+              <Link to="/faq/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>FAQ</Link>
+              <Link to="/download/" className="button" onClick={this.handleMenuClick}
                 style={
                   {
                     marginRight: '0',
