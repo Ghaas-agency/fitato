@@ -11,7 +11,7 @@ const displayNone = {
 
 class Topbar extends React.Component {
   state = {
-    showTopbar: this.topbarLocalStorageCheck()
+    showTopbar: false
   }
 
   handleClose = () => {
@@ -24,23 +24,26 @@ class Topbar extends React.Component {
 
   topbarLocalStorageCheck() {
     if(!(typeof(sessionStorage) === "undefined")) {
-      if(sessionStorage.getItem('topbarToggle') === 'false') {
+      if(sessionStorage.getItem('topbarToggle') === 'false' || sessionStorage.getItem('topbarToggle') === false) {
         return false;
       } else {
         return true;
       }
-    } else {
-      return true;
     }
   }
 
   componentDidMount() {
-    // Add height to the header placeholder if topbar is active.
-    if(!(typeof(document) === "undefined")) {
-      if(this.state.showTopbar === 'false' || this.state.showTopbar === false) {
-        document.getElementsByClassName('main-header-placeholder')[0].style.height = '80px';
-      } else {
+    // Check local storage, then show the topbar, and
+    // add height to the header placeholder if topbar is active.
+    if(this.topbarLocalStorageCheck()) {
+      this.setState({showTopbar: true});
+      if(!(typeof(document) === "undefined")) {
         document.getElementsByClassName('main-header-placeholder')[0].style.height = '150px';
+      }
+    } else {
+      this.setState({showTopbar: false});
+      if(!(typeof(document) === "undefined")) {
+        document.getElementsByClassName('main-header-placeholder')[0].style.height = '80px';
       }
     }
   }
