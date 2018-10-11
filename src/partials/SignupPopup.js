@@ -12,12 +12,29 @@ const displayNone = {
 
 class SignupPopup extends React.Component {
   state = {
-    showPopup: false
+    showPopup: this.sessionStorageCheck()
   }
 
-  handlePopup = e => {
+  setSessionStorage = () => {
+    if(!(typeof(sessionStorage) === "undefined")) {
+      sessionStorage.setItem('fitato_plan_pop', 'f');
+    }
+  }
+
+  sessionStorageCheck = () => {
+    if(!(typeof(sessionStorage) === "undefined")) {
+      if(sessionStorage.getItem('fitato_plan_pop') === 'f') {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  handlePopupClose = e => {
     if(e.target.className === 'partial-signup-popup' || e.target.className === 'partial-signup-popup__content--close') {
-      this.setState({showPopup: !this.state.showPopup});
+      this.setState({showPopup: false});
+      this.setSessionStorage();
     }
   }
 
@@ -33,12 +50,12 @@ class SignupPopup extends React.Component {
         <div 
           className="partial-signup-popup" 
           style={(this.state.showPopup) ? displayBlock : displayNone}
-          onClick={this.handlePopup}
+          onClick={this.handlePopupClose}
         >
           <div className="partial-signup-popup__content">
             <span 
               className="partial-signup-popup__content--close"
-              onClick={this.handlePopup}
+              onClick={this.handlePopupClose}
             >X</span>
             <h3>Let Us Create A Customized Fitness Plan For You</h3>
             <MCForm />
