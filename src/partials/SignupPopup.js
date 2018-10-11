@@ -12,7 +12,7 @@ const displayNone = {
 
 class SignupPopup extends React.Component {
   state = {
-    showPopup: this.sessionStorageCheck()
+    showPopup: false
   }
 
   setSessionStorage = () => {
@@ -39,9 +39,11 @@ class SignupPopup extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({showPopup: true});
-    }, 10000);
+    if(this.sessionStorageCheck()) {
+      setTimeout(() => {
+        this.setState({showPopup: true});
+      }, 10000);
+    }
   }
 
   render() {
