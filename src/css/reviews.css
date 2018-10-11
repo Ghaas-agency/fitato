@@ -2,6 +2,7 @@
   padding: 50px 0;
   /* color: #ffffff; */
   background-position: center;
+  -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-color: #888888; */
@@ -11,14 +12,21 @@
 .reviews-page-content {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-box;
   display: flex;
   -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
   flex-direction: row;
   -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
   background-blend-mode: color-burn;
   /* background-color: #efefef; */
@@ -30,6 +38,8 @@
   max-width: 350px;
   padding: 50px;
   background-color: #efefef;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 100px;
 }
@@ -40,9 +50,15 @@
 }
 
 .reviews-page-content__item--avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   width: 100px;
   margin-top: -100px;
+  -webkit-transform: translate(75%, 0);
+  -moz-transform: translate(75%, 0);
+  -ms-transform: translate(75%, 0);
+  -o-transform: translate(75%, 0);
   transform: translate(75%, 0);
   border: 1px solid #aaaaaa;
   background-color: #efefef;
@@ -51,6 +67,9 @@
 .reviews-page-content__item--svg {
   width: 30px;
   -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #EB1F2E;
 }
