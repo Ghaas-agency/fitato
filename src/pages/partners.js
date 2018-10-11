@@ -23,12 +23,12 @@ const PartnersPage = () => (
         <div className="partners-page-menu">
           <div className="partners-page-menu__item">
             <h3>Pune</h3>
-            <a href="#pune">See facilities -></a>
+            <a href="#pune">See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></a>
             <img src={withPrefix('/static/icons/pune.svg')} alt="fitato facilities in Pune" className="partners-page-menu__item--img"/>
           </div>
           <div className="partners-page-menu__item">
             <h3>Hyderabad</h3>
-            <a href="#hyderabad">See facilities -></a>
+            <a href="#hyderabad">See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></a>
             <img src={withPrefix('/static/icons/hyderabad.svg')} alt="fitato facilities in Hyderabad" className="partners-page-menu__item--img"/>
           </div>
         </div>

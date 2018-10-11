@@ -129,6 +129,18 @@
   filter: opacity(95%);
 }
 
+.partners-page-menu__item--arrow {
+  margin: 0;
+  padding: 0;
+  width: 18px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+.partners-page-menu__item a:hover {
+  border-bottom: none !important;
+}
+
 .partners-page__location-title {
   margin-top: 80px;
   font-size: 2em !important;
