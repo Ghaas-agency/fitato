@@ -5,6 +5,7 @@ import MCForm from '../partials/MailChimpForm'
 import FooterInfo from '../partials/FooterInfo'
 import SocialLinks from '../partials/SocialLinks'
 import ContactLinks from '../partials/ContactLinks'
+import SignupPopup from '../partials/SignupPopup'
 
 const ContactPage = () => (
   <Layout>
@@ -25,6 +26,7 @@ const ContactPage = () => (
       </div>
     </div>
     <FooterInfo />
+    <SignupPopup />
   </Layout>
 )
 

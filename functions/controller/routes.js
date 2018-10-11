@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Get Firebase Firestore models.
-const db = require('../model/db');
+const db = require('../model/firestore');
 
 router.get('/', async (req, res) => {
   res.render('home', {
@@ -25,20 +25,29 @@ router.get('/pune/:id', async (req, res) => {
   if(currentLoc) {
     // render facility
     console.log(currentLoc);
+
+    res.render('results', {
+      options: await db.getOptions(),
+      /* results: await db.getResults('loc', id) */
+    });
+
   } else {
     if(currentAct) {
       // render activity
       console.log(currentAct);
+
+      res.render('results', {
+        options: await db.getOptions(),
+        /* results: await db.getResults('act', id) */
+      });
+
     } else {
       // none found
       console.log('not found');
+      res.status(404).send('not found');
     };
   }
 
-  res.render('results', {
-    options: await db.getOptions(),
-    
-  })
 });
 
 router.get('/pune/:loc/:act', async (req, res) => {
@@ -50,16 +59,18 @@ router.get('/pune/:loc/:act', async (req, res) => {
   // Check current route.
   if(currentLoc && currentAct) {
     // render results
-    console.log(currentLoc, currentAct);
+
+    res.render('results', {
+      options: await db.getOptions(),
+      /* results: await db.getResults('act', id) */
+    });
+
   } else {
     // none found
     console.log('not found');
-  }
 
-  res.render('results', {
-    options: await db.getOptions(),
-    
-  })
+    res.status(404).send('not found');
+  }
 
 });
 
