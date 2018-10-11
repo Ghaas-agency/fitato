@@ -21,16 +21,16 @@ const PartnersPage = () => (
         <h2>300+ Fitness Studios | 1000+ Activities | One Pass</h2>
 
         <div className="partners-page-menu">
-          <div className="partners-page-menu__item">
+          <a href="#pune" className="partners-page-menu__item">
             <h3>Pune</h3>
-            <a href="#pune">See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></a>
+            <p>See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></p>
             <img src={withPrefix('/static/icons/pune.svg')} alt="fitato facilities in Pune" className="partners-page-menu__item--img"/>
-          </div>
-          <div className="partners-page-menu__item">
+          </a>
+          <a href="#hyderabad" className="partners-page-menu__item">
             <h3>Hyderabad</h3>
-            <a href="#hyderabad">See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></a>
+            <p>See facilities <img src={withPrefix('/static/icons/arrow-forward.svg')} alt="arrow forward" className="partners-page-menu__item--arrow"/></p>
             <img src={withPrefix('/static/icons/hyderabad.svg')} alt="fitato facilities in Hyderabad" className="partners-page-menu__item--img"/>
-          </div>
+          </a>
         </div>
 
         <h2 id="pune" className="partners-page__location-title">Facilities in Pune</h2>

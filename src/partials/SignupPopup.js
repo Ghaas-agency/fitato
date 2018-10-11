@@ -1,6 +1,6 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
 import MCForm from './MailChimpForm'
-/* import { withPrefix } from 'gatsby' */
 
 const displayBlock = {
   display: 'flex'
@@ -42,7 +42,7 @@ class SignupPopup extends React.Component {
     if(this.sessionStorageCheck()) {
       setTimeout(() => {
         this.setState({showPopup: true});
-      }, 10000);
+      }, 1000);
     }
   }
 
@@ -59,8 +59,13 @@ class SignupPopup extends React.Component {
               className="partial-signup-popup__content--close"
               onClick={this.handlePopupClose}
             >X</span>
-            <h3>Discover The Best Fitness Options Your City Has To Offer</h3>
-            <MCForm />
+            <div className="partial-signup-popup__items">
+              <div className="partial-signup-popup__item-left" style={{backgroundImage: 'url(' + withPrefix('/static/fitato-fit-squad.jpg') + ')'}}></div>
+              <div className="partial-signup-popup__item-right">
+                <h3>Discover The Best Fitness Options Your City Has To Offer</h3>
+                <MCForm />
+              </div>
+            </div>
           </div>
         </div>
       </>

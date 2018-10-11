@@ -30,10 +30,9 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background-color: #efefef;
-  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -42,7 +41,6 @@
 
 .partners-page .react-sanfona-item-body-wrapper {
   padding: 0 30px;
-  background-color: #efefef;
   -webkit-border-radius: 0px 0px 5px 5px;
   -moz-border-radius: 0px 0px 5px 5px;
   border-radius: 0px 0px 5px 5px;
@@ -86,7 +84,7 @@
 }
 
 .partners-page .react-sanfona-item-title:hover {
-  background-color: #dddddd;
+  background-color: #efefef;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -137,7 +135,7 @@
   -moz-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 30px;
+  padding: 32px 30px;
   margin: 10px 10px;
   background-color: #ffffff;
   -webkit-border-radius: 5px;
@@ -150,11 +148,36 @@
   min-width: 310px;
   position: relative;
   overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.partners-page-menu__item:hover {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  -webkit-filter: invert(2%);
+  filter: invert(2%);
+  border-bottom: none;
+}
+
+.partners-page-menu__item p {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 .partners-page-menu__item h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.6em;
+  margin-bottom: 5px;
+  color: #1e1e1e;
 }
 
 .partners-page-menu__item--img {
