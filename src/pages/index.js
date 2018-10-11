@@ -6,6 +6,7 @@ import AppIcons from '../partials/AppIcons'
 import Plans from '../partials/Plans'
 import MCForm from '../partials/MailChimpForm'
 import DownloadSwipe from '../partials/DownloadSwipe'
+import SignupPopup from '../partials/SignupPopup'
 import Layout from '../components/index'
 import '../css/index.css'
 
@@ -186,6 +187,7 @@ const HomePage = () => (
 
       <FooterInfo />
     </div>
+    <SignupPopup />
   </Layout>
 )
 
