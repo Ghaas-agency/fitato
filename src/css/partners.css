@@ -92,17 +92,17 @@
 
 .partners-page .accordion-item>h4::before,
 .partners-page .accordion-item>h3::before {
-  content: '+';
+  content: url('../assets/arrow-down.svg');
   position: absolute;
-  top: 30px;
+  top: 31px;
   left: 20px;
 }
 
 .partners-page .accordion-item-active>h4::before,
 .partners-page .accordion-item-active>h3::before {
-  content: '-';
+  content: url('../assets/arrow-up.svg');
   position: absolute;
-  top: 30px;
+  top: 31px;
   left: 20px;
 }
 

@@ -46,16 +46,16 @@
 
 .accordion-item>h4::before,
 .accordion-item>h3::before {
-  content: '+';
+  content: url('../assets/arrow-down.svg');
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0px;
 }
 
 .accordion-item-active>h4::before,
 .accordion-item-active>h3::before {
-  content: '-';
+  content: url('../assets/arrow-up.svg');
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0px;
 }

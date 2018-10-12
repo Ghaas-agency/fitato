@@ -33,7 +33,7 @@ const ReviewsPage = () => (
           </div>
           <div className="reviews-page-content__item">
             <img src={withPrefix('/static/reviews/avatar-male.svg')} alt="fitato reviewer" className="reviews-page-content__item--avatar" />
-            <h3>Ravi Kumar<br /><span className="normal">Pune</span></h3>
+            <h3>Ravi Kumar</h3>
             <p>"How good is fitato .. considering how limited and diverse each gym services are .. fitato made it possible to access them all from one place.. specially for people who are involved in different fitness & sports activities fitato is best thing they can use. You have raised the bar for fitness .. I would love to see fitato getting into organising social sports event for volleyball, basketball, swimming ( no cricket or football)... Especially for travellers who want to workout while hopping different cities this is the best place ... I don't see why I won't use fitato on my next visit back home .. Thanks for such a brilliant app . I hope it's just gets better and come"</p>
             <img src={withPrefix('/static/icons/comma.svg')} alt="comma" className="reviews-page-content__item--svg" />
           </div>
@@ -54,7 +54,7 @@ const ReviewsPage = () => (
         <div className="reviews-page-content__col">
           <div className="reviews-page-content__item">
             <img src={withPrefix('/static/reviews/karen-jophy.jpg')} alt="karen jophy" className="reviews-page-content__item--avatar" />
-            <h3>Karen Jophy<br /><span className="normal">Reliance</span></h3>
+            <h3>Karen Jophy</h3>
             <p>“Without the  Fitato pass, I would never have been able to attend Pilates classes, Yoga studios or the other vastly available fitness options, that too at a very nominal price. Fitato makes it possible & I have finally found activities I love”</p>
             <img src={withPrefix('/static/icons/comma.svg')} alt="comma" className="reviews-page-content__item--svg" />
           </div>
@@ -72,7 +72,7 @@ const ReviewsPage = () => (
           </div>
           <div className="reviews-page-content__item">
             <img src={withPrefix('/static/reviews/vishesh.jpg')} alt="vishesh parahshar" className="reviews-page-content__item--avatar" />
-            <h3>Vishesh Parahshar<br /><span className="normal">MAERSK</span></h3>
+            <h3>Vishesh Parahshar</h3>
             <p>“It makes fitness fun &amp; flexible, being a sportsperson and adventure junkie I hated being tied down to a particular gym. With Fitato, it's like a new adventure waiting for you every day, sheer variety in fitness with a single pass”</p>
             <img src={withPrefix('/static/icons/comma.svg')} alt="comma" className="reviews-page-content__item--svg" />
           </div>
@@ -81,7 +81,7 @@ const ReviewsPage = () => (
         <div className="reviews-page-content__col">
           <div className="reviews-page-content__item">
             <img src={withPrefix('/static/reviews/aninda-verma.jpg')} alt="aninda verma" className="reviews-page-content__item--avatar" />
-            <h3>Aninda Verma<br /><span className="normal">PR Consultant</span></h3>
+            <h3>Aninda Verma</h3>
             <p>“After paying gym fees for years and never getting my money's worth, I'm happy I can fit in workouts I want, when I want”</p>
             <img src={withPrefix('/static/icons/comma.svg')} alt="comma" className="reviews-page-content__item--svg" />
           </div>

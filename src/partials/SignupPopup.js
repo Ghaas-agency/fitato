@@ -42,7 +42,7 @@ class SignupPopup extends React.Component {
     if(this.sessionStorageCheck()) {
       setTimeout(() => {
         this.setState({showPopup: true});
-      }, 1000);
+      }, 10000);
     }
   }
 
