@@ -118,6 +118,11 @@ const PartnersPage = () => (
           </AccordionItem>
         </Accordion>
 
+        <style dangerouslySetInnerHTML={{
+          __html: `.partners-page .accordion-item>h4::before,.partners-page .accordion-item>h3::before{content: url('${withPrefix('/static/icons/arrow-down.svg')}');}.partners-page .accordion-item-active>h4::before,.partners-page .accordion-item-active>h3::before{content: url('${withPrefix('/static/icons/arrow-up.svg')}');}`
+          }}>
+        </style>
+
       </div>
     </div>
     <GetStarted />

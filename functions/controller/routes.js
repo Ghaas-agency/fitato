@@ -22,7 +22,7 @@ router.get('/pune/:id', async (req, res) => {
   const currentAct = await db.checkActivity(id);
 
   // Check current route.
-  if(currentLoc) {
+  if (currentLoc) {
     // render facility
     console.log(currentLoc);
 
@@ -33,25 +33,22 @@ router.get('/pune/:id', async (req, res) => {
       results: await db.getResults('loc', id)
     });
 
+  } else if (currentAct) {
+    // render activity
+    console.log(currentAct);
+
+    res.render('results', {
+      options: await db.getOptions(),
+      selector: 'act',
+      selected: id,
+      /* results: await db.getResults('act', id) */
+    });
+
   } else {
-    if(currentAct) {
-      // render activity
-      console.log(currentAct);
-
-      res.render('results', {
-        options: await db.getOptions(),
-        selector: 'act',
-        selected: id,
-        /* results: await db.getResults('act', id) */
-      });
-
-    } else {
-      // none found
-      console.log('not found');
-      res.status(404).send('not found');
-    };
+    // none found
+    console.log('not found');
+    res.status(404).send('not found');
   }
-
 });
 
 router.get('/pune/:loc/:act', async (req, res) => {

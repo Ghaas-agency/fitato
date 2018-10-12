@@ -93,7 +93,6 @@
 
 .partners-page .accordion-item>h4::before,
 .partners-page .accordion-item>h3::before {
-  content: url('/static/icons/arrow-down.svg');
   position: absolute;
   top: 31px;
   left: 20px;
@@ -101,7 +100,6 @@
 
 .partners-page .accordion-item-active>h4::before,
 .partners-page .accordion-item-active>h3::before {
-  content: url('/static/icons/arrow-up.svg');
   position: absolute;
   top: 31px;
   left: 20px;

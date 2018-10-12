@@ -94,6 +94,11 @@ const FAQPage = () => (
             </AccordionItem>
   
           </Accordion>
+
+          <style dangerouslySetInnerHTML={{
+            __html: `.accordion-item>h4::before,.accordion-item>h3::before{content: url('${withPrefix('/static/icons/arrow-down.svg')}');}.accordion-item-active>h4::before,.accordion-item-active>h3::before{content: url('${withPrefix('/static/icons/arrow-up.svg')}');}`
+            }}>
+          </style>
         </div>
       </div>
       <GetStarted />
