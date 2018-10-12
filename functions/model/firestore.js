@@ -89,52 +89,32 @@ const getResults = async (selector, id, id2) => {
       .catch(err => console.log(err));
 
     await locationsPuneRef.doc(id).collection('facilities').get()
-      .then(snap => {
+      .then(async snap => {
         let arrayFacilities = [];
-        snap.forEach(doc => {
+
+        await snap.forEach(async doc => {
           let facility = {text: '', activities: []};
-          facility.text = doc.data().text;
-          doc.data().activities.forEach(activity => facility.activities.push(activity.get()));
-          arrayFacilities.push(facility);
-        });
-        return arrayFacilities;
-      })
-      .then(async facilitiesSnaps => {
-        
-        let res = await facilitiesSnaps.map(async snap => {
-          let obj = {text: '', activities: []};
+          facility.text = await doc.data().text;
 
-          obj.text = snap.text;          
-          
-          /* snap.activities.forEach(promise => {
-            promise.then(data => obj.activities.push(data.data().text));
-          }); */
-
-          const arr = await snap.activities.map(async promise => {
-            const a = await promise
-              .then(data => {
-                return data.data().text;
-              })
+          const arr = await doc.data().activities.map(async activity => {
+            const a = await activity.get()
+              .then(snap => snap.data().text)
               .catch(err => console.log(err));
-            const b = await a;
-            return b;
+
+            return await a;
           });
 
-          /* console.log(arr); */
-          obj.activities = await arr;
-          return obj;
+          const a = await Promise.all(arr);
+          console.log(a);
+          arrayFacilities.push(a);
         });
 
-        Promise.all(res);
-
-        console.log(res);
-
-        return res;
+        return arrayFacilities;
       })
       .catch(err => console.log(err));
 
-    const res = await r;
-    /* console.log(res); */
+    console.log(r);
+
   } else if (selector === 'act') {
     // render /pune/gym
   } else if (selector === 'both') {
