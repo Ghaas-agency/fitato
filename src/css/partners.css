@@ -61,6 +61,7 @@
   padding: 30px;
   padding-left: 50px;
   font-size: 1.35em;
+  position: relative;
 }
 
 @media (max-width: 480px) {

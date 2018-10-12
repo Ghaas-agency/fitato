@@ -28,6 +28,8 @@ router.get('/pune/:id', async (req, res) => {
 
     res.render('results', {
       options: await db.getOptions(),
+      selector: 'loc',
+      selected: id,
       results: await db.getResults('loc', id)
     });
 
@@ -38,6 +40,8 @@ router.get('/pune/:id', async (req, res) => {
 
       res.render('results', {
         options: await db.getOptions(),
+        selector: 'act',
+        selected: id,
         /* results: await db.getResults('act', id) */
       });
 
@@ -62,7 +66,9 @@ router.get('/pune/:loc/:act', async (req, res) => {
 
     res.render('results', {
       options: await db.getOptions(),
-      /* results: await db.getResults('act', id) */
+      selector: 'both',
+      selected: {loc, act},
+      /* results: await db.getResults('act', loc, act) */
     });
 
   } else {

@@ -77,14 +77,14 @@ module.exports.getResults = async (selector, id, id2) => {
   if(selector === 'loc') {
     // render /pune/aundh
 
-    let r = {
+    let result = {
       locationName: '',
       facilities: []
     };
 
     await locationsPuneRef.doc(id).get()
       .then(snap => {
-        r.locationName = snap.data().text;
+        result.locationName = snap.data().text;
       })
       .catch(err => console.log(err));
 
@@ -111,15 +111,52 @@ module.exports.getResults = async (selector, id, id2) => {
           return facility;
         });
 
-        r.facilities = await Promise.all(arrayFacilities);
+        result.facilities = await Promise.all(arrayFacilities);
       })
       .catch(err => console.log(err));
 
-    return r;
+    return result;
+
   } else if (selector === 'act') {
     // render /pune/gym
+
+    /* let result = {
+      locationName: '',
+      facilities: []
+    };
+
+    let result = {
+      activityName = '',
+      locations = [
+        {
+          locationName: '',
+          facilities: [
+            {
+              text: '',
+              activities: ['', '']
+            },
+            {
+              text: '',
+              activities: ['', '']
+            }
+          ]
+        },
+        {
+          locationName: '',
+          facilities: []
+        }
+      ]
+    }
+
+    
+
+    return result; */
+
   } else if (selector === 'both') {
     // render /pune/aundh/gym
+
+
+
   }
 
   
