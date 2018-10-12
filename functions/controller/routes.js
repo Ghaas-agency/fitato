@@ -28,7 +28,7 @@ router.get('/pune/:id', async (req, res) => {
 
     res.render('results', {
       options: await db.getOptions(),
-      /* results: await db.getResults('loc', id) */
+      results: await db.getResults('loc', id)
     });
 
   } else {

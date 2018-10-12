@@ -6,9 +6,16 @@
     <h4>search the fitato network.</h4>
     {{> search-form}}
 
-    <h2>here are the results</h2>
+    {{#if results}}
+      <h2>showing results for {{results.locationName}}</h2>
 
-
+      {{#each results.facilities}}
+        <h3>{{this.text}}</h3>
+        {{#each this.activities}}
+          <p>{{this}}</p>
+        {{/each}}
+      {{/each}}
+    {{/if}}
 
   </div>
 </div>

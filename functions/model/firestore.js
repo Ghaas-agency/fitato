@@ -73,7 +73,7 @@ module.exports.checkActivity = async id => {
 }
 
 // Export results.
-const getResults = async (selector, id, id2) => {
+module.exports.getResults = async (selector, id, id2) => {
   if(selector === 'loc') {
     // render /pune/aundh
 
@@ -126,4 +126,4 @@ const getResults = async (selector, id, id2) => {
 
 }
 
-getResults('loc', 'kalyani-nagar');
+/* getResults('loc', 'kalyani-nagar'); */
