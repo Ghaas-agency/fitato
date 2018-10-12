@@ -46,7 +46,7 @@
 
 .accordion-item>h4::before,
 .accordion-item>h3::before {
-  content: url('../assets/arrow-down.svg');
+  content: url('/static/icons/arrow-down.svg');
   position: absolute;
   top: -1px;
   left: 0px;
@@ -54,7 +54,7 @@
 
 .accordion-item-active>h4::before,
 .accordion-item-active>h3::before {
-  content: url('../assets/arrow-up.svg');
+  content: url('/static/icons/arrow-up.svg');
   position: absolute;
   top: -1px;
   left: 0px;
