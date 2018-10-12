@@ -89,10 +89,13 @@ const getResults = async (selector, id, id2) => {
       .catch(err => console.log(err));
 
     await locationsPuneRef.doc(id).collection('facilities').get()
-      .then(async snap => {
-        let arrayFacilities = [];
-
-        await snap.forEach(async doc => {
+      .then(snap => {
+        let arr = [];
+        snap.forEach(doc => arr.push(doc));
+        return arr;
+      })
+      .then(async data => {
+        const arrayFacilities = await data.map(async doc => {
           let facility = {text: '', activities: []};
           facility.text = await doc.data().text;
 
@@ -104,17 +107,15 @@ const getResults = async (selector, id, id2) => {
             return await a;
           });
 
-          const a = await Promise.all(arr);
-          console.log(a);
-          arrayFacilities.push(a);
+          facility.activities = await Promise.all(arr);
+          return facility;
         });
 
-        return arrayFacilities;
+        r.facilities = await Promise.all(arrayFacilities);
       })
       .catch(err => console.log(err));
 
-    console.log(r);
-
+    return r;
   } else if (selector === 'act') {
     // render /pune/gym
   } else if (selector === 'both') {
