@@ -164,3 +164,19 @@ module.exports.getResults = async (selector, id, id2) => {
 }
 
 /* getResults('loc', 'kalyani-nagar'); */
+
+// add data
+/* 
+activitiesRef.get()
+  .then(snap => {
+    snap.forEach(doc => {
+      let ref = activitiesRef.doc(doc.id).collection('pune').doc('000');
+
+      return ref.set({
+        location: 'ref'
+      })
+    })
+  })
+  .catch(err => console.log(err));
+
+ */

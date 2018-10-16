@@ -28,7 +28,7 @@ const Plans = props => (
             <p className="partial-plans__item--price">&#8377;3899</p>
           </div>
           <div className="partial-plans__item--cta">
-            <a href="https://imjo.in/syY6T5" target="_blank" rel="noopener noreferrer" className="button button-fluid">Buy Now</a>
+            <a href="https://imjo.in/TQqWQ9" target="_blank" rel="noopener noreferrer" className="button button-fluid">Buy Now</a>
           </div>
         </div>
         <div className="partial-plans__item">
