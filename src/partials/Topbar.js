@@ -56,7 +56,7 @@ class Topbar extends React.Component {
       >
         <div className="container">
           <div className="partial-topbar-close" onClick={this.handleClose}>X</div>
-          <p><img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/><a href="https://hyderabad.fitato.fit/?utm_source=website&utm_medium=sticky-bar" target="_blank" rel="noreferrer noopener">We&apos;re coming to Hyderabad soon. Special promo on pre-booking your Fitato pass there!</a></p>
+          <p><img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/><a href="https://hyderabad.fitato.fit/?utm_source=website&utm_medium=sticky-bar" target="_blank" rel="noreferrer noopener">We&apos;re now in Hyderabad. Get your first Fitato pass at discounted rates!</a></p>
         </div>
       </div>
     );

@@ -12,19 +12,35 @@ import '../css/index.css'
 
 const HomePage = () => (
   <Layout>
-    <Helmet title="Fitato&reg;: Best Gyms in Pune | One Pass to Fitness" />
+    <Helmet title="Fitato&reg;: Fitness for the Intelligent Indian" />
     <div className="home-page">
       
-      <div className="index-section-hero" style={{backgroundImage: 'url(' + withPrefix('/static/index/banner-image-5.jpg') + ')',}}>
+      <div className="index-section-hero">
         <div className="container">
           <div className="index-section-hero__content">
-            <h1>Your All-Access Fitness Pass</h1>
-            <p>Finally, a fitness membership you deserve. Workout the way you want, where you want and when you want!</p>
-            {/* <Link to="/download" className="button">Download the app</Link> */}
-            <AppIcons />
+            <h1><span style={{color: '#EB1F2E', fontSize: '50%', fontStyle: 'italic'}}>Welcome to your</span><br /><span style={{textTransform: 'uppercase', fontStyle: 'italic', fontSize: '125%'}}>Fitness Freedom</span></h1>
+            <div className="line"></div>
+            <div className="index-section-hero__content--text">
+              <p>The best fitness facilities, fun events and a huge community rooting for you.</p>
+              {/* <Link to="/download" className="button">Download the app</Link> */}
+              <p style={{color: '#EB1F2E', marginTop: '35px', marginBottom: '10px'}}>Start here:</p>
+              <AppIcons />
+            </div>
           </div>
         </div>
       </div>
+      
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .index-section-hero {
+          background-image: url('${withPrefix('/static/bann.jpg')}');
+        }
+        @media (max-width: 767px) {
+          .index-section-hero {
+            background-image: url('${withPrefix('/static/bannmob.jpg')}');
+          }
+        }
+      `}}/>
 
       <div className="index-section-pass" /* style={{backgroundImage: 'url(' + withPrefix('/static/gradient-bg.png') + ')'}} */>
         <div className="container">

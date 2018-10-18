@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Fitato&reg;: Best Gyms in Pune | One Pass to Fitness',
+    title: 'Fitato&reg;: Fitness for the Intelligent Indian',
     siteUrl: `https://www.fitato.fit`,
   },
   pathPrefix: `/fitato-fit`,

@@ -1,8 +1,8 @@
 /* Home Page */
 
 .index-section-hero {
-  min-height: 40vh;
-  padding: 90px 5% 100px 5%;
+  min-height: 650px;
+  padding: 75px 5% 100px 5%;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #efefef;
@@ -28,7 +28,6 @@
 
 @media (max-width: 1200px) {
   .index-section-hero {
-    min-height: 30vh;
     padding: 100px 0;
   }
 
@@ -38,6 +37,10 @@
 }
 
 @media (max-width: 979px) {
+  .index-section-hero {
+    background-position: 30% center;
+  }
+
   .index-section-hero__content {
     width: 50%;
   }
@@ -60,20 +63,28 @@
 
 @media (max-width: 480px) {
   .index-section-hero {
-    padding: 100px 5%;
-    background-position: right;
-    background-color: rgba(0, 0, 0, 0.75);
-    background-blend-mode: overlay;
+    padding: 20px 5%;
+    padding-top: 20px;
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
     color: #ffffff;
+    background-color: #ffffff;
+  }
+
+  .index-section-hero__content--text {
+    width: 50%;
   }
 
   .index-section-hero p {
     color: #ffffff;
+    color: #1E1E1E;
   }
 
   .index-section-hero h1 {
     font-size: 2.5em;
     line-height: 1em;
+    color: #111111
   }
 
   .index-section-hero .button,

@@ -24,16 +24,16 @@ export default ({ children }) => (
         <Helmet defaultTitle={data.site.siteMetadata.title}>
 
           <meta charset="utf-8" />
-          <meta name="description" content="Fitato® is Your One Pass to 250+ Best Gyms &amp; Fitness Studios in Pune. Access All Gyms, Dance, Yoga, Crossfit and Swimming Near You - One Pass @ ₹1199"/>
+          <meta name="description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
           <meta itemprop="name" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
-          <meta itemprop="description" content="Fitato® is Your One Pass to 250+ Best Gyms &amp; Fitness Studios in Pune. Access All Gyms, Dance, Yoga, Crossfit and Swimming Near You - One Pass @ ₹1199"/>
+          <meta itemprop="description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta itemprop="image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
           <meta name="apple-itunes-app" content="app-id=1300323768"/>
           <meta name="google-play-app" content="app-id=fit.fitato.health"/>
           <meta name="twitter:card" content="app"/>
           <meta name="twitter:title" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
-          <meta name="twitter:description" content="Fitato® is Your One Pass to 250+ Best Gyms &amp; Fitness Studios in Pune. Access All Gyms, Dance, Yoga, Crossfit and Swimming Near You - One Pass @ ₹1199"/>
+          <meta name="twitter:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="twitter:site" content="@FitatoFit"/>
           <meta name="twitter:creator" content="@FitatoFit"/>
           <meta name="twitter:image:src" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
@@ -42,7 +42,7 @@ export default ({ children }) => (
           <meta name="twitter:app:id:googleplay" content="fit.fitato.health"/>
           <meta name="twitter:app:name:googleplay" content="Fitato: One Pass to Fitness"/>
           <meta name="og:title" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
-          <meta name="og:description" content="Fitato® is Your One Pass to 250+ Best Gyms &amp; Fitness Studios in Pune. Access All Gyms, Dance, Yoga, Crossfit and Swimming Near You - One Pass @ ₹1199"/>
+          <meta name="og:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="og:image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
           <meta name="og:url" content="https://www.fitato.fit"/>
           <meta name="og:site_name" content="Fitato"/>
@@ -60,7 +60,7 @@ export default ({ children }) => (
           <link rel="apple-touch-icon" href={withPrefix('/static/fitato-icon-57.png')} />
           <link rel="apple-touch-icon" sizes="72x72" href={withPrefix('/static/fitato-icon-72.png')} />
           <link rel="apple-touch-icon" sizes="114x114" href={withPrefix('/static/fitato-icon-114.png')} />
-          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet" />
           
         </Helmet>
         
