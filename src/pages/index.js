@@ -33,11 +33,11 @@ const HomePage = () => (
       <style dangerouslySetInnerHTML={{
         __html: `
         .index-section-hero {
-          background-image: url('${withPrefix('/static/bann.jpg')}');
+          background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}');
         }
         @media (max-width: 767px) {
           .index-section-hero {
-            background-image: url('${withPrefix('/static/bannmob.jpg')}');
+            background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}');
           }
         }
       `}}/>
