@@ -60,7 +60,7 @@ export default ({ children }) => (
           <link rel="apple-touch-icon" href={withPrefix('/static/fitato-icon-57.png')} />
           <link rel="apple-touch-icon" sizes="72x72" href={withPrefix('/static/fitato-icon-72.png')} />
           <link rel="apple-touch-icon" sizes="114x114" href={withPrefix('/static/fitato-icon-114.png')} />
-          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900,900i" rel="stylesheet" />
           
         </Helmet>
         

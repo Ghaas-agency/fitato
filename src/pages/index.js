@@ -18,7 +18,7 @@ const HomePage = () => (
       <div className="index-section-hero">
         <div className="container">
           <div className="index-section-hero__content">
-            <h1><span style={{color: '#EB1F2E', fontSize: '50%', fontStyle: 'italic'}}>Welcome to your</span><br /><span style={{textTransform: 'uppercase', fontStyle: 'italic', fontSize: '125%'}}>Fitness Freedom</span></h1>
+            <h1><span style={{color: '#EB1F2E', fontSize: '50%', fontStyle: 'italic'}}>Welcome to your</span><br /><span style={{textTransform: 'uppercase', fontStyle: 'italic', fontSize: '125%', fontWeight: '900'}}>Fitness Freedom</span></h1>
             <div className="line"></div>
             <div className="index-section-hero__content--text">
               <p>The best fitness facilities, fun events and a huge community rooting for you.</p>
@@ -102,8 +102,8 @@ const HomePage = () => (
               <p>Evolve Fitness, Wanowrie<br />Gym: 6AM - 11PM<br /><span className="red">95 Fitato Clan Members Going</span></p>
             </div>
             <div className="index-section-partners__item">
-              <img src={withPrefix('/static/index/partners/urbounce.jpg')} alt="urbounce" />
-              <p>Urbounce, Baner<br />Gym: 6AM - 11PM<br /><span className="red">97 Fitato Clan Members Going</span></p>
+              <img src={withPrefix('/static/index/partners/recomp.jpg')} alt="recomp" />
+              <p>Recomp Fitness, Koregaon Park<br />Gym: 6AM - 11PM<br /><span className="red">97 Fitato Clan Members Going</span></p>
             </div>
             <div className="index-section-partners__item">
               <img src={withPrefix('/static/index/partners/multifit.jpg')} alt="multifit" />
