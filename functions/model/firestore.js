@@ -55,6 +55,21 @@ module.exports.allActivities = async () => {
   return await partners;
 }
 
+// Return an array of all activities.
+module.exports.allActivitiesCitywise = async (city) => {
+  const partners = await activitiesRef.where('availability.' + city, '==', true).get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  return await partners;
+}
+
 // Return an object of arrays of all locations in Pune and Hyderabad.
 module.exports.allLocations = async () => {
   const locationsPune = await locationsPuneRef.get()

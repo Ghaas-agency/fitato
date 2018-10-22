@@ -18,6 +18,10 @@ router.get('/activities', async (req, res) => {
   res.json(await db.allActivities());
 });
 
+router.get('/activities/:city', async (req, res) => {
+  res.json(await db.allActivitiesCitywise(req.params.city));
+});
+
 router.get('/locations', async (req, res) => {
   res.json(await db.allLocations());
 });
@@ -30,7 +34,7 @@ router.get('/locations/hyderabad', async (req, res) => {
   res.json(await db.allLocationsHyderabad());
 });
 
-router.get('/pune/:id', async (req, res) => {
+router.get('/locations/pune/:id', async (req, res) => {
   const { id } = req.params;
   const currentLoc = await db.checkLocation(id);
   const currentAct = await db.checkActivity(id);
