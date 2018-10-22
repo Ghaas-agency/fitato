@@ -26,12 +26,8 @@ router.get('/locations', async (req, res) => {
   res.json(await db.allLocations());
 });
 
-router.get('/locations/pune', async (req, res) => {
-  res.json(await db.allLocationsPune());
-});
-
-router.get('/locations/hyderabad', async (req, res) => {
-  res.json(await db.allLocationsHyderabad());
+router.get('/locations/:city', async (req, res) => {
+  res.json(await db.allLocationsCitywise(req.params.city));
 });
 
 router.get('/locations/pune/:id', async (req, res) => {

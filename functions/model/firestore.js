@@ -55,7 +55,7 @@ module.exports.allActivities = async () => {
   return await partners;
 }
 
-// Return an array of all activities.
+// Return an array of all activities of a city.
 module.exports.allActivitiesCitywise = async (city) => {
   const partners = await activitiesRef.where('availability.' + city, '==', true).get()
     .then(snap => {
@@ -96,23 +96,16 @@ module.exports.allLocations = async () => {
 }
 
 // Return an array of all locations in Pune.
-module.exports.allLocationsPune = async () => {
-  const locations = await locationsPuneRef.get()
-    .then(snap => {
-      let arr = [];
-      snap.forEach(doc => {
-        arr.push({id: doc.id, text: doc.data().text});
-      });
-      return arr;
-    })
-    .catch(err => console.log(err));
-
-  return await locations;
-}
-
-// Return an array of all locations in Hyderabad.
-module.exports.allLocationsHyderabad = async () => {
-  const locations = await locationsHyderabadRef.get()
+module.exports.allLocationsCitywise = async (city) => {
+  let ref = '';
+  if (city === 'pune') {
+    ref = locationsPuneRef;
+  } else if (city === 'hyderabad') {
+    ref = locationsHyderabadRef;
+  } else {
+    return {err: 'Path does not exist.'}
+  }
+  const locations = await ref.get()
     .then(snap => {
       let arr = [];
       snap.forEach(doc => {
