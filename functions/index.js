@@ -10,7 +10,7 @@ app.engine('handlebars', hbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
 
 // Routes
-app.use('/partner', routes);
+app.use('/api', routes);
 
 // Handle 404 error
 app.use((req, res, next) => {

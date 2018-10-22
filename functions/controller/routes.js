@@ -10,10 +10,24 @@ router.get('/', async (req, res) => {
   });
 });
 
-router.get('/pune', async (req, res) => {
-  res.render('home', {
-    options: await db.getOptions()
-  });
+router.get('/options', async (req, res) => {
+  res.json(await db.getOptions());
+});
+
+router.get('/activities', async (req, res) => {
+  res.json(await db.allActivities());
+});
+
+router.get('/locations', async (req, res) => {
+  res.json(await db.allLocations());
+});
+
+router.get('/locations/pune', async (req, res) => {
+  res.json(await db.allLocationsPune());
+});
+
+router.get('/locations/hyderabad', async (req, res) => {
+  res.json(await db.allLocationsHyderabad());
 });
 
 router.get('/pune/:id', async (req, res) => {

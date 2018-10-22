@@ -11,6 +11,7 @@ const db = admin.firestore();
 // References to collections.
 const activitiesRef = db.collection('activities');
 const locationsPuneRef = db.collection('facilities-pune');
+const locationsHyderabadRef = db.collection('facilities-hyderabad');
 
 // Export options for search form.
 module.exports.getOptions = async () => {
@@ -20,7 +21,7 @@ module.exports.getOptions = async () => {
       snap.forEach(doc => {
         arr.push({id: doc.id, text: doc.data().text});
       });
-      arr.unshift({id: 'all', text: 'All Activities'});
+      /* arr.unshift({id: 'all', text: 'All Activities'}); */
       return arr;
     })
     .catch(err => console.log(err));
@@ -31,13 +32,82 @@ module.exports.getOptions = async () => {
       snap.forEach(doc => {
         arr.push({id: doc.id, text: doc.data().text});
       });
-      arr.unshift({id: 'all', text: 'All Locations'});
+      /* arr.unshift({id: 'all', text: 'All Locations'}); */
       return arr;
     })
     .catch(err => console.log(err));
   
-  const both = await {activities, locations};
-  return both;
+  return await {activities, locations};
+}
+
+// Return an array of all activities.
+module.exports.allActivities = async () => {
+  const partners = await activitiesRef.get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  return await partners;
+}
+
+// Return an object of arrays of all locations in Pune and Hyderabad.
+module.exports.allLocations = async () => {
+  const locationsPune = await locationsPuneRef.get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  const locationsHyderabad = await locationsHyderabadRef.get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  return await {pune: locationsPune, hyderabad: locationsHyderabad};
+}
+
+// Return an array of all locations in Pune.
+module.exports.allLocationsPune = async () => {
+  const locations = await locationsPuneRef.get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  return await locations;
+}
+
+// Return an array of all locations in Hyderabad.
+module.exports.allLocationsHyderabad = async () => {
+  const locations = await locationsHyderabadRef.get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => {
+        arr.push({id: doc.id, text: doc.data().text});
+      });
+      return arr;
+    })
+    .catch(err => console.log(err));
+
+  return await locations;
 }
 
 // Returns the ID of the current location, if found.
