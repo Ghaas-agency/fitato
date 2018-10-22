@@ -31,16 +31,8 @@ const HomePage = () => (
       </div>
       
       <style dangerouslySetInnerHTML={{
-        __html: `
-        .index-section-hero {
-          background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}');
-        }
-        @media (max-width: 767px) {
-          .index-section-hero {
-            background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}');
-          }
-        }
-      `}}/>
+        __html: `.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}')}@media (max-width: 767px) {.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}}`
+      }}/>
 
       <div className="index-section-pass" /* style={{backgroundImage: 'url(' + withPrefix('/static/gradient-bg.png') + ')'}} */>
         <div className="container">
@@ -144,19 +136,16 @@ const HomePage = () => (
             <div className="index-section-testimonials__item">
               <img src={withPrefix('/static/index/testimonials/vishesh.jpg')} alt="vishesh parashar" className="index-section-testimonials__item--img"/>
               <h4>Vishesh Parashar</h4>
-              <p className="index-section-testimonials__item--from">Aundh, MAERSK</p>
               <p className="index-section-testimonials__item--review"><em>“It makes fitness fun &amp; flexible, being a sportsperson and adventure junkie I hated being tied down to a particular gym. With Fitato, it's like a new adventure waiting for you every day, sheer variety in fitness with a single pass.”</em></p>
             </div>
             <div className="index-section-testimonials__item">
               <img src={withPrefix('/static/index/testimonials/karen.jpg')} alt="karen jophy" className="index-section-testimonials__item--img" />
               <h4>Karen Jophy</h4>
-              <p className="index-section-testimonials__item--from">Viman Nagar, Reliance</p>
               <p className="index-section-testimonials__item--review"><em>“Without the Fitato pass, I would never have been able to attend Pilates classes, Yoga studios or the other vastly available fitness options, that too at a very nominal price. Fitato makes it possible &amp; I have finally found activities I love.”</em></p>
             </div>
             <div className="index-section-testimonials__item">
               <img src={withPrefix('/static/index/testimonials/aninda.jpg')} alt="aninda verma" className="index-section-testimonials__item--img" />
               <h4>Aninda Verma</h4>
-              <p className="index-section-testimonials__item--from">Shivaji Nagar, PR Consultant</p>
               <p className="index-section-testimonials__item--review"><em>“After paying gym fees for years and never getting my money's worth, I'm happy I can fit in workouts I want, when I want.”</em></p>
             </div>
           </div>

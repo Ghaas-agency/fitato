@@ -26,13 +26,13 @@ export default ({ children }) => (
           <meta charset="utf-8" />
           <meta name="description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
-          <meta itemprop="name" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
+          <meta itemprop="name" content="Fitato&reg;: Fitness for the Intelligent Indian"/>
           <meta itemprop="description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta itemprop="image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
           <meta name="apple-itunes-app" content="app-id=1300323768"/>
           <meta name="google-play-app" content="app-id=fit.fitato.health"/>
           <meta name="twitter:card" content="app"/>
-          <meta name="twitter:title" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
+          <meta name="twitter:title" content="Fitato&reg;: Fitness for the Intelligent Indian"/>
           <meta name="twitter:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="twitter:site" content="@FitatoFit"/>
           <meta name="twitter:creator" content="@FitatoFit"/>
@@ -41,7 +41,7 @@ export default ({ children }) => (
           <meta name="twitter:app:name:iphone" content="Fitato"/>
           <meta name="twitter:app:id:googleplay" content="fit.fitato.health"/>
           <meta name="twitter:app:name:googleplay" content="Fitato: One Pass to Fitness"/>
-          <meta name="og:title" content="Fitato®: Best Gyms in Pune | One Pass to Fitness"/>
+          <meta name="og:title" content="Fitato&reg;: Fitness for the Intelligent Indian"/>
           <meta name="og:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
           <meta name="og:image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
           <meta name="og:url" content="https://www.fitato.fit"/>
@@ -75,12 +75,7 @@ export default ({ children }) => (
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-            var scroll = new SmoothScroll('a[href*="#"]', {
-              offset: 150,
-              easing: 'easeInOutCubic',
-            });
-            `,
+            __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic'});`,
           }}
         />
       </>
