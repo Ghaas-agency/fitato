@@ -122,8 +122,7 @@ module.exports.checkLocation = async id => {
     })
     .catch(err => console.log(err));
   
-  const r = await c;
-  return r;
+  return await c;
 }
 
 // Returns the ID of the current activity, if found.
@@ -138,8 +137,7 @@ module.exports.checkActivity = async id => {
     })
     .catch(err => console.log(err));
 
-  const r = await c;
-  return r;
+  return await c;
 }
 
 // Export results.
