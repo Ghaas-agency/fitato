@@ -162,24 +162,34 @@ module.exports.getResultsByLocation = async (locId, city) => {
 }
 
 // Return results by activity.
-module.exports.getResultsByActivity = async (city, activity) => {
+module.exports.getResultsByActivity = async (city, activity, loc) => {
   let result = {
     activityName: '',
     locations: []
   };
 
+  const ref = activitiesRef.doc(activity);
+
   // Set activity name.
-  await activitiesRef.doc(activity).get()
+  await ref.get()
     .then(snap => {
       result.activityName = snap.data().text;
     })
     .catch(err => console.log(err));
 
   // Set locations array of objects.
-  await activitiesRef.doc(activity).collection(city).get()
+  await ref.collection(city).get()
     .then(snap => {
       let arr = [];
-      snap.forEach(doc => arr.push(doc.data().location));
+      snap.forEach(doc => {
+        // Check if 'loc' variable is provided. If so, return facilities only for that
+        // location. Else, return facilities of all locations.
+        if (loc) {
+          (doc.data().value === loc) ? arr.push(doc.data().location) : null;
+        } else {
+          arr.push(doc.data().location);
+        }
+      });
       return arr;
     })
     .then(async refsArr => {
@@ -192,7 +202,7 @@ module.exports.getResultsByActivity = async (city, activity) => {
 }
 
 // Returns a location object with location name and the available activities.
-const getLocationObj = async (ref) => {
+const getLocationObj = async ref => {
   let result = {
     locationName: '',
     facilities: []

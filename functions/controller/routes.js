@@ -32,6 +32,15 @@ router.get('/activities/:city/:activity', async (req, res) => {
   (currentAct) ? res.json(await db.getResultsByActivity(city, activity)) : res.status(404).json({err: 'Error: Not found.'});
 });
 
+router.get('/activities/:city/:activity/:location', async (req, res) => {
+  const { city, activity, location } = req.params;
+
+  const currentAct = await db.checkActivity(activity, city);
+
+  // If the activity exists in that city, then send the results as response.
+  (currentAct) ? res.json(await db.getResultsByActivity(city, activity, location)) : res.status(404).json({err: 'Error: Not found.'});
+});
+
 router.get('/locations', async (req, res) => {
   res.json(await db.allLocations());
 });
