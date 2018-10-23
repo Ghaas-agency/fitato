@@ -13,6 +13,17 @@ const activitiesRef = db.collection('activities');
 const locationsPuneRef = db.collection('facilities-pune');
 const locationsHyderabadRef = db.collection('facilities-hyderabad');
 
+// Returns current city reference.
+const getCityRef = city => {
+  if (city === 'pune') {
+    return locationsPuneRef;
+  } else if (city === 'hyderabad') {
+    return locationsHyderabadRef;
+  } else {
+    return '404';
+  }
+}
+
 // Export options for search form.
 module.exports.getOptions = async () => {
   const activities = await activitiesRef.get()
@@ -56,7 +67,7 @@ module.exports.allActivities = async () => {
 }
 
 // Return an array of all activities of a city.
-module.exports.allActivitiesCitywise = async (city) => {
+module.exports.allActivitiesCitywise = async city => {
   const partners = await activitiesRef.where('availability.' + city, '==', true).get()
     .then(snap => {
       let arr = [];
@@ -96,15 +107,9 @@ module.exports.allLocations = async () => {
 }
 
 // Return an array of all locations in Pune.
-module.exports.allLocationsCitywise = async (city) => {
-  let ref = '';
-  if (city === 'pune') {
-    ref = locationsPuneRef;
-  } else if (city === 'hyderabad') {
-    ref = locationsHyderabadRef;
-  } else {
-    return {err: 'Path does not exist.'}
-  }
+module.exports.allLocationsCitywise = async city => {
+  const ref = getCityRef(city);
+  
   const locations = await ref.get()
     .then(snap => {
       let arr = [];
@@ -119,8 +124,10 @@ module.exports.allLocationsCitywise = async (city) => {
 }
 
 // Returns the ID of the current location, if found.
-module.exports.checkLocation = async id => {
-  const c = await locationsPuneRef.where('value', '==', id).get()
+module.exports.checkLocation = async (id, city) => {
+  const ref = getCityRef(city);
+
+  const c = await ref.where('value', '==', id).get()
     .then(snap => {
       let re;
       snap.forEach(doc => {
@@ -134,8 +141,8 @@ module.exports.checkLocation = async id => {
 }
 
 // Returns the ID of the current activity, if found.
-module.exports.checkActivity = async id => {
-  const c = await activitiesRef.where('value', '==', id).get()
+module.exports.checkActivity = async (id, city) => {
+  const c = await activitiesRef.where('availability.' + city, '==', true).where('value', '==', id).get()
     .then(snap => {
       let re;
       snap.forEach(doc => {
@@ -227,6 +234,7 @@ module.exports.getResults = async (selector, id, id2) => {
     
 
     return result; */
+    return {activity: id}
 
   } else if (selector === 'both') {
     // render /pune/aundh/gym

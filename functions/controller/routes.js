@@ -30,19 +30,25 @@ router.get('/locations/:city', async (req, res) => {
   res.json(await db.allLocationsCitywise(req.params.city));
 });
 
-router.get('/locations/pune/:id', async (req, res) => {
-  const { id } = req.params;
-  const currentLoc = await db.checkLocation(id);
-  const currentAct = await db.checkActivity(id);
+router.get('/locations/:city/:id', async (req, res) => {
+  const { city, id } = req.params;
 
-  // Check current route.
-  if (currentLoc) {
-    res.json(await db.getResults('loc', id));
-  } else if (currentAct) {
-    res.json(await db.getResults('act', id));
+  if(city === 'pune' || city === 'hyderabad') {
+    const currentLoc = await db.checkLocation(id, city);
+    const currentAct = await db.checkActivity(id, city);
+
+    // Check current route.
+    if (currentLoc) {
+      res.json(await db.getResults('loc', id));
+    } else if (currentAct) {
+      res.json(await db.getResults('act', id));
+    } else {
+      res.status(404).send('not found');
+    }
   } else {
-    res.status(404).send('not found');
+    res.json(404, {err: 'City does not exist.'});
   }
+
 });
 
 router.get('/pune/:loc/:act', async (req, res) => {
