@@ -19,11 +19,17 @@ router.get('/activities', async (req, res) => {
 });
 
 router.get('/activities/:city', async (req, res) => {
-  res.json(await db.allActivitiesCitywise(req.params.city));
+  const response = await db.allActivitiesCitywise(req.params.city);
+  res.json((response.length > 0) ? response : {err: 'City not found.'});
 });
 
-router.get('/activities/:city/locations', async (req, res) => {
-  res.json(await db.allActivitiesCitywise(req.params.city));
+router.get('/activities/:city/:activity', async (req, res) => {
+  const { city, activity } = req.params;
+
+  const currentAct = await db.checkActivity(activity, city);
+
+  // If the activity exists in that city, then send the results as response.
+  (currentAct) ? res.json(await db.getResultsByActivity(city, activity)) : res.status(404).json({err: 'Error: Not found.'});
 });
 
 router.get('/locations', async (req, res) => {
@@ -37,14 +43,10 @@ router.get('/locations/:city', async (req, res) => {
 router.get('/locations/:city/:location', async (req, res) => {
   const { city, location } = req.params;
 
-  if(city === 'pune' || city === 'hyderabad') {
-    const currentLoc = await db.checkLocation(location, city);
+  const currentLoc = await db.checkLocation(location, city);
 
-    // If the location exists in that city, then send the results as response.
-    (currentLoc) ? res.json(await db.getResultsByLocation(location)) : res.status(404).json({err: 'Does not exist.'});
-  } else {
-    res.status(404).json({err: 'City does not exist.'});
-  }
+  // If the location exists in that city, then send the results as response.
+  (currentLoc) ? res.json(await db.getResultsByLocation(location, city)) : res.status(404).json({err: 'Error: Not found.'});
 });
 
 
