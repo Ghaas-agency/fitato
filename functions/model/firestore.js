@@ -141,8 +141,8 @@ module.exports.checkLocation = async (id, city) => {
 }
 
 // Returns the ID of the current activity, if found.
-module.exports.checkActivity = async (id, city) => {
-  const c = await activitiesRef.where('availability.' + city, '==', true).where('value', '==', id).get()
+module.exports.checkActivity = async (activityId, city) => {
+  const c = await activitiesRef.where('availability.' + city, '==', true).where('value', '==', activityId).get()
     .then(snap => {
       let re;
       snap.forEach(doc => {
@@ -156,52 +156,53 @@ module.exports.checkActivity = async (id, city) => {
 }
 
 // Export results.
-module.exports.getResults = async (selector, id, id2) => {
-  if(selector === 'loc') {
-    // render /pune/aundh
+module.exports.getResultsByLocation = async locId => {
+  let result = {
+    locationName: '',
+    facilities: []
+  };
 
-    let result = {
-      locationName: '',
-      facilities: []
-    };
+  await locationsPuneRef.doc(locId).get()
+    .then(snap => {
+      result.locationName = snap.data().text;
+    })
+    .catch(err => console.log(err));
 
-    await locationsPuneRef.doc(id).get()
-      .then(snap => {
-        result.locationName = snap.data().text;
-      })
-      .catch(err => console.log(err));
+  await locationsPuneRef.doc(locId).collection('facilities').get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => arr.push(doc));
+      return arr;
+    })
+    .then(async data => {
+      const arrayFacilities = await data.map(async doc => {
+        let facility = {text: '', activities: []};
+        facility.text = await doc.data().text;
 
-    await locationsPuneRef.doc(id).collection('facilities').get()
-      .then(snap => {
-        let arr = [];
-        snap.forEach(doc => arr.push(doc));
-        return arr;
-      })
-      .then(async data => {
-        const arrayFacilities = await data.map(async doc => {
-          let facility = {text: '', activities: []};
-          facility.text = await doc.data().text;
+        const arr = await doc.data().activities.map(async activity => {
+          const a = await activity.get()
+            .then(snap => snap.data().text)
+            .catch(err => console.log(err));
 
-          const arr = await doc.data().activities.map(async activity => {
-            const a = await activity.get()
-              .then(snap => snap.data().text)
-              .catch(err => console.log(err));
-
-            return await a;
-          });
-
-          facility.activities = await Promise.all(arr);
-          return facility;
+          return await a;
         });
 
-        result.facilities = await Promise.all(arrayFacilities);
-      })
-      .catch(err => console.log(err));
+        facility.activities = await Promise.all(arr);
+        return facility;
+      });
 
-    return result;
+      result.facilities = await Promise.all(arrayFacilities);
+    })
+    .catch(err => console.log(err));
 
-  } else if (selector === 'act') {
-    // render /pune/gym
+  return result;
+}
+
+
+
+/* getResultsByActivity('loc', 'kalyani-nagar'); */
+
+// render /pune/gym
 
     /* let result = {
       locationName: '',
@@ -230,24 +231,6 @@ module.exports.getResults = async (selector, id, id2) => {
         }
       ]
     }
-
-    
-
-    return result; */
-    return {activity: id}
-
-  } else if (selector === 'both') {
-    // render /pune/aundh/gym
-
-
-
-  }
-
-  
-
-}
-
-/* getResults('loc', 'kalyani-nagar'); */
 
 // add data
 /* 
