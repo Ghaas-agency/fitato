@@ -158,55 +158,11 @@ module.exports.checkActivity = async (activityId, city) => {
 // Return results by location.
 module.exports.getResultsByLocation = async (locId, city) => {
   const ref = getCityRef(city);
-
-  if (ref === '404') {
-    return {err: 'City not found.'};
-  } else {
-    let result = {
-      locationName: '',
-      facilities: []
-    };
-
-    await ref.doc(locId).get()
-      .then(snap => {
-        result.locationName = snap.data().text;
-      })
-      .catch(err => console.log(err));
-
-    await ref.doc(locId).collection('facilities').get()
-      .then(snap => {
-        let arr = [];
-        snap.forEach(doc => arr.push(doc));
-        return arr;
-      })
-      .then(async data => {
-        const arrayFacilities = await data.map(async doc => {
-          let facility = {text: '', activities: []};
-          facility.text = await doc.data().text;
-
-          const arr = await doc.data().activities.map(async activity => {
-            const a = await activity.get()
-              .then(snap => snap.data().text)
-              .catch(err => console.log(err));
-
-            return await a;
-          });
-
-          facility.activities = await Promise.all(arr);
-          return facility;
-        });
-
-        result.facilities = await Promise.all(arrayFacilities);
-      })
-      .catch(err => console.log(err));
-
-    return result;
-  }
+  return (ref === '404') ? {err: 'City not found.'} : await getLocationObj(ref.doc(locId));
 }
 
 // Return results by activity.
 module.exports.getResultsByActivity = async (city, activity) => {
-
   let result = {
     activityName: '',
     locations: []
@@ -217,7 +173,7 @@ module.exports.getResultsByActivity = async (city, activity) => {
     .then(snap => {
       result.activityName = snap.data().text;
     })
-    .catch();
+    .catch(err => console.log(err));
 
   // Set locations array of objects.
   await activitiesRef.doc(activity).collection(city).get()
@@ -227,19 +183,7 @@ module.exports.getResultsByActivity = async (city, activity) => {
       return arr;
     })
     .then(async refsArr => {
-      const arr = await refsArr.map(async locations => {
-        let locObj = {
-          locationName: '',
-          facilities: []
-        }
-
-        await locations.get().then(snap => {
-          obj.locationName = snap.data().text;
-        });
-
-        return await locObj;
-      });
-
+      const arr = await refsArr.map(async location => await getLocationObj(location));
       result.locations = await Promise.all(arr);
     })
     .catch(err => console.log(err));
@@ -247,35 +191,48 @@ module.exports.getResultsByActivity = async (city, activity) => {
   return result;
 }
 
-// render /pune/gym
+// Returns a location object with location name and the available activities.
+const getLocationObj = async (ref) => {
+  let result = {
+    locationName: '',
+    facilities: []
+  };
 
-    /* let result = {
-      locationName: '',
-      facilities: []
-    };
+  await ref.get()
+    .then(snap => {
+      result.locationName = snap.data().text;
+    })
+    .catch(err => console.log(err));
 
-    let result = {
-      activityName = '',
-      locations = [
-        {
-          locationName: '',
-          facilities: [
-            {
-              text: '',
-              activities: ['', '']
-            },
-            {
-              text: '',
-              activities: ['', '']
-            }
-          ]
-        },
-        {
-          locationName: '',
-          facilities: []
-        }
-      ]
-    }
+  await ref.collection('facilities').get()
+    .then(snap => {
+      let arr = [];
+      snap.forEach(doc => arr.push(doc));
+      return arr;
+    })
+    .then(async data => {
+      const arrayFacilities = await data.map(async doc => {
+        let facility = {text: '', activities: []};
+        facility.text = await doc.data().text;
+
+        const arr = await doc.data().activities.map(async activity => {
+          const a = await activity.get()
+            .then(snap => snap.data().text)
+            .catch(err => console.log(err));
+
+          return await a;
+        });
+
+        facility.activities = await Promise.all(arr);
+        return facility;
+      });
+
+      result.facilities = await Promise.all(arrayFacilities);
+    })
+    .catch(err => console.log(err));
+
+  return result;
+}
 
 // add data
 /* 
