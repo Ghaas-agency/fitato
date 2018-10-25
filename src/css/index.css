@@ -149,7 +149,7 @@
 }
 
 .index-section-join {
-  padding: 100px 0;
+  padding: 100px 0%;
   text-align: center;
   background-color: #efefef;
 }
@@ -157,6 +157,15 @@
 .index-section-join .partial-mc-form__main>div {
   display: inline-block;
   margin: 0 10px;
+}
+
+.index-section-join .partial-mc-form__main .partial-mc-form__main--radio {
+  margin-top: 7px;
+}
+
+.index-section-join .partial-mc-form__main .partial-mc-form__main--radio li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 @media (max-width: 767px) {

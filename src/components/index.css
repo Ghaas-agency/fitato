@@ -1514,8 +1514,8 @@ input[type="submit"]:focus {
   margin-left: 15%;
   margin-right: 15%;
   max-width: 1050px;
-  max-height: 85%;
-  overflow: hidden;
+  max-height: 90%;
+  overflow: auto;
 }
 
 .partial-signup-popup__content h3 {
@@ -1557,6 +1557,10 @@ input[type="submit"]:focus {
 
 .partial-signup-popup__item-right {
   padding: 30px;
+}
+
+.partial-signup-popup__item-right h3 {
+  font-size: 1.5em;
 }
 
 .partial-signup-popup__content form {
@@ -1650,4 +1654,22 @@ input[type="submit"]:focus {
   to {
     opacity: 1;
   }
+}
+
+.partial-mc-form__main--radio {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partial-mc-form__main--radio li {
+  padding: 0;
+  margin: 0;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.partial-mc-form__main--radio li label {
+  margin-left: 10px;
 }

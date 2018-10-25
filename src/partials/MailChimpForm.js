@@ -17,14 +17,27 @@ const MCForm = () => (
           <label htmlFor="mce-EMAIL">Email</label>
           <input type="email" name="EMAIL" className="required email" placeholder="Enter your email address" id="mce-EMAIL" />
         </div>
-        <div id="mce-responses" className="clear" style={{margin: '0'}}>
-          <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
-          <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
-        </div>
-        <div style={{position: 'absolute', left: '-5000px', margin: '0'}} aria-hidden="true">
-          <input type="text" name="b_c70dd7220cee163ff5b3fa95d_537f4ff9ae" tabIndex="-1" />
+        <div class="mc-field-group input-group">
+          <label>City</label>
+          <ul className="partial-mc-form__main--radio">
+            <li>
+              <input type="radio" value="Pune" name="CITY" id="mce-CITY-0"/>
+              <label htmlFor="mce-CITY-0">Pune</label>
+            </li>
+            <li>
+              <input type="radio" value="Hyderabad" name="CITY" id="mce-CITY-1"/>
+              <label htmlFor="mce-CITY-1">Hyderabad</label>
+            </li>
+          </ul>
         </div>
         <div className="clear mc-form-submit-btn">
+          <div id="mce-responses" className="clear" style={{margin: '0'}}>
+            <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
+            <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
+          </div>
+          <div style={{position: 'absolute', left: '-5000px', margin: '0'}} aria-hidden="true">
+            <input type="text" name="b_c70dd7220cee163ff5b3fa95d_537f4ff9ae" tabIndex="-1" />
+          </div>
           <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" className="button" style={{marginLeft: '0px'}} />
         </div>
       </div>
