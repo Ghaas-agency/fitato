@@ -4,12 +4,6 @@ const router = express.Router();
 // Get Firebase Firestore models.
 const db = require('../model/firestore');
 
-router.get('/', async (req, res) => {
-  res.render('home', {
-    options: await db.getOptions()
-  });
-});
-
 router.get('/options', async (req, res) => {
   res.json(await db.getOptions());
 });
