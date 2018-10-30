@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "express-basic-auth": "^1.1.6",
     "gatsby": "^2.0.25",
     "gatsby-link": "^2.0.4",
     "gatsby-plugin-nprogress": "^2.0.5",

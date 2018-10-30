@@ -25,29 +25,9 @@ const getCityRef = city => {
 }
 
 // Export options for search form.
-module.exports.getOptions = async () => {
-  const activities = await activitiesRef.get()
-    .then(snap => {
-      let arr = [];
-      snap.forEach(doc => {
-        arr.push({id: doc.id, text: doc.data().text});
-      });
-      /* arr.unshift({id: 'all', text: 'All Activities'}); */
-      return arr;
-    })
-    .catch(err => console.log(err));
-
-  const locations = await locationsPuneRef.get()
-    .then(snap => {
-      let arr = [];
-      snap.forEach(doc => {
-        arr.push({id: doc.id, text: doc.data().text});
-      });
-      /* arr.unshift({id: 'all', text: 'All Locations'}); */
-      return arr;
-    })
-    .catch(err => console.log(err));
-  
+module.exports.getOptions = async city => {
+  const activities = await aAC(city);
+  const locations = await aLC(city);
   return await {activities, locations};
 }
 
@@ -67,7 +47,7 @@ module.exports.allActivities = async () => {
 }
 
 // Return an array of all activities of a city.
-module.exports.allActivitiesCitywise = async city => {
+async function aAC(city) {
   const partners = await activitiesRef.where('availability.' + city, '==', true).get()
     .then(snap => {
       let arr = [];
@@ -80,6 +60,7 @@ module.exports.allActivitiesCitywise = async city => {
 
   return await partners;
 }
+module.exports.allActivitiesCitywise = aAC;
 
 // Return an object of arrays of all locations in Pune and Hyderabad.
 module.exports.allLocations = async () => {
@@ -107,7 +88,7 @@ module.exports.allLocations = async () => {
 }
 
 // Return an array of all locations in Pune.
-module.exports.allLocationsCitywise = async city => {
+async function aLC(city) {
   const ref = getCityRef(city);
   
   const locations = await ref.get()
@@ -122,6 +103,7 @@ module.exports.allLocationsCitywise = async city => {
 
   return await locations;
 }
+module.exports.allLocationsCitywise = aLC;
 
 // Returns the ID of the current location, if found.
 module.exports.checkLocation = async (id, city) => {
