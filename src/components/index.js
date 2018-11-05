@@ -68,9 +68,9 @@ export default ({ children }) => (
           {`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}
         </noscript>
         <Header />
-        <div>
+        <main>
           {children}
-        </div>
+        </main>
         <Footer />
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
         <script
