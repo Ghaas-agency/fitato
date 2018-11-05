@@ -41,7 +41,7 @@ class ReferPage extends React.Component {
           <Helmet
             title="How to Refer Your Friends | Fitato"
           >
-            <meta name="description" content="Learn how to refer" />
+            <meta name="description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here." />
           </Helmet>
     
           <div className="refer-page__hero">
@@ -72,7 +72,7 @@ class ReferPage extends React.Component {
               <div className="refer-page__steps">
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>1. Open the profile section</h3>
+                    <h3>1. Go to the profile section</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-android-step-1.jpg')} alt=""/>
@@ -88,7 +88,7 @@ class ReferPage extends React.Component {
                 </div>
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>3. Tap "REFER" button</h3>
+                    <h3>3. Tap "REFER"</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-android-step-3.jpg')} alt=""/>
@@ -96,7 +96,7 @@ class ReferPage extends React.Component {
                 </div>
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>4. Choose your preferrd option</h3>
+                    <h3>4. Choose your preferred option</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-android-step-4.jpg')} alt=""/>
@@ -113,7 +113,7 @@ class ReferPage extends React.Component {
               <div className="refer-page__steps">
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>1. Open the profile section</h3>
+                    <h3>1. Go to the profile section</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-ios-step-1.jpg')} alt=""/>
@@ -129,7 +129,7 @@ class ReferPage extends React.Component {
                 </div>
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>3. Tap "REFER" button</h3>
+                    <h3>3. Tap "REFER"</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-ios-step-3.jpg')} alt=""/>
@@ -137,7 +137,7 @@ class ReferPage extends React.Component {
                 </div>
                 <div className="refer-page__step">
                   <div className="refer-page__step--title">
-                    <h3>4. Choose your preferrd option</h3>
+                    <h3>4. Choose your preferred option</h3>
                   </div>
                   <div className="refer-page__step--img">
                     <img src={withPrefix('/static/refer/fitato-refer-ios-step-4.jpg')} alt=""/>
