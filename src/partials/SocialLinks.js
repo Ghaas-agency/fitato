@@ -19,7 +19,7 @@ const SocialLinks = props => (
       </a>
     </li>
     <li>
-      <a href="https://www.youtube.com/channel/UCUAcO5m8nXxqXHs42kyfzmg" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/channel/UCUAcO5m8nXxqXHs42kyfzmg?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
         <img src={withPrefix('/static/icons/youtube-circle-black.svg')} alt="youtube" className="partial-social-links__icon" />
       </a>
     </li>
