@@ -17,7 +17,7 @@ const MCForm = () => (
           <label htmlFor="mce-EMAIL">Email</label>
           <input type="email" name="EMAIL" className="required email" placeholder="Enter your email address" id="mce-EMAIL" />
         </div>
-        <div class="mc-field-group input-group">
+        <div className="mc-field-group input-group">
           <label>City</label>
           <ul className="partial-mc-form__main--radio">
             <li>

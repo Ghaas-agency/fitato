@@ -78,6 +78,11 @@ export default ({ children }) => (
             __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic'});`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,
+          }}
+        />
       </>
     )}
   />
