@@ -1337,14 +1337,14 @@ input[type="submit"]:focus {
   color: #ffffff;
   text-align: center;
   padding: 15px 0;
-  -webkit-animation-name: disappear;
+  /* -webkit-animation-name: disappear;
   -moz-animation-name: disappear;
   -o-animation-name: disappear;
   animation-name: disappear;
   -webkit-animation-duration: 0.3s;
   -moz-animation-duration: 0.3s;
   -o-animation-duration: 0.3s;
-  animation-duration: 0.3s;
+  animation-duration: 0.3s; */
 }
 
 .partial-topbar p {

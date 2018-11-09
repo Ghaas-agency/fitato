@@ -1,5 +1,5 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 const displayBlock = {
   display: 'block'
@@ -58,9 +58,9 @@ class Topbar extends React.Component {
           <div className="partial-topbar-close" onClick={this.handleClose}>X</div>
           <p>
             <img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/>
-            <a href="https://hyderabad.fitato.fit/?utm_source=website&utm_medium=sticky-bar" target="_blank" rel="noreferrer noopener">
-            We&apos;re now in Hyderabad. Get your Fitato pass here!
-            </a>
+            <Link to="/partners/#hyderabad" onClick={this.handleClose}>
+            We&apos;re now in Hyderabad. Check out our facility partners.
+            </Link>
           </p>
         </div>
       </div>
