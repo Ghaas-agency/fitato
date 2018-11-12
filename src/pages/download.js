@@ -15,7 +15,7 @@ const DownloadPage = () => (
       <div className="container">
         <h1>Download the Fitato App</h1>
         <p>Your single pass to access over 300 health and fitness studios. Fitness, redefined!</p>
-        <AppIcons />
+        <AppIcons btnClass="f-ai-download" />
         <img src={withPrefix('/static/fitato-app.png')} className="download-page__preview" alt="fitato app preview"/>
       </div>
     </div>

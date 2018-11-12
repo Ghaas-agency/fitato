@@ -2,13 +2,13 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import AppIcons from './AppIcons'
 
-const DownloadSwipe = () => (
+const DownloadSwipe = props => (
   <div className="partial-download-swipe">
     <div className="container">
       <div className="partial-download-swipe__left">
         <h2>Download the Fitato App</h2>
         <p>Swim your way to Zumba via MMA and Yoga! Experiment each day with a new adventure and push your body to the limits with your Fitato Pass.</p>
-        <AppIcons />
+        {(props.btnClass) ? <AppIcons btnClass={props.btnClass} /> : <AppIcons />}
       </div>
       <div className="partial-download-swipe__right">
         <img src={withPrefix('/static/fitato-app.png')} alt="download fitato smartphone app"/>

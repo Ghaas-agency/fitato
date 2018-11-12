@@ -63,7 +63,7 @@ class SignupPopup extends React.Component {
               <div className="partial-signup-popup__item-left" style={{backgroundImage: 'url(' + withPrefix('/static/fitato-discover.jpg') + ')'}}></div>
               <div className="partial-signup-popup__item-right">
                 <h3>Discover The Best Fitness Options Your City Has To Offer</h3>
-                <MCForm />
+                <MCForm formClass="f-cf-popup" />
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ const HomePage = () => (
               <p>The best fitness facilities, fun events and a huge community rooting for you.</p>
               {/* <Link to="/download" className="button">Download the app</Link> */}
               <p style={{color: '#EB1F2E', marginTop: '35px', marginBottom: '10px'}}>Start here:</p>
-              <AppIcons />
+              <AppIcons btnClass="f-ai-index-hero" />
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const HomePage = () => (
         <div className="container">
           <h2>Workout At The Best Fitness Studios<br />With Your Fitato Pass</h2>
           <p>Do you want a guide to the best fitness studios near you?<br />Just put in your details and we’ll get back to you with a personalized fitness plan!</p>
-          <MCForm />
+          <MCForm formClass="f-cf-index-join" />
         </div>
       </div>
 
@@ -76,7 +76,7 @@ const HomePage = () => (
               <p>Reserve the activity and you’ll get an access code. Share that code at the facility you’re visiting, and that’s it. You’re ready to sweat it out!</p>
             </div>
           </div>
-          <AppIcons />
+          <AppIcons btnClass="f-ai-index-how" />
         </div>
       </div>
 
@@ -177,7 +177,7 @@ const HomePage = () => (
       </div>
 
       <div className="index-section-download">
-        <DownloadSwipe />
+        <DownloadSwipe btnClass="f-ai-index-download" />
       </div>
 
       <div className="index-section-callback">
@@ -185,7 +185,7 @@ const HomePage = () => (
           <h2>Still Not Sure? Speak to a Fitness Concierge</h2>
           <p>Fill out the form below and let us tailor a customized plan for you.</p>
           <div className="index-section-callback__form">
-            <MCForm />
+            <MCForm formClass="f-cf-index-speak" />
           </div>
         </div>
       </div>

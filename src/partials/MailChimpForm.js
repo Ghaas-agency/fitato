@@ -1,8 +1,15 @@
 import React from 'react'
 
-const MCForm = () => (
+const MCForm = props => (
   <div id="mc_embed_signup" className="partial-mc-form">
-    <form action="https://fit.us18.list-manage.com/subscribe/post?u=c70dd7220cee163ff5b3fa95d&amp;id=537f4ff9ae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+    <form action="https://fit.us18.list-manage.com/subscribe/post?u=c70dd7220cee163ff5b3fa95d&amp;id=537f4ff9ae" 
+      method="post" 
+      id="mc-embedded-subscribe-form" 
+      name="mc-embedded-subscribe-form" 
+      className={(props.formClass) ? 'validate ' + props.formClass : 'validate'}
+      target="_blank" 
+      noValidate
+    >
       <div id="mc_embed_signup_scroll" className="partial-mc-form__main">
       
         <div className="mc-field-group">
