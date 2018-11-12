@@ -49,7 +49,7 @@ class ReferPage extends React.Component {
               <h1>Share The Wealth, Spread The Joy!</h1>
               <div className="refer-page__hero-spl">
                 <div className="refer-page__hero-spl--left">
-                  <img src={withPrefix('/static/icons/giftcard.svg')} alt=""/>
+                  <img src={withPrefix('/static/refer/wallet.png')} alt="refer"/>
                 </div>
                 <div className="refer-page__hero-spl--right">
                   <p className="refer-page__hero-spl--title">Refer A Friend And Get 40% Cashback On All Passes</p>
