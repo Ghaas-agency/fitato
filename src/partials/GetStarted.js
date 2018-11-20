@@ -9,7 +9,7 @@ const GetStarted = () => (
       </div>
       <div className="partial-get-started__cta">
         <Link to="/download/" className="button">Download Fitato App</Link>
-        <Link to="/contact/" className="button-inverted">Contact us</Link>
+        <Link to="/contact-us/" className="button-inverted">Contact us</Link>
       </div>
     </div>
   </div>

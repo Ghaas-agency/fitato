@@ -49,7 +49,7 @@ const Plans = props => (
       </div>
       <div className="partial-plans__fitquad">
         {(props.tag === 'h1') ? <h2>Looking for more than one pass?</h2> : <h3>Looking for more than one pass?</h3>}
-        <Link to="/fit-squad" className="button">View Fit Squad Plans</Link>
+        <Link to="/fit-squad/" className="button">View Fit Squad Plans</Link>
       </div>
     </div>
   </div>

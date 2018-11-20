@@ -2,8 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from './header-app'
+import Footer from './footer'
 import './index.css'
 
 import { withPrefix } from 'gatsby';
@@ -60,7 +60,7 @@ export default ({ children }) => (
           <link rel="apple-touch-icon" href={withPrefix('/static/fitato-icon-57.png')} />
           <link rel="apple-touch-icon" sizes="72x72" href={withPrefix('/static/fitato-icon-72.png')} />
           <link rel="apple-touch-icon" sizes="114x114" href={withPrefix('/static/fitato-icon-114.png')} />
-          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900,900i" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet" />
           
         </Helmet>
         
@@ -72,12 +72,12 @@ export default ({ children }) => (
           {children}
         </main>
         <Footer />
-        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
+        {/* <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic'});`,
           }}
-        />
+        /> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,

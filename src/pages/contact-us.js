@@ -1,9 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/index-app'
+import Layout from '../components/index'
 import MCForm from '../partials/MailChimpForm'
+import FooterInfo from '../partials/FooterInfo'
 import SocialLinks from '../partials/SocialLinks'
 import ContactLinks from '../partials/ContactLinks'
+import SignupPopup from '../partials/SignupPopup'
 
 const ContactPage = () => (
   <Layout>
@@ -23,6 +25,8 @@ const ContactPage = () => (
         <SocialLinks cname="footer-social" />
       </div>
     </div>
+    <FooterInfo />
+    <SignupPopup />
   </Layout>
 )
 

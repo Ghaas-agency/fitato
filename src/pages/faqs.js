@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link, withPrefix } from 'gatsby'
 import Helmet from 'react-helmet'
+import GetStarted from '../partials/GetStarted'
+import FooterInfo from '../partials/FooterInfo'
+import SignupPopup from '../partials/SignupPopup'
 import { Accordion, AccordionItem } from 'react-sanfona'
-import Layout from '../components/index-app'
+import Layout from '../components/index'
 import '../css/faq.css'
 
 const FAQPage = () => (
@@ -12,7 +15,7 @@ const FAQPage = () => (
       >
         <meta name="description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types." />
       </Helmet>
-      <div className="faq-page" style={{paddingTop: '50px', paddingBottom: '50px'}}>
+      <div className="faq-page">
         <div className="container">
           <h1>Frequently Asked Questions</h1>
           <p>Let&apos;s help you step by step.</p>
@@ -29,7 +32,7 @@ const FAQPage = () => (
             <AccordionItem title="Where do I buy the Fitato Membership from?" titleTag="h4" className="accordion-item" expandedClassName="accordion-item-active">
               <p>You can activate your pass by <Link to="/download/">downloading the Fitato app</Link> from the Google Playstore or App Store.</p>
               <ol>
-                <li><Link to="/download/a">Download the Fitato App</Link></li>
+                <li><Link to="/download/">Download the Fitato App</Link></li>
                 <li>Signup / Login through Facebook</li><li>Browse partner facilities &amp; timings</li>
                 <li>The "Home Screen " has a "Buy Pass" section, click on it</li>
                 <li>Select the membership that suits you</li><li>Pay via Debit/Credit Card, Net Banking or Mobile Wallets</li>
@@ -98,6 +101,9 @@ const FAQPage = () => (
           </style>
         </div>
       </div>
+      <GetStarted />
+      <FooterInfo />
+      <SignupPopup />
     </Layout>
   )
 

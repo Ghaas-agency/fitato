@@ -15,7 +15,7 @@ const FooterInfo = () => (
         <h4>Know More</h4>
         <ul className="footer-ul">
           <li><a href="http://blog.fitato.fit">Blog</a></li>
-          <li><Link to="/faq/">FAQ</Link></li>
+          <li><Link to="/faqs/">FAQ</Link></li>
           <li><Link to="/reviews/">Reviews</Link></li>
           <li><Link to="/how-to-refer/">Refer Your Friends</Link></li>
           <li><a href="http://corporate.fitato.fit">Fitato For The Workplace</a></li>

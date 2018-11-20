@@ -22,7 +22,7 @@ const HomePage = () => (
             <div className="line"></div>
             <div className="index-section-hero__content--text">
               <p>The best fitness facilities, fun events and a huge community rooting for you.</p>
-              {/* <Link to="/download" className="button">Download the app</Link> */}
+              {/* <Link to="/download/" className="button">Download the app</Link> */}
               <p style={{color: '#EB1F2E', marginTop: '35px', marginBottom: '10px'}}>Start here:</p>
               <AppIcons btnClass="f-ai-index-hero" />
             </div>
@@ -43,7 +43,7 @@ const HomePage = () => (
             <p>Take your pick from Yoga, Zumba, MMA, CrossFit, Swimming, Strength Training and plenty more.</p>
             <p>Workout in any of our 300+ fitness studios spread across your city with one single Fitato Pass. Everything at the cost of one membership.</p>
             <p>Fitato is the most holistic approach to fitness out there! Join us and be a part of our Fitness Revolution!</p>
-            <Link to="/partners" className="button" style={{marginLeft: '0'}}>Explore our Facilities</Link>
+            <Link to="/partners/" className="button" style={{marginLeft: '0'}}>Explore our Facilities</Link>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ const HomePage = () => (
           </div>
           <div className="align-center">
             <h4 style={{fontWeight: 'normal'}}>1000+ Fitness Activities - One Pass To All</h4>
-            <Link to="/partners" className="button-inverted">View all our facilities</Link>
+            <Link to="/partners/" className="button-inverted">View all our facilities</Link>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ const HomePage = () => (
               <p className="index-section-testimonials__item--review"><em>“After paying gym fees for years and never getting my money's worth, I'm happy I can fit in workouts I want, when I want.”</em></p>
             </div>
           </div>
-          <Link to="/reviews" className="button-inverted" style={{marginTop: '20px'}}>Read more reviews</Link>
+          <Link to="/reviews/" className="button-inverted" style={{marginTop: '20px'}}>Read more reviews</Link>
         </div>
       </div>
 

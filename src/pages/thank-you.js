@@ -17,9 +17,9 @@ const ThankYouPage = () => (
         <p>We appreciate you contacting us. We will get in touch with you shortly.</p>
         <p>In the meantime, you can check out the following:</p>
         <ul>
-          <li><Link to="/faq">Frequently Asked Questions (FAQ)</Link></li>
+          <li><Link to="/faqs/">Frequently Asked Questions (FAQ)</Link></li>
           <li><a href="http://blog.fitato.fit">Our Blog</a></li>
-          <li><Link to="/partners">Locate a Fitato Partner Facility near you</Link></li>
+          <li><Link to="/partners/">Locate a Fitato Partner Facility near you</Link></li>
         </ul>
         <p>Have a great day!</p>
       </div>
