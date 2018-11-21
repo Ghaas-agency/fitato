@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import Layout from '../components/index-app'
 import MCForm from '../partials/MailChimpForm'
 import SocialLinks from '../partials/SocialLinks'
-import ContactLinks from '../partials/ContactLinks'
 
 const ContactPage = () => (
   <Layout>
@@ -19,7 +18,10 @@ const ContactPage = () => (
           <p>We’re always here, burning the midnight oil. If you have any queries/questions or even need yourself a workout partner, talk to us. Just put in your details and we’ll get back to you. You can even call us on the numbers listed below!</p>
           <MCForm formClass="f-cf-contact" />
         </div>
-        <ContactLinks cname="footer-ul" />
+        <ul className="footer-ul">
+          <li><a href="mailto:connect@fitato.fit">connect@fitato.fit</a></li>
+          <li><p>+91 8200396237</p></li>
+        </ul>
         <SocialLinks cname="footer-social" />
       </div>
     </div>

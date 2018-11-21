@@ -11,7 +11,7 @@ import { withPrefix } from 'gatsby';
 export default ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutQuery {
+      query LayoutAppQuery {
         site {
           siteMetadata {
             title
