@@ -11,6 +11,7 @@ const ContactPage = () => (
         title="Contact Us | Fitato"
       >
         <meta name="description" content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP." />
+        <link rel="canonical" href="https://www.fitato.fit/contact-us/"/>
       </Helmet>
       <div className="container">
         <h1>Get in Touch With Us - Available 24/7</h1>
