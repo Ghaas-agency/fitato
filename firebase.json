@@ -6,15 +6,133 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
-        "function": "app"
+        "source" : "/refer*",
+        "destination" : "/how-to-refer/",
+        "type" : 301
       },
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source" : "/mmapune*",
+        "destination" : "/partners/",
+        "type" : 301
+      },
+      {
+        "source" : "/valentine-s-day*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/yoga*",
+        "destination" : "/partners/",
+        "type" : 301
+      },
+      {
+        "source" : "/fitatokids*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/zumbapune*",
+        "destination" : "/partners/",
+        "type" : 301
+      },
+      {
+        "source" : "/newyearfitnessoffer*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/xmenia*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/prebook*",
+        "destination" : "/purchase-fitato/",
+        "type" : 301
+      },
+      {
+        "source" : "/punewomen*",
+        "destination" : "/partners/",
+        "type" : 301
+      },
+      {
+        "source" : "/eats*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/terms-and-conditions*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/popup-*",
+        "destination" : "/",
+        "type" : 301
+      },
+      {
+        "source" : "/bucket-sitemap.xml",
+        "destination" : "/sitemap.xml",
+        "type" : 301
+      },
+      {
+        "source" : "/post-sitemap.xml",
+        "destination" : "/sitemap.xml",
+        "type" : 301
+      },
+      {
+        "source" : "/attachment-sitemap.xml",
+        "destination" : "/sitemap.xml",
+        "type" : 301
+      },
+      {
+        "source" : "/workout-week-mma*",
+        "destination" : "/partners/",
+        "type" : 301
+      },
+      {
+        "source" : "/offer*",
+        "destination" : "https://offer.fitato.fit",
+        "type" : 301
+      },
+      {
+        "source" : "/theroom*",
+        "destination" : "/",
+        "type" : 301
       }
-    ]
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|ico|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js|pdf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=2592000"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": true
   }
 }
