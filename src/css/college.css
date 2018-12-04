@@ -1,0 +1,44 @@
+.college-page section {
+  padding: 100px 0;
+}
+
+.college-page h3 {
+  font-weight: 400;
+}
+
+.college-hero {
+  background-color: #EB1F2E;
+  color: #ffffff;
+}
+
+.college-hero .container {
+  padding-right: 30%;
+}
+
+.college-hero p {
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+.college-what__items,
+.college-get__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.college-what__item,
+.college-get__item {
+  flex: 1;
+}
+
+.college-signup {
+  background-color: #EB1F2E;
+  color: #ffffff;
+  text-align: center
+}
+
+.college-signup p {
+  font-size: 32px;
+  
+}
