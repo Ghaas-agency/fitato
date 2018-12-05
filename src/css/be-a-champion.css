@@ -2,9 +2,14 @@
   padding: 100px 0;
 }
 
+@media only screen and (max-width: 767px) {
+  .college-page section {
+    padding: 50px 0;
+  }
+}
+
 .college-page h1,
-.college-page h2,
-.college-page h3 {
+.college-page h2 {
   font-style: italic;
 }
 
@@ -16,29 +21,137 @@
 .college-page ul,
 .college-page ol,
 .college-page a {
-  line-height: 1.2em;
+  line-height: 1.4em;
   font-size: 18px;
 }
 
-.college-hero {
+section.college-hero {
   background-color: #EB1F2E;
   color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  background-position: center;
+  min-height: 700px;
 }
 
-.college-hero .container {
-  padding-right: 30%;
+section.college-hero .button-inverted {
+  font-size: 20px;
+  padding: 12px 30px;
+  margin-left: 0;
+  margin-right: 0
+}
+
+.college-hero__wrapper {
+  width: 60%;
+  margin-left: 40%;
+}
+
+.college-hero h1 {
+  font-size: 3.25em;
 }
 
 .college-hero p {
-  font-size: 56px;
-  margin-top: 30px;
-  font-style: italic;
+  font-size: 36px;
+  margin-top: 200px;
   line-height: 1.1;
-  font-weight: 700;
+}
+
+@media only screen and (max-height: 750px) {
+  section.college-hero {
+    padding: 100px 0;
+    min-height: 600px;
+  }
+
+  .college-hero p {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .college-hero h1 {
+    font-size: 2.75em;
+  }
+  
+  .college-hero p {
+    margin-top: 150px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 979px) {
+  .college-hero h1 {
+    font-size: 2.2em;
+    margin-top: 50px
+  }
+  
+  .college-hero p {
+    margin-top: 150px;
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section.college-hero {
+    padding-top: 50px;
+    background-position: 40% center;
+  }
+
+  .college-hero__wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .college-hero h1 {
+    font-size: 2em;
+    margin-top: 0px
+  }
+  
+  .college-hero p {
+    font-size: 26px;
+    margin-top: 300px;
+    margin-left: 80px;
+  }
+  
+  section.college-hero .button-inverted {
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section.college-hero {
+    padding-bottom: 50px;
+    background-position: 30% center;
+  }
+
+  .college-hero h1 {
+    font-size: 1.7em;
+  }
+
+  .college-hero p {
+    font-size: 24px;
+    margin-top: 300px;
+    margin-left: 60px;
+  }
+
+  section.college-hero .button-inverted {
+    margin-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .college-hero h1 {
+    font-size: 1.5em;
+  }
+
+  .college-hero p {
+    font-size: 24px;
+    margin-top: 270px;
+  }
 }
 
 .college-what__items,
-.college-get__items {
+.college-be__items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -48,9 +161,9 @@
 }
 
 .college-what__item,
-.college-get__item {
+.college-be__item {
   flex: 1;
-  padding: 30px 50px;
+  padding: 40px;
   padding-bottom: 15px;
   margin: 20px;
   background-color: #ffffff;
@@ -64,6 +177,12 @@
   transition: all 0.2s ease-in-out;
 }
 
+.college-what__item {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+}
+
 .college-what__item:hover,
 .college-get__item:hover {
   -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
@@ -71,16 +190,29 @@
   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
 }
 
-.college-who {
+.college-what__item img {
+  max-height: 70px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+section.college-who {
   background-color: #1e1e1e;
   color: #ffffff;
+  padding-top: 50px;
 }
 
 .college-who p,
-.college-be p {
-  font-size: 26px;
+.college-be p,
+.college-get p {
+  font-size: 24px;
   line-height: 1.5em;
-  width: 80%
+  width: 85%;
+  color: #ffffff;
+}
+
+.college-be__item p {
+  color: #1e1e1e;
 }
 
 section.college-what {
@@ -89,10 +221,9 @@ section.college-what {
   overflow: hidden;
   position: relative;
   background-color: #EB1F2E;
-}
-
-section.college-what {
-  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .college-what h2 {
@@ -115,7 +246,7 @@ section.college-what {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 300px 0 0 1800px;
+  border-width: 250px 0 0 1800px;
   border-color: transparent transparent transparent #1e1e1e;
   z-index: 0;
 }
@@ -128,21 +259,25 @@ section.college-be {
 
 section.college-get {
   background-color: #EB1F2E;
-  padding-bottom: 0
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 section.college-get h2 {
   color: #ffffff;
 }
 
 section.college-signup {
-  background-color: #EB1F2E;
+  background-color: #1e1e1e;
   text-align: center;
-  padding-top: 50px
+  padding-top: 100px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #363636;
 }
 
-.college-signup p {
+.college-signup h2 {
   color: #ffffff;
-  font-size: 32px;
   font-weight: 700;
   font-style: italic;
 }
@@ -180,13 +315,36 @@ section.college-signup {
   padding: 12px 20px;
 }
 
+.college-signup__contact {
+  padding-top: 50px;
+}
+
+.college-signup__contact p {
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.college-signup__contact p a {
+  line-height: 1.7em
+}
+
 @media (max-width: 767px) {
+  section.college-signup {
+    padding-top: 50px;
+  }
+
   .college-signup--form {
     width: 90%;
   }
 
   .college-who p,
-  .college-be p {
+  .college-be p,
+  .college-get p {
     font-size: 20px;
     line-height: 1.5em;
     width: 100%

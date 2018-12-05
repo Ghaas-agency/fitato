@@ -12,7 +12,11 @@ import '../css/index.css'
 
 const HomePage = () => (
   <Layout>
-    <Helmet title="Fitato&reg;: Fitness for the Intelligent Indian" />
+    <Helmet title="Fitato&reg;: Fitness for the Intelligent Indian"
+    style={[{
+      "cssText": `.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}')}@media (max-width: 767px) {.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}}`
+    }]}
+    />
     <div className="home-page">
       
       <div className="index-section-hero">
@@ -30,10 +34,6 @@ const HomePage = () => (
         </div>
       </div>
       
-      <style dangerouslySetInnerHTML={{
-        __html: `.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}')}@media (max-width: 767px) {.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}}`
-      }}/>
-
       <div className="index-section-pass" /* style={{backgroundImage: 'url(' + withPrefix('/static/gradient-bg.png') + ')'}} */>
         <div className="container">
           <div className="align-center">
