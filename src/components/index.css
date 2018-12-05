@@ -817,6 +817,10 @@ select {
   color: #EB1F2E;
 }
 
+.yellow {
+  color: #f6ea15;
+}
+
 .align-center {
   text-align: center;
 }
