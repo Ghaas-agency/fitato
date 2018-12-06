@@ -10,6 +10,12 @@ const NotFoundPage = () => (
         title="404 - Page Not Found - Fitato"
       >
         <meta name="description" content="This is just a 404 - Page Not Found page." />
+        <meta itemprop="name" content="404 - Page Not Found - Fitato"/>
+        <meta itemprop="description" content="This is just a 404 - Page Not Found page."/>
+        <meta name="twitter:title" content="404 - Page Not Found - Fitato"/>
+        <meta name="twitter:description" content="This is just a 404 - Page Not Found page."/>
+        <meta name="og:title" content="404 - Page Not Found - Fitato"/>
+        <meta name="og:description" content="This is just a 404 - Page Not Found page."/>
       </Helmet>
       <div className="container">
         <img src={withPrefix('/static/icons/confused.svg')} alt="confused" width="100"/>

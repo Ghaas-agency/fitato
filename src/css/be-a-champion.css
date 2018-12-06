@@ -211,8 +211,14 @@ section.college-who {
   color: #ffffff;
 }
 
+.college-be__item h3 {
+  padding-right: 25%;
+  line-height: 1.3em;
+  margin-bottom: 15px;
+}
+
 .college-be__item p {
-  color: #1e1e1e;
+  color: #363636;
 }
 
 section.college-what {
@@ -224,6 +230,7 @@ section.college-what {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: #363636;
 }
 
 .college-what h2 {

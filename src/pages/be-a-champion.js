@@ -19,6 +19,12 @@ const CollegePage = () => (
           }]}
         >
           <meta name="description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus." />
+          <meta itemprop="name" content="Represent Fitato On You Campus | Fitato Champion"/>
+          <meta itemprop="description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
+          <meta name="twitter:title" content="Represent Fitato On You Campus | Fitato Champion"/>
+          <meta name="twitter:description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
+          <meta name="og:title" content="Represent Fitato On You Campus | Fitato Champion"/>
+          <meta name="og:description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
         </Helmet>
         
         <section className="college-hero">
@@ -80,8 +86,7 @@ const CollegePage = () => (
 
         <section className="college-be">
           <div className="container">
-            <h2>Who can be a <br/><span className="yellow">#FitatoCampusChampion</span>?</h2>
-            <p>A campus champion should be an active college student with a strong passion for fitness and a desire to make people’s lives healthier. The student should be available for two months (December and January).</p>
+            <h2>What would you do?</h2>
             <div className="college-be__items">
               <div className="college-be__item">
                 <h3>Expand the Fitness Revolution Offline</h3>

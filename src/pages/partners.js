@@ -14,6 +14,12 @@ const PartnersPage = () => (
       title="Fitato Partners"
     >
       <meta name="description" content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more." />
+      <meta itemprop="name" content="Fitato Partners"/>
+      <meta itemprop="description" content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."/>
+      <meta name="twitter:title" content="Fitato Partners"/>
+      <meta name="twitter:description" content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."/>
+      <meta name="og:title" content="Fitato Partners"/>
+      <meta name="og:description" content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."/>
     </Helmet>
     <div className="partners-page">
       <div className="container">

@@ -10,6 +10,12 @@ const DownloadPage = () => (
       title="Fitato App For Android & iOS | Download For Free"
     >
       <meta name="description" content="Download the Fitato App. A single pass to access all our partner fitness facilities. Fitness, redefined!" />
+      <meta itemprop="name" content="Fitato App For Android & iOS | Download For Free"/>
+      <meta itemprop="description" content="Download the Fitato App. A single pass to access all our partner fitness facilities. Fitness, redefined!"/>
+      <meta name="twitter:title" content="Fitato App For Android & iOS | Download For Free"/>
+      <meta name="twitter:description" content="Download the Fitato App. A single pass to access all our partner fitness facilities. Fitness, redefined!"/>
+      <meta name="og:title" content="Fitato App For Android & iOS | Download For Free"/>
+      <meta name="og:description" content="Download the Fitato App. A single pass to access all our partner fitness facilities. Fitness, redefined!"/>
     </Helmet>
     <div className="download-page align-center">
       <div className="container">

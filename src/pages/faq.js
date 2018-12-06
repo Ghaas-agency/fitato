@@ -11,6 +11,12 @@ const FAQPage = () => (
         title="Frequently Asked Questions | Fitato"
       >
         <meta name="description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types." />
+        <meta itemprop="name" content="Frequently Asked Questions | Fitato"/>
+        <meta itemprop="description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
+        <meta name="twitter:title" content="Frequently Asked Questions | Fitato"/>
+        <meta name="twitter:description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
+        <meta name="og:title" content="Frequently Asked Questions | Fitato"/>
+        <meta name="og:description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
         <link rel="canonical" href="https://www.fitato.fit/faqs/"/>
       </Helmet>
       <div className="faq-page" style={{paddingTop: '50px', paddingBottom: '50px'}}>

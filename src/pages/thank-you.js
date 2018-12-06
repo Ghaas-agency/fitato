@@ -10,6 +10,12 @@ const ThankYouPage = () => (
         title="Thank You for Getting in Touch"
       >
         <meta name="description" content="Thank you for contact us. We'll get back to you soon." />
+        <meta itemprop="name" content="Thank You for Getting in Touch"/>
+        <meta itemprop="description" content="Thank you for contact us. We'll get back to you soon."/>
+        <meta name="twitter:title" content="Thank You for Getting in Touch"/>
+        <meta name="twitter:description" content="Thank you for contact us. We'll get back to you soon."/>
+        <meta name="og:title" content="Thank You for Getting in Touch"/>
+        <meta name="og:description" content="Thank you for contact us. We'll get back to you soon."/>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="container">

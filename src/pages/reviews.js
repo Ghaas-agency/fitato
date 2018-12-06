@@ -15,6 +15,12 @@ const ReviewsPage = () => (
         title="Fitato Reviews | Let's Hear From Our Users"
       >
         <meta name="description" content="We've already got thousands of people enjoying their fitato passes to the fullest. Let's hear from some of them!" />
+        <meta itemprop="name" content="Fitato Reviews | Let's Hear From Our Users"/>
+        <meta itemprop="description" content="We've already got thousands of people enjoying their fitato passes to the fullest. Let's hear from some of them!"/>
+        <meta name="twitter:title" content="Fitato Reviews | Let's Hear From Our Users"/>
+        <meta name="twitter:description" content="We've already got thousands of people enjoying their fitato passes to the fullest. Let's hear from some of them!"/>
+        <meta name="og:title" content="Fitato Reviews | Let's Hear From Our Users"/>
+        <meta name="og:description" content="We've already got thousands of people enjoying their fitato passes to the fullest. Let's hear from some of them!"/>
       </Helmet>
       <div className="reviews-page-header align-center" /* style={{backgroundImage: 'url(' + withPrefix('/static/reviews/reviews-header.jpg') + ')'}} */>
         <div className="container">
