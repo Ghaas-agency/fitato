@@ -28,6 +28,9 @@
 section.college-hero {
   background-color: #EB1F2E;
   color: #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 120px 0;
@@ -72,7 +75,7 @@ section.college-hero .button-inverted {
   .college-hero h1 {
     font-size: 2.75em;
   }
-  
+
   .college-hero p {
     margin-top: 150px;
     font-size: 32px;
@@ -84,7 +87,7 @@ section.college-hero .button-inverted {
     font-size: 2.2em;
     margin-top: 50px
   }
-  
+
   .college-hero p {
     margin-top: 150px;
     font-size: 32px;
@@ -106,13 +109,13 @@ section.college-hero .button-inverted {
     font-size: 2em;
     margin-top: 0px
   }
-  
+
   .college-hero p {
     font-size: 26px;
     margin-top: 300px;
     margin-left: 80px;
   }
-  
+
   section.college-hero .button-inverted {
     margin-left: 80px;
   }
@@ -152,8 +155,18 @@ section.college-hero .button-inverted {
 
 .college-what__items,
 .college-be__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 -20px;
   z-index: 2;
@@ -162,11 +175,17 @@ section.college-hero .button-inverted {
 
 .college-what__item,
 .college-be__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   padding: 40px;
   padding-bottom: 15px;
   margin: 20px;
   background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
   -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
@@ -179,19 +198,26 @@ section.college-hero .button-inverted {
 
 .college-what__item {
   text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   min-width: 250px;
 }
 
 .college-what__item:hover,
 .college-get__item:hover {
-  -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
-  -moz-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
 }
 
 .college-what__item img {
-  max-height: 70px;
+  height: 70px;
+  width: 60px;
+  -o-object-fit: contain;
+  object-fit: contain;
   margin: 0;
   margin-bottom: 15px;
 }
@@ -228,6 +254,9 @@ section.college-what {
   position: relative;
   background-color: #EB1F2E;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center;
   color: #363636;
@@ -267,6 +296,9 @@ section.college-be {
 section.college-get {
   background-color: #EB1F2E;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: center;
 }
@@ -294,6 +326,8 @@ section.college-signup {
   padding-bottom: 10px;
   width: 60%;
   margin: 0 auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   margin-top: 30px;
   background-color: #ffffff;
@@ -307,9 +341,9 @@ section.college-signup {
 }
 
 .college-signup--form:hover {
-  -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
-  -moz-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
 }
 
 .college-signup--form input {
