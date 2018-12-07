@@ -34,7 +34,7 @@ const HomePage = () => (
         </div>
       </div>
       
-      <div className="index-section-pass" /* style={{backgroundImage: 'url(' + withPrefix('/static/gradient-bg.png') + ')'}} */>
+      <div className="index-section-pass">
         <div className="container">
           <div className="align-center">
             <h2>Your One-Stop Fitness Solution</h2>
@@ -56,87 +56,44 @@ const HomePage = () => (
         </div>
       </div>
 
-      {/* <div className="index-section-how">
-        <div className="container">
-          <h2>How It Works</h2>
-          <div className="index-section-how__steps">
-            <div className="index-section-how__step">
-              <img src={withPrefix('/static/index/section-four-1.png')} height="450" width="auto" alt="fitato app membership screenshot" />
-              <h3>Get a Fitato Membership</h3>
-              <p>Click on the 'Buy Pass' button on the home screen of the app. Choose a membership plan, pay for it and you're good to go.</p>
-            </div>
-            <div className="index-section-how__step">
-              <img src={withPrefix('/static/index/section-four-2.png')} height="450" width="auto" alt="fitato app activities screenshot" />
-              <h3>Choose Your Adventure</h3>
-              <p>Scroll through our categories, and choose your choice of workout. Pick from the Highest Rated Gyms, MMA, Zumba and much more.</p>
-            </div>
-            <div className="index-section-how__step">
-              <img src={withPrefix('/static/index/section-four-3.png')} height="450" width="auto" alt="fitato app reserve screenshot" />
-              <h3>Reserve Your Activity</h3>
-              <p>Reserve the activity and you’ll get an access code. Share that code at the facility you’re visiting, and that’s it. You’re ready to sweat it out!</p>
-            </div>
-          </div>
-          <AppIcons btnClass="f-ai-index-how" />
-        </div>
-      </div> */}
-
       <div className="index-section-plans">
         <Plans />
       </div>
 
-      {/* <div className="index-section-partners">
-        <div className="container">
-          <h2 className="align-center">One Pass - Limitless Possibilities</h2>
-          <h3 style={{fontWeight: 'normal', textAlign: 'center'}}>#FitatoTrending</h3>
-          <div className="index-section-partners__items">
-            <div className="index-section-partners__item">
-              <img src={withPrefix('/static/index/partners/evolve-fitness.jpg')} alt="evolve fitness" />
-              <p>Evolve Fitness, Wanowrie<br />Gym: 6AM - 11PM<br /><span className="red">95 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item">
-              <img src={withPrefix('/static/index/partners/recomp.jpg')} alt="recomp" />
-              <p>Recomp Fitness, Koregaon Park<br />Gym: 6AM - 11PM<br /><span className="red">97 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item">
-              <img src={withPrefix('/static/index/partners/multifit.jpg')} alt="multifit" />
-              <p>MultiFit, Pimple Nilakh<br />Functional Training: 8PM - 9PM<br /><span className="red">33 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item hide-in-small">
-              <img src={withPrefix('/static/index/partners/blitz.jpg')} alt="blitz athletics" />
-              <p>Blitz Athletics, Baner<br />Mixed Martial Arts: 6:30PM - 7:30PM<br /><span className="red">21 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item hide-in-small">
-              <img src={withPrefix('/static/index/partners/crossfit.jpg')} alt="crossfit graybar" />
-              <p>CrossFit Graybar, Chandan Nagar<br />Crossfit: 7AM - 11AM<br /><span className="red">11 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item hide-in-small">
-              <img src={withPrefix('/static/index/partners/firstfitt.jpg')} alt="firstfitt" />
-              <p>FirstFitt, Viman Nagar<br />Gym &amp; Circuit Training: 6AM - 11PM<br /><span className="red">123 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item hide-in-small">
-              <img src={withPrefix('/static/index/partners/capoeira.jpg')} alt="capoeira pune" />
-              <p>Capoeira Pune, Kalyani Nagar<br />Mixed Martial Arts: 7:45PM - 8:45PM<br /><span className="red">7 Fitato Clan Members Going</span></p>
-            </div>
-            <div className="index-section-partners__item hide-in-small">
-              <img src={withPrefix('/static/index/partners/shree.jpg')} alt="shree gym" />
-              <p>Shree Gym, Chandan Nagar<br />Swimming: 7AM - 9PM<br /><span className="red">21 Fitato Clan Members Going</span></p>
-            </div>
-          </div>
-          <div className="align-center">
-            <h4 style={{fontWeight: 'normal'}}>1000+ Fitness Activities - One Pass To All</h4>
-            <Link to="/partners/" className="button-inverted">View all our facilities</Link>
-          </div>
-        </div>
-      </div> */}
-
       <div className="index-section-partners">
         <div className="container">
-          <h2>Our Featured Partners</h2>
+          <h2>Our Featured Facilities</h2>
           <div className="index-section-partners__items">
             <div className="index-section-partners__item">
-              <img src="" alt=""/>
+              <img src={withPrefix('/static/partners/featured/blitz-athletics.jpg')} alt="blitz athletics" title="Blitz Athletics"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/crossfit-graybar.jpg')} alt="crossfit graybar" title="Crossfit Graybar"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/endure-fitness-club.jpg')} alt="endure fitness club" title="Endure Fitness Club"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/evolve-fitness.jpg')} alt="evolve fitness" title="Evolve Fitness"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/golds-gym.jpg')} alt="gold's gym" title="Gold's Gym"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/multifit.jpg')} alt="multifit" title="MultiFit"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/recomp.jpg')} alt="recomp fitness" title="Recomp Fitness"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/talkwalkers.jpg')} alt="talkwalker's" title="Talkwalker's"/>
+            </div>
+            <div className="index-section-partners__item">
+              <img src={withPrefix('/static/partners/featured/urbounce.jpg')} alt="urbounce" title="Urbounce"/>
             </div>
           </div>
+          <p>...and many more.</p>
+          <Link to="/partners/" className="button">Explore Facilities</Link>
         </div>
       </div>
 

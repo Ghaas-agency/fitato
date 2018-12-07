@@ -1,0 +1,62 @@
+.works-hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.works-hero .container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #efefef;
+}
+
+.works-hero p {
+  margin: 0;
+  font-size: 22px;
+  padding-right: 15%;
+  padding-left: 15%;
+  line-height: 1.5em;
+}
+
+@media only screen and (max-width: 767px) {
+  .works-hero p {
+    padding-right: 0%;
+    padding-left: 0%;
+  }
+}
+
+.works-steps {
+  padding: 50px 0;
+}
+
+.works-steps--step {
+  padding: 7px 7px 5px 7px;
+  font-size: 15px;
+  border: 1px solid #EB1F2E;
+  color: #EB1F2E;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1em;
+  border-radius: 3px;
+}
+
+.works-steps__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-steps__item {
+  flex: 1;
+  min-width: 275px;
+}
+
+.works-steps__item p {
+  margin-bottom: 15px;
+}
+
+.works-steps__item--center {
+  text-align: center;
+}
