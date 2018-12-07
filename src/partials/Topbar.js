@@ -55,7 +55,9 @@ class Topbar extends React.Component {
         style={(this.state.showTopbar) ? displayBlock : displayNone}
       >
         <div className="container">
-          <div className="partial-topbar-close" onClick={this.handleClose}>X</div>
+          <div className="partial-topbar-close" onClick={this.handleClose}>
+            <img src={withPrefix('/static/icons/close.svg')} alt="close"/>
+          </div>
           <p>
             <img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/>
             <Link to="/partners/#hyderabad" onClick={this.handleClose}>

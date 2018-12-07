@@ -1342,14 +1342,6 @@ input[type="submit"]:focus {
   color: #ffffff;
   text-align: center;
   padding: 15px 0;
-  /* -webkit-animation-name: disappear;
-  -moz-animation-name: disappear;
-  -o-animation-name: disappear;
-  animation-name: disappear;
-  -webkit-animation-duration: 0.3s;
-  -moz-animation-duration: 0.3s;
-  -o-animation-duration: 0.3s;
-  animation-duration: 0.3s; */
 }
 
 .partial-topbar p {
@@ -1371,22 +1363,25 @@ input[type="submit"]:focus {
 .partial-topbar-close {
   float: right;
   margin-top: 4px;
-  padding: 2px;
+  padding: 3px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #eeeeee;
+  border: 2px solid #eeeeee;
   width: 30px;
   height: 30px;
   font-size: 0.7em;
-  color: #eeeeee;
   cursor: pointer;
   text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.75;
 }
 
 .partial-topbar-close:hover {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  opacity: 1;
 }
 
 @-webkit-keyframes disappear {
@@ -1579,14 +1574,14 @@ input[type="submit"]:focus {
   cursor: pointer;
   width: 27px;
   height: 27px;
-  border: 1px solid #767676;
+  border: 2px solid #1e1e1e;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   margin: 0;
-  padding: 0 7px;
+  padding: 3px;
+  opacity: 0.6;
   vertical-align: middle;
-  color: #767676;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -1594,8 +1589,7 @@ input[type="submit"]:focus {
 }
 
 .partial-signup-popup__content--close:hover {
-  color: #0a0a0a;
-  border-bottom-color: #0a0a0a;
+  opacity: 1;
 }
 
 @media (max-width: 767px) {

@@ -203,7 +203,7 @@ section.college-hero .button-inverted {
   -moz-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 250px;
+  min-width: 275px;
 }
 
 .college-what__item:hover,
@@ -245,6 +245,7 @@ section.college-who {
 
 .college-be__item p {
   color: #363636;
+  width: 100%;
 }
 
 section.college-what {
@@ -375,6 +376,10 @@ section.college-signup {
 }
 
 @media (max-width: 767px) {
+  .college-be__item h3 {
+    padding-right: 0%;
+  }
+
   section.college-signup {
     padding-top: 50px;
   }

@@ -43,7 +43,7 @@ const HomePage = () => (
             <p>Take your pick from Yoga, Zumba, MMA, CrossFit, Swimming, Strength Training and plenty more.</p>
             <p>Workout in any of our 300+ fitness studios spread across your city with one single Fitato Pass. Everything at the cost of one membership.</p>
             <p>Fitato is the most holistic approach to fitness out there! Join us and be a part of our Fitness Revolution!</p>
-            <Link to="/partners/" className="button" style={{marginLeft: '0'}}>Explore our Facilities</Link>
+            <Link to="/how-it-works/" className="button" style={{marginLeft: '0'}}>Learn how it works</Link>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const HomePage = () => (
         </div>
       </div>
 
-      <div className="index-section-how"/*  style={{backgroundImage: 'url(' + withPrefix('/static/index/index-section-how.webp') + ')'}} */>
+      {/* <div className="index-section-how">
         <div className="container">
           <h2>How It Works</h2>
           <div className="index-section-how__steps">
@@ -78,13 +78,13 @@ const HomePage = () => (
           </div>
           <AppIcons btnClass="f-ai-index-how" />
         </div>
-      </div>
+      </div> */}
 
       <div className="index-section-plans">
         <Plans />
       </div>
 
-      <div className="index-section-partners">
+      {/* <div className="index-section-partners">
         <div className="container">
           <h2 className="align-center">One Pass - Limitless Possibilities</h2>
           <h3 style={{fontWeight: 'normal', textAlign: 'center'}}>#FitatoTrending</h3>
@@ -125,6 +125,17 @@ const HomePage = () => (
           <div className="align-center">
             <h4 style={{fontWeight: 'normal'}}>1000+ Fitness Activities - One Pass To All</h4>
             <Link to="/partners/" className="button-inverted">View all our facilities</Link>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="index-section-partners">
+        <div className="container">
+          <h2>Our Featured Partners</h2>
+          <div className="index-section-partners__items">
+            <div className="index-section-partners__item">
+              <img src="" alt=""/>
+            </div>
           </div>
         </div>
       </div>

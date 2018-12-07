@@ -32,7 +32,7 @@ class SignupPopup extends React.Component {
   }
 
   handlePopupClose = e => {
-    if(e.target.className === 'partial-signup-popup' || e.target.className === 'partial-signup-popup__content--close') {
+    if(e.target.className === 'partial-signup-popup' || e.target.className === 'partial-signup-popup__content--close' || e.target.parentElement.className === 'partial-signup-popup__content--close') {
       this.setState({showPopup: false});
       this.setSessionStorage();
     }
@@ -42,7 +42,7 @@ class SignupPopup extends React.Component {
     if(this.sessionStorageCheck()) {
       setTimeout(() => {
         this.setState({showPopup: true});
-      }, 10000);
+      }, 1000);
     }
   }
 
@@ -58,7 +58,7 @@ class SignupPopup extends React.Component {
             <span 
               className="partial-signup-popup__content--close"
               onClick={this.handlePopupClose}
-            >X</span>
+            ><img src={withPrefix('/static/icons/close-dark.svg')} alt="close"/></span>
             <div className="partial-signup-popup__items">
               <div className="partial-signup-popup__item-left" style={{backgroundImage: 'url(' + withPrefix('/static/fitato-discover.jpg') + ')'}}></div>
               <div className="partial-signup-popup__item-right">
