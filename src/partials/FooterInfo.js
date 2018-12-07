@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import SocialLinks from './SocialLinks'
 import ContactLinks from './ContactLinks'
 
 const FooterInfo = () => (
-  <div className="footer-info" style={{backgroundImage: 'url(' + withPrefix('/static/footer-bg.webp') + ')'}}>
+  <div className="footer-info">
     <div className="container">
       <div className="footer-info__col1">
         <h4>Do You Own a Fitness Facility? Become a Partner</h4>

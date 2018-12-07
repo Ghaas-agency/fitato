@@ -29,14 +29,17 @@ class HowItWorksPage extends React.Component {
         <div className="works-page">
           <Helmet
             title="How It Works | Fitato"
+            style={[{
+              "cssText": `.works-hero {background-image: url('${withPrefix('/static/how-it-works/fitato-how-it-works-hero-bg.jpg')}')}`
+            }]}
           >
-            <meta name="description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here." />
+            <meta name="description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works." />
             <meta itemprop="name" content="How It Works | Fitato"/>
-            <meta itemprop="description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
+            <meta itemprop="description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
             <meta name="twitter:title" content="How It Works | Fitato"/>
-            <meta name="twitter:description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
+            <meta name="twitter:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
             <meta name="og:title" content="How It Works | Fitato"/>
-            <meta name="og:description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
+            <meta name="og:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
           </Helmet>
     
           <section className="works-hero">

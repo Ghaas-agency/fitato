@@ -1,26 +1,47 @@
 .works-hero {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.works-hero .container {
-  padding-top: 75px;
-  padding-bottom: 75px;
-  background-color: #efefef;
+  padding-top: 120px;
+  padding-bottom: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .works-hero p {
   margin: 0;
   font-size: 22px;
-  padding-right: 15%;
-  padding-left: 15%;
+  padding-right: 50%;
   line-height: 1.5em;
 }
 
+
 @media only screen and (max-width: 767px) {
+  .works-hero {
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  .works-hero p {
+    padding-right: 35%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .works-hero {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background-position: 60% bottom;
+    background-size: 150%;
+  }
+
   .works-hero p {
     padding-right: 0%;
-    padding-left: 0%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .works-hero {
+    background-position: 60% bottom;
+    background-size: 170%;
   }
 }
 
