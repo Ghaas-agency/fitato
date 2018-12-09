@@ -72,10 +72,10 @@ export default ({ children }) => (
           {children}
         </main>
         <Footer />
-        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic'});`,
+            __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic',updateURL: false});`,
           }}
         />
         <script

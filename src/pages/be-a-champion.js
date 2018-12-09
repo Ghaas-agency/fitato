@@ -151,7 +151,7 @@ const CollegePage = () => (
 
       </div>
     </Layout>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js" />
     <script
       dangerouslySetInnerHTML={{
         __html: `var scroll = new SmoothScroll('a[href*="#"]', {updateURL: false,easing: 'easeInOutCubic'});`,

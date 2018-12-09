@@ -1384,6 +1384,7 @@ input[type="submit"]:focus {
   opacity: 1;
 }
 
+
 @-webkit-keyframes disappear {
   from {
     opacity: 0;
@@ -1457,8 +1458,12 @@ input[type="submit"]:focus {
 
   .partial-topbar img {
     float: left;
-    margin: 20px;
+    margin: 10px 15px;
     margin-left: 0;
+  }
+  
+  .partial-topbar-close img {
+    margin: 0
   }
 }
 

@@ -1,26 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link, withPrefix } from 'gatsby'
+import { withPrefix } from 'gatsby'
 import FooterInfo from '../partials/FooterInfo'
 import SignupPopup from '../partials/SignupPopup'
+import DownloadSwipe from '../partials/DownloadSwipe'
 import Layout from '../components/index'
 
 import '../css/how-it-works.css'
 
-/* const displayBlock = {
-  display: 'block'
-}
-
-const displayNone = {
-  display: 'none'
-}
-
-const navActive = {
-  backgroundColor: '#EB1F2E',
-  color: '#ffffff',
-  border: '1px solid #EB1F2E'
-}
- */
 class HowItWorksPage extends React.Component {
 
   render() {
@@ -56,8 +43,7 @@ class HowItWorksPage extends React.Component {
                   <p className="works-steps--step">Step 1</p>
                   <h2>Get The Fitato App</h2>
                   <p>Fitato membership is only accessible with the Fitato app. The apps are available on both Android and iOS.</p>
-                  <p>Don’t have the app yet?</p>
-                  <Link to="/download/" className="button" style={{marginLeft: '0'}}>Download Now</Link>
+                  <p>Don’t have the app yet? <a href="#downloadnow">Download now.</a></p>
                 </div>
                 <div className="works-steps__item--right">
                   <img src={withPrefix('/static/how-it-works/fitato-how-it-works-step-1.jpg')} alt="how fitato app works download the app"/>
@@ -94,6 +80,10 @@ class HowItWorksPage extends React.Component {
                 </div>
               </div>
             </div>
+          </section>
+
+          <section id="downloadnow">
+            <DownloadSwipe btnClass="f-ai-index-download" />
           </section>
           
           <FooterInfo />
