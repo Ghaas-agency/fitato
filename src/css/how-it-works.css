@@ -195,7 +195,6 @@
 
 @media only screen and (max-width: 767px) {
   .works-steps__items {
-    margin-bottom: 50px;
     text-align: center
   }
 
@@ -222,7 +221,7 @@
   }
 
   .works-steps__item--right img {
-    max-width: 300px;
+    max-width: 250px;
     margin-top: 10px;
   }
 

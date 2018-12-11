@@ -90,7 +90,7 @@ class Header extends Component {
               <Link to="/how-it-works/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>How It Works</Link>
               <Link to="/partners/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Facilities</Link>
               <Link to="/purchase-fitato/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Pricing</Link>
-              <a href="http://blog.fitato.fit" target="_blank" rel="noopener noreferrer" className="menu-link-item">Blog</a>
+              <a href="https://blog.fitato.fit" target="_blank" rel="noopener noreferrer" className="menu-link-item">Blog</a>
               <Link to="/contact-us/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>Contact Us</Link>
               <Link to="/faqs/" className="menu-link-item" activeClassName="menu-link-item-active" onClick={this.handleMenuClick}>FAQ</Link>
               <Link to="/download/" className="button" onClick={this.handleMenuClick}
