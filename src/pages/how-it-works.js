@@ -16,6 +16,16 @@ const displayNone = {
   display: 'none'
 }
 
+const greyed = {
+  backgroundColor: '#aaaaaa',
+  borderColor: '#aaaaaa'
+}
+
+const notGreyed = {
+  backgroundColor: '#EB1F2E',
+  borderColor: '#EB1F2E'
+}
+
 class HowItWorksPage extends React.Component {
   state = {
     howToPosition: 1
@@ -30,6 +40,20 @@ class HowItWorksPage extends React.Component {
       this.setState({howToPosition: 3});
     } else if(e.target.id === 'step-4') {
       this.setState({howToPosition: 4});
+    }
+  }
+
+  handleNavClick = e => {
+    let current = this.state.howToPosition;
+
+    if(e.target.className === 'work-steps--nav-left' || e.target.parentElement.className === 'work-steps--nav-left') {
+      if(current > 1) {
+        this.setState({howToPosition: (current - 1)});
+      }
+    } else if(e.target.className === 'work-steps--nav-right' || e.target.parentElement.className === 'work-steps--nav-right') {
+      if(current < 4) {
+        this.setState({howToPosition: (current + 1)});
+      }
     }
   }
 
@@ -60,7 +84,21 @@ class HowItWorksPage extends React.Component {
           </section>
 
           <section className="works-steps">
-            <div className="container">
+            <div className="container work-steps-container">
+              <div 
+                className="work-steps--nav-left"
+                onClick={this.handleNavClick}
+                style={(this.state.howToPosition < 2) ? greyed : notGreyed}
+                >
+                <img src={withPrefix('/static/icons/arrow-back-white.svg')} alt="arrow back"/>
+              </div>
+              <div 
+                className="work-steps--nav-right" 
+                onClick={this.handleNavClick}
+                style={(this.state.howToPosition > 3) ? greyed : notGreyed}
+                >
+                <img src={withPrefix('/static/icons/arrow-forward-white.svg')} alt="arrow forward"/>
+              </div>
               <div 
                 className="works-steps__items" 
                 style={(this.state.howToPosition === 1) ? displayBlock : displayNone}>
