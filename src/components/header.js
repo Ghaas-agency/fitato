@@ -57,7 +57,7 @@ class Header extends Component {
   }
 
   updateMenuToggle = () => {
-    if(this.state.windowWidth > 767) {
+    if(this.state.windowWidth > 791) {
       this.setState({ toggleMenu: true, toggleMenuBg: false });
     } else {
       this.setState({ toggleMenu: false, toggleMenuBg: false });
