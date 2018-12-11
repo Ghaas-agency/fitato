@@ -38,23 +38,23 @@ class HowItWorksPage extends React.Component {
       <Layout>
         <div className="works-page">
           <Helmet
-            title="How It Works | Fitato"
+            title="How Fitato Works | Flexibility At Your Fingertips"
             style={[{
               "cssText": `.works-hero {background-image: url('${withPrefix('/static/how-it-works/fitato-how-it-works-hero-bg.jpg')}')}@media (max-width: 480px) {.works-hero {background-image: url('${withPrefix('/static/how-it-works/fitato-how-it-works-hero-bg-mobile.jpg')}')}}`
             }]}
           >
             <meta name="description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works." />
-            <meta itemprop="name" content="How It Works | Fitato"/>
+            <meta itemprop="name" content="How Fitato Works | Flexibility At Your Fingertips"/>
             <meta itemprop="description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
-            <meta name="twitter:title" content="How It Works | Fitato"/>
+            <meta name="twitter:title" content="How Fitato Works | Flexibility At Your Fingertips"/>
             <meta name="twitter:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
-            <meta name="og:title" content="How It Works | Fitato"/>
+            <meta name="og:title" content="How Fitato Works | Flexibility At Your Fingertips"/>
             <meta name="og:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
           </Helmet>
     
           <section className="works-hero">
             <div className="container">
-              <h1>How It Works</h1>
+              <h1>Flexibility At Your Fingertips</h1>
               <p>Fitato is your single membership to access the best gyms and fitness studios in your city. Welcome to your Fitness Freedom.</p>
             </div>
           </section>

@@ -16,6 +16,21 @@
   line-height: 1.5em;
 }
 
+.works-hero h1 {
+  padding-right: 50%;
+  font-size: 58px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 979px) {
+  .works-hero h1 {
+    font-size: 50px;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   .works-hero {
@@ -26,6 +41,10 @@
   .works-hero p {
     padding-right: 50%;
     font-size: 18px;
+  }
+
+  .works-hero h1 {
+    font-size: 40px;
   }
 }
 
@@ -42,6 +61,11 @@
 
   .works-hero p {
     padding-right: 0%;
+  }
+
+  .works-hero h1 {
+    font-size: 34px;
+    padding-right: 0;
   }
 }
 
