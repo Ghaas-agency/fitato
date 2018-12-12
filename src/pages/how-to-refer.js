@@ -53,7 +53,7 @@ class ReferPage extends React.Component {
           <div className="refer-page__hero">
             <div className="container">
               <h1>Share The Wealth, Spread The Joy!</h1>
-              <div className="refer-page__hero-spl">
+              {/* <div className="refer-page__hero-spl">
                 <div className="refer-page__hero-spl--left">
                   <img src={withPrefix('/static/refer/wallet.png')} alt="refer"/>
                 </div>
@@ -62,7 +62,7 @@ class ReferPage extends React.Component {
                   <p>Your Friend Gets 40% Cashback  + 20% OFF</p>
                   <small>Offer valid till 13<sup>th</sup> November 2018</small>
                 </div>
-              </div>
+              </div> */}
               <h3>How To Refer Your Friends</h3>
               <ul className="refer-page__hero-items">
                 <li>

@@ -16,12 +16,16 @@ class SignupPopup extends React.Component {
   }
 
   setSessionStorage = () => {
+    // Set session storage for popup to avoid repetition
+    // during a single session.
     if(!(typeof(sessionStorage) === "undefined")) {
       sessionStorage.setItem('fitato_plan_pop', 'f');
     }
   }
 
   sessionStorageCheck = () => {
+    // Check if session storage item exists to avoid
+    // popup from opening.
     if(!(typeof(sessionStorage) === "undefined")) {
       if(sessionStorage.getItem('fitato_plan_pop') === 'f') {
         return false;
@@ -32,17 +36,40 @@ class SignupPopup extends React.Component {
   }
 
   handlePopupClose = e => {
+    // Close popup on pressing (x) button or outside container.
     if(e.target.className === 'partial-signup-popup' || e.target.className === 'partial-signup-popup__content--close' || e.target.parentElement.className === 'partial-signup-popup__content--close') {
       this.setState({showPopup: false});
       this.setSessionStorage();
     }
   }
 
+  escFunction = e => {
+    // Close popup on pressing escape key.
+    if(e.keyCode === 27) {
+      this.setState({showPopup: false});
+      this.setSessionStorage();
+    }
+  }
+
   componentDidMount() {
+    // Calls function to check if session storage item exists.
+    // If not, then show popup after ten seconds on page load.
     if(this.sessionStorageCheck()) {
       setTimeout(() => {
         this.setState({showPopup: true});
       }, 10000);
+    }
+
+    // Add event listener for keydown event.
+    if(!(typeof(document) === "undefined")) {
+      document.addEventListener("keydown", this.escFunction, false);
+    }
+  }
+
+  componentWillUnmount() {
+    // Remove event listener for keydown event.
+    if(!(typeof(document) === "undefined")) {
+      document.removeEventListener("keydown", this.escFunction, false);
     }
   }
 
