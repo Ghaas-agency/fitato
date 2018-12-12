@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <>
-        <div className="main-header" style={{position: 'relative'}}>
+        <nav className="main-header" style={{position: 'relative'}}>
           <div className="main-header-container" style={{textAlign: 'center'}}>
             <Link className="menu-logo" to="/">
               <img
@@ -16,7 +16,7 @@ class Header extends Component {
               />
             </Link>
           </div>
-        </div>
+        </nav>
       </>
     )
   }

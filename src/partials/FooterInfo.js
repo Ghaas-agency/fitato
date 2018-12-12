@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks'
 import ContactLinks from './ContactLinks'
 
 const FooterInfo = () => (
-  <div className="footer-info">
+  <footer className="footer-info">
     <div className="container">
       <div className="footer-info__col1">
         <h4>Do You Own a Fitness Facility? Become a Partner</h4>
@@ -28,7 +28,7 @@ const FooterInfo = () => (
         <SocialLinks cname="footer-social" />
       </div>
     </div>
-  </div>
+  </footer>
 )
 
 export default FooterInfo

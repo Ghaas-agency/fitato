@@ -75,7 +75,7 @@ class Header extends Component {
     return (
       <>
         <div className="main-header-placeholder" />
-        <div className="main-header">
+        <nav className="main-header">
           <Topbar />
           <div className="main-header-container">
             <img src={withPrefix('/static/icons/menu.svg')} onClick={this.handleMenuClick} className="main-header-menu-icon" alt="menu" />
@@ -108,7 +108,7 @@ class Header extends Component {
             <div className="menu-close-x" onClick={this.handleMenuClick} style={(this.state.toggleMenuBg) ? displayBlock : displayNone}>x</div>
           </div>
           <div className="mobile-menu-bg" style={(this.state.toggleMenuBg) ? displayBlock : displayNone} onClick={this.handleBgClick}></div>
-        </div>
+        </nav>
       </>
     )
   }

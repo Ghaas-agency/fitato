@@ -5,11 +5,11 @@ import '../css/footer.css'
 var d = new Date();
 
 const Footer = () => (
-  <div className="footer-copyright">
+  <footer className="footer-copyright">
     <div className="container">
       <small>&copy; {d.getFullYear()} Fitato Health Solutions Private Limited.</small>
     </div>
-  </div>
+  </footer>
 )
 
 export default Footer
