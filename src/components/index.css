@@ -1387,7 +1387,8 @@ input[type="submit"]:focus {
 img.partial-topbar--arrow {
   width: 20px;
   vertical-align: text-top;
-  margin: 0
+  margin: 0 !important;
+  float: unset !important;
 }
 
 @-webkit-keyframes disappear {
@@ -1463,7 +1464,7 @@ img.partial-topbar--arrow {
 
   .partial-topbar img {
     float: left;
-    margin: 10px 15px;
+    margin: 0px 15px;
     margin-left: 0;
   }
   
