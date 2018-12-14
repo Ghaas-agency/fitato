@@ -13,7 +13,7 @@ const Plans = props => (
           </div>
           <div className="partial-plans__item--content">
             <p>Purchase the Fitato Quarterly pass and get unlimited access to every Fitato partner facility for 3 months!</p>
-            <p className="partial-plans__item--price">&#8377;5499</p>
+            <p className="partial-plans__item--price">&#8377;5,499</p>
           </div>
           <div className="partial-plans__item--cta">
             <a href="https://imjo.in/u76vFn" target="_blank" rel="noopener noreferrer" className="button button-fluid">Buy Now</a>
@@ -25,7 +25,7 @@ const Plans = props => (
           </div>
           <div className="partial-plans__item--content">
             <p>Purchase the Fitato Bi-Monthly pass and get unlimited  access to every Fitato partner facility for 2 months!</p>
-            <p className="partial-plans__item--price">&#8377;3899</p>
+            <p className="partial-plans__item--price">&#8377;3,899</p>
           </div>
           <div className="partial-plans__item--cta">
             <a href="https://imjo.in/TQqWQ9" target="_blank" rel="noopener noreferrer" className="button button-fluid">Buy Now</a>
@@ -37,7 +37,7 @@ const Plans = props => (
           </div>
           <div className="partial-plans__item--content">
             <p>Purchase the Fitato Monthly pass and get unlimited access to every Fitato partner facility for  1 month!</p>
-            <p className="partial-plans__item--price">&#8377;2199</p>
+            <p className="partial-plans__item--price">&#8377;2,199</p>
           </div>
           <div className="partial-plans__item--cta">
             <a href="https://imjo.in/wdS88s" target="_blank" rel="noopener noreferrer" className="button button-fluid">Buy Now</a>

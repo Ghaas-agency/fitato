@@ -1384,6 +1384,11 @@ input[type="submit"]:focus {
   opacity: 1;
 }
 
+img.partial-topbar--arrow {
+  width: 20px;
+  vertical-align: text-top;
+  margin: 0
+}
 
 @-webkit-keyframes disappear {
   from {

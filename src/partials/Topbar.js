@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, withPrefix } from 'gatsby'
+import { /* Link, */ withPrefix } from 'gatsby'
 
 const displayBlock = {
   display: 'block'
@@ -60,9 +60,9 @@ class Topbar extends React.Component {
           </div>
           <p>
             <img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/>
-            <Link to="/partners/#hyderabad" onClick={this.handleClose}>
-            We&apos;re now in Hyderabad. Check out our facility partners.
-            </Link>
+            <a href="https://offer.fitato.fit" target="_blank" rel="noreferrer noopener" onClick={this.handleClose}>
+            Pre Resolution Sale! Buy Fitato Pass at Discounted Rates <img src={withPrefix('/static/icons/arrow-forward-white.svg')} alt="arrow forward white" className="partial-topbar--arrow"/>
+            </a>
           </p>
         </div>
       </div>
