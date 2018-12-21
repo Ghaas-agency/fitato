@@ -68,6 +68,7 @@ export default ({ children }) => (
           {`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}
         </noscript>
         <Header />
+        <div id="particles-js"></div>
         <main>
           {children}
         </main>
@@ -81,6 +82,12 @@ export default ({ children }) => (
         <script
           dangerouslySetInnerHTML={{
             __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,
+          }}
+        />
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.onload = function() {particlesJS("particles-js", {particles: {number: {value: 52,density: {enable: true,value_area: 631.3280775270874}},color: {value: "#ccc"},shape: {type: "circle",stroke: {width: 0,color: "#ffffff"},polygon: {nb_sides: 5},image: {src: "img/github.svg",width: 100,height: 100}},opacity: {value: 0.5,random: true,anim: {enable: false,speed: 1,opacity_min: 0.1,sync: false}},size: {value: 5,random: true,anim: {enable: false,speed: 40,size_min: 0.1,sync: false}},line_linked: {enable: false,distance: 500,color: "#ffffff",opacity: 0.4,width: 2},move: {enable: true,speed: 1.5,direction: "bottom",random: false,straight: false,out_mode: "out",bounce: false,attract: {enable: false,rotateX: 600,rotateY: 1200}}},interactivity: {detect_on: "window",events: {onhover: {enable: false,mode: "bubble"},onclick: {enable: true,mode: "repulse"},resize: true},modes: {grab: {distance: 400,line_linked: {opacity: 0.5}},bubble: {distance: 400,size: 4,duration: 0.3,opacity: 1,speed: 3},repulse: {distance: 200,duration: 0.4},push: {particles_nb: 4},remove: {particles_nb: 2}}},retina_detect: true});}`,
           }}
         />
       </>

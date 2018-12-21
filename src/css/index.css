@@ -147,7 +147,7 @@
 
 .index-section-join {
   text-align: center;
-  background-color: #efefef;
+  background-color: #ffefef;
   padding-top: 50px;
   padding-bottom: 5px;
   margin-top: 25px;
@@ -246,11 +246,12 @@
 .index-section-plans {
   padding-top: 80px;
   padding-bottom: 100px;
-  background-color: #efefef;
+  background-color: #ffefef;
 }
 
 .index-section-partners {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 75px;
   text-align: center;
 }
 
@@ -331,8 +332,7 @@
 }
 
 .index-section-testimonials {
-  padding: 100px 0;
-  background-color: #efefef;
+  padding: 75px 0;
   text-align: center;
 }
 
@@ -358,7 +358,7 @@
   -moz-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 50px;
+  padding: 35px 30px;
   margin: 20px;
   background-color: #ffffff;
   -webkit-border-radius: 5px;
@@ -392,7 +392,6 @@
   }
 
   .index-section-testimonials__item {
-    padding: 30px;
     margin: 20px 10px;
     min-width: 300px;
   }
@@ -425,7 +424,8 @@
 }
 
 .index-section-media {
-  padding: 100px 0;
+  padding-top: 75px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -452,7 +452,7 @@
 }
 
 .index-section-download {
-  background-color: #efefef;
+  background-color: #ffefef;
 }
 
 .index-section-callback {

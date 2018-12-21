@@ -20,7 +20,7 @@
 .main-header-container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0.5em 3%;
+  padding: 7px 3%;
 }
 
 .menu-logo {
@@ -36,8 +36,9 @@
 
 .menu-logo>img {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 0px;
   max-width: 120px;
+  max-height: 62px;
 }
 
 .menu-links {

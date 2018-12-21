@@ -920,6 +920,13 @@ input[type="submit"]:focus {
   margin: 0;
 }
 
+.separator .container {
+  height: 1px;
+  width: 75%;
+  background-color: #eee3e3;
+  margin: 0 auto;
+}
+
 /* Pricing, Download and Contact Pages */
 
 .pricing-page,
@@ -1282,10 +1289,11 @@ input[type="submit"]:focus {
 .partial-download-swipe__right {
   text-align: center;
   padding-bottom: 0;
+  padding-top: 10px;
 }
 
 .partial-download-swipe__right img {
-  max-width: 300px;
+  max-width: 320px;
   margin-bottom: 0;
   vertical-align: middle;
 }
@@ -1682,4 +1690,20 @@ img.partial-topbar--arrow {
 
 .partial-mc-form__main--radio li label {
   margin-left: 10px;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+a, .button, input, textarea {
+  position: relative;
+  z-index: 8;
 }

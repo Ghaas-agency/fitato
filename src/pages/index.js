@@ -97,6 +97,8 @@ const HomePage = () => (
         </div>
       </div>
 
+      <div className="separator"><div className="container"></div></div>
+
       <div className="index-section-testimonials">
         <div className="container">
           <h2>What Our Members Have to Say</h2>
@@ -120,6 +122,8 @@ const HomePage = () => (
           <Link to="/reviews/" className="button-inverted" style={{marginTop: '20px'}}>Read more reviews</Link>
         </div>
       </div>
+
+      <div className="separator"><div className="container"></div></div>
 
       <div className="index-section-media">
         <div className="container">
