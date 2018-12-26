@@ -218,6 +218,7 @@
   .main-header {
     z-index: 9;
   }
+  
 
   .main-header-container {
     padding: 0 3%;
@@ -299,6 +300,7 @@
 
   .main-header-menu-icon {
     display: inline-block;
+    margin-bottom: 15px;
   }
 
   .menu-logo>img {
