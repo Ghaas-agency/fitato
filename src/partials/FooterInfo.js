@@ -18,7 +18,7 @@ const FooterInfo = () => (
           <li><Link to="/faqs/">FAQ</Link></li>
           <li><Link to="/reviews/">Reviews</Link></li>
           <li><Link to="/how-to-refer/">Refer Your Friends</Link></li>
-          <li><a href="https://corporate.fitato.fit" target="_blank" rel="noopener noreferrer">Fitato For The Workplace</a></li>
+          <li><Link to="/corporate/">Fitato For The Workplace</Link></li>
           <li><Link to="/privacy-policy/">Privacy Policy</Link></li>
         </ul>
       </div>

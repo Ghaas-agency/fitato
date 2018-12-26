@@ -348,9 +348,9 @@ class WorkplacePage extends React.Component {
               <h4>Learn More</h4>
               <ul className="footer-ul">
                 <li><a href="https://blog.fitato.fit" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                <li><Link to="/faqs">FAQ</Link></li>
-                <li><Link to="/reviews">Reviews</Link></li>
-                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link to="/faqs/">FAQ</Link></li>
+                <li><Link to="/reviews/">Reviews</Link></li>
+                <li><Link to="/privacy-policy/">Privacy Policy</Link></li>
               </ul>
             </div>
             <div className="footer-info__col3">
