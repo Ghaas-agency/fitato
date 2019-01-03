@@ -40,6 +40,12 @@ class WorkplacePage extends React.Component {
           title="Workplace Wellness Programs | Fitato"
         >
           <meta name="description" content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs." />
+          <meta itemprop="name" content="Workplace Wellness Programs | Fitato"/>
+          <meta itemprop="description" content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."/>
+          <meta name="twitter:title" content="Workplace Wellness Programs | Fitato"/>
+          <meta name="twitter:description" content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."/>
+          <meta property="og:title" content="Workplace Wellness Programs | Fitato"/>
+          <meta property="og:description" content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."/>
         </Helmet>
         <div className="workplace-page">
           

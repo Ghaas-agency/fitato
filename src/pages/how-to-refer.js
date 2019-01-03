@@ -46,8 +46,8 @@ class ReferPage extends React.Component {
             <meta itemprop="description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
             <meta name="twitter:title" content="How to Refer Your Friends | Fitato"/>
             <meta name="twitter:description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
-            <meta name="og:title" content="How to Refer Your Friends | Fitato"/>
-            <meta name="og:description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
+            <meta property="og:title" content="How to Refer Your Friends | Fitato"/>
+            <meta property="og:description" content="Working out is more fun with friends. Learn how to refer Fitato to your friends here."/>
           </Helmet>
     
           <div className="refer-page__hero">

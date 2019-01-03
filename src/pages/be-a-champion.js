@@ -23,8 +23,8 @@ const CollegePage = () => (
           <meta itemprop="description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
           <meta name="twitter:title" content="Represent Fitato On You Campus | Fitato Champion"/>
           <meta name="twitter:description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
-          <meta name="og:title" content="Represent Fitato On You Campus | Fitato Champion"/>
-          <meta name="og:description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
+          <meta property="og:title" content="Represent Fitato On You Campus | Fitato Champion"/>
+          <meta property="og:description" content="If you are passionate about leading a healthy lifestyle and wish to inspire others towards it, join us as a campus ambassador. Lead the Fitness revolution on your campus."/>
         </Helmet>
         
         <section className="college-hero">

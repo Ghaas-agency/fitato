@@ -14,8 +14,8 @@ const PrivacyPolicyPage = () => (
         <meta itemprop="description" content="Our privacy policy which should answer all your queries about user information and sharing."/>
         <meta name="twitter:title" content="Privacy Policy | Fitato"/>
         <meta name="twitter:description" content="Our privacy policy which should answer all your queries about user information and sharing."/>
-        <meta name="og:title" content="Privacy Policy | Fitato"/>
-        <meta name="og:description" content="Our privacy policy which should answer all your queries about user information and sharing."/>
+        <meta property="og:title" content="Privacy Policy | Fitato"/>
+        <meta property="og:description" content="Our privacy policy which should answer all your queries about user information and sharing."/>
       </Helmet>
       <div className="container">
         <h1>Privacy Policy</h1>

@@ -72,8 +72,8 @@ class HowItWorksPage extends React.Component {
             <meta itemprop="description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
             <meta name="twitter:title" content="How Fitato Works | Flexibility At Your Fingertips"/>
             <meta name="twitter:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
-            <meta name="og:title" content="How Fitato Works | Flexibility At Your Fingertips"/>
-            <meta name="og:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
+            <meta property="og:title" content="How Fitato Works | Flexibility At Your Fingertips"/>
+            <meta property="og:description" content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."/>
           </Helmet>
     
           <section className="works-hero">

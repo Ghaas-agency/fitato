@@ -17,8 +17,8 @@ const FitSquadPage = () => (
         <meta itemprop="description" content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"/>
         <meta name="twitter:title" content="Fit Squad Plans | Fitato"/>
         <meta name="twitter:description" content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"/>
-        <meta name="og:title" content="Fit Squad Plans | Fitato"/>
-        <meta name="og:description" content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"/>
+        <meta property="og:title" content="Fit Squad Plans | Fitato"/>
+        <meta property="og:description" content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"/>
       </Helmet>
 
       <div className="fit-squad-page-hero" /* style={{backgroundImage: 'url(' + withPrefix('/static/') + ')'}} */>

@@ -41,16 +41,16 @@ export default ({ children }) => (
           <meta name="twitter:app:name:iphone" content="Fitato"/>
           <meta name="twitter:app:id:googleplay" content="fit.fitato.health"/>
           <meta name="twitter:app:name:googleplay" content="Fitato: One Pass to Fitness"/>
-          <meta name="og:title" content="Fitato&reg;: Fitness for the Intelligent Indian"/>
-          <meta name="og:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
-          <meta name="og:image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
-          <meta name="og:url" content="https://www.fitato.fit"/>
-          <meta name="og:site_name" content="Fitato"/>
-          <meta name="og:type" content="website"/>
-          <meta name="al:ios:app_store_id" content="1300323768"/>
-          <meta name="al:ios:app_name" content="Fitato"/>
-          <meta name="al:android:package" content="fit.fitato.health"/>
-          <meta name="al:android:app_name" content="Fitato: One Pass to Fitness"/>
+          <meta property="og:title" content="Fitato&reg;: Fitness for the Intelligent Indian"/>
+          <meta property="og:description" content="A fitness membership tailored to you. The best facilities, exciting events, and the country’s fastest-growing fitness community. Come, be a part of the revolution!"/>
+          <meta property="og:image" content="https://www.fitato.fit/static/fitato-one-pass-to-all.jpg"/>
+          <meta property="og:url" content="https://www.fitato.fit"/>
+          <meta property="og:site_name" content="Fitato"/>
+          <meta property="og:type" content="website"/>
+          <meta property="al:ios:app_store_id" content="1300323768"/>
+          <meta property="al:ios:app_name" content="Fitato"/>
+          <meta property="al:android:package" content="fit.fitato.health"/>
+          <meta property="al:android:app_name" content="Fitato: One Pass to Fitness"/>
 
           <script type="text/javascript">
             {`!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`}

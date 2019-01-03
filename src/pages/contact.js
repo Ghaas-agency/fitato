@@ -15,8 +15,8 @@ const ContactPage = () => (
         <meta itemprop="description" content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."/>
         <meta name="twitter:title" content="Contact Us | Fitato"/>
         <meta name="twitter:description" content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."/>
-        <meta name="og:title" content="Contact Us | Fitato"/>
-        <meta name="og:description" content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."/>
+        <meta property="og:title" content="Contact Us | Fitato"/>
+        <meta property="og:description" content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."/>
         <link rel="canonical" href="https://www.fitato.fit/contact-us/"/>
       </Helmet>
       <div className="container">

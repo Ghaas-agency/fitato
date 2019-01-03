@@ -14,8 +14,8 @@ const PricingPage = () => (
         <meta itemprop="description" content="A Fitato Pass gives you access to multiple fitness facilities and activities. Choose Your preferred Pass. Choice, control & convenience for your health goals."/>
         <meta name="twitter:title" content="Fitato Pass Pricing | Choose Your Pass Plan"/>
         <meta name="twitter:description" content="A Fitato Pass gives you access to multiple fitness facilities and activities. Choose Your preferred Pass. Choice, control & convenience for your health goals."/>
-        <meta name="og:title" content="Fitato Pass Pricing | Choose Your Pass Plan"/>
-        <meta name="og:description" content="A Fitato Pass gives you access to multiple fitness facilities and activities. Choose Your preferred Pass. Choice, control & convenience for your health goals."/>
+        <meta property="og:title" content="Fitato Pass Pricing | Choose Your Pass Plan"/>
+        <meta property="og:description" content="A Fitato Pass gives you access to multiple fitness facilities and activities. Choose Your preferred Pass. Choice, control & convenience for your health goals."/>
       </Helmet>
       <Plans tag="h1" />
     </div>
