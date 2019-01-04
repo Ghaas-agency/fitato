@@ -13,14 +13,14 @@
 }
 
 .main-header-placeholder {
-  height: 80px;
+  height: 77px !important;
   background-color: #ffffff;
 }
 
 .main-header-container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 7px 3%;
+  padding: 5px 3%;
 }
 
 .menu-logo {
@@ -36,7 +36,7 @@
 
 .menu-logo>img {
   margin-bottom: 0;
-  margin-top: 0px;
+  margin-top: 7px;
   max-width: 120px;
   max-height: 62px;
 }
@@ -304,7 +304,8 @@
   }
 
   .menu-logo>img {
-    padding-top: 5px;
+    padding-top: 3px;
+    width: 115px;
   }
 }
 

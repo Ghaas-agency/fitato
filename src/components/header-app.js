@@ -10,8 +10,8 @@ class Header extends Component {
           <div className="main-header-container" style={{textAlign: 'center'}}>
             <Link className="menu-logo" to="/">
               <img
-                src={withPrefix('/static/fitato-logo-winter.svg')}
-                title='Fitato wishes happy winters!'
+                src={withPrefix('/static/fitato-logo-colored.svg')}
+                title='Fitato'
                 alt="fitato"
               />
             </Link>

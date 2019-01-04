@@ -81,8 +81,8 @@ class Header extends Component {
             <img src={withPrefix('/static/icons/menu.svg')} onClick={this.handleMenuClick} className="main-header-menu-icon" alt="menu" />
             <Link className="menu-logo" to="/">
               <img
-                src={withPrefix('/static/fitato-logo-winter.svg')}
-                title='Fitato wishes happy winters!'
+                src={withPrefix('/static/fitato-logo-colored.svg')}
+                title='Fitato'
                 alt="fitato"
               />
             </Link>
