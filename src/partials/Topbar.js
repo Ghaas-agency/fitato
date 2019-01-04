@@ -18,7 +18,7 @@ class Topbar extends React.Component {
     this.setState({showTopbar: false});
     if(!(typeof(sessionStorage) === "undefined")) {
       sessionStorage.setItem("topbarToggle", false);
-      document.querySelector('.main-header-placeholder').style.height = '80px';
+      document.getElementsByClassName('main-header-placeholder')[0].style.height = '77px';
     }
   }
 
@@ -38,12 +38,12 @@ class Topbar extends React.Component {
     if(this.topbarLocalStorageCheck()) {
       this.setState({showTopbar: true});
       if(!(typeof(document) === "undefined")) {
-        document.getElementsByClassName('main-header-placeholder')[0].style.height = '150px';
+        document.getElementsByClassName('main-header-placeholder')[0].style.height = '146px';
       }
     } else {
       this.setState({showTopbar: false});
       if(!(typeof(document) === "undefined")) {
-        document.getElementsByClassName('main-header-placeholder')[0].style.height = '80px';
+        document.getElementsByClassName('main-header-placeholder')[0].style.height = '77px';
       }
     }
   }
