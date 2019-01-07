@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import GetStarted from '../partials/GetStarted'
 import FooterInfo from '../partials/FooterInfo'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import { Accordion, AccordionItem } from 'react-sanfona'
 import Layout from '../components/index'
 import '../css/partners.css'
@@ -133,7 +133,7 @@ const PartnersPage = () => (
     </div>
     <GetStarted />
     <FooterInfo />
-    <SignupPopup />
+    {/* <SignupPopup /> */}
   </Layout>
 )
 

@@ -3,7 +3,7 @@ import { Link, withPrefix } from 'gatsby'
 import Helmet from 'react-helmet'
 import GetStarted from '../partials/GetStarted'
 import FooterInfo from '../partials/FooterInfo'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import { Accordion, AccordionItem } from 'react-sanfona'
 import Layout from '../components/index'
 import '../css/faq.css'
@@ -110,7 +110,7 @@ const FAQPage = () => (
       </div>
       <GetStarted />
       <FooterInfo />
-      <SignupPopup />
+      {/* <SignupPopup /> */}
     </Layout>
   )
 

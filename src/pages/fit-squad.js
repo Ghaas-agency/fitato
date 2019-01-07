@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/index'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import { withPrefix } from 'gatsby'
 import DownloadSwipe from '../partials/DownloadSwipe'
 import '../css/fit-squad.css'
@@ -100,7 +100,7 @@ const FitSquadPage = () => (
 
       <DownloadSwipe />
     </div>
-    <SignupPopup />
+    {/* <SignupPopup /> */}
   </Layout>
 )
 

@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import GetStarted from '../partials/GetStarted'
 import FooterInfo from '../partials/FooterInfo'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import Layout from '../components/index'
 
 import '../css/reviews.css'
@@ -110,7 +110,7 @@ const ReviewsPage = () => (
       <GetStarted />
       <FooterInfo />
     </div>
-    <SignupPopup />
+    {/* <SignupPopup /> */}
   </Layout>
 )
 

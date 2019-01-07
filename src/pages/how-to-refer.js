@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import FooterInfo from '../partials/FooterInfo'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import Layout from '../components/index'
 
 import '../css/refer.css'
@@ -165,7 +165,7 @@ class ReferPage extends React.Component {
           
           <FooterInfo />
         </div>
-        <SignupPopup />
+        {/* <SignupPopup /> */}
       </Layout>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import FooterInfo from '../partials/FooterInfo'
-import SignupPopup from '../partials/SignupPopup'
+/* import SignupPopup from '../partials/SignupPopup' */
 import DownloadSwipe from '../partials/DownloadSwipe'
 import Layout from '../components/index'
 
@@ -166,7 +166,7 @@ class HowItWorksPage extends React.Component {
           
           <FooterInfo />
         </div>
-        <SignupPopup />
+        {/* <SignupPopup /> */}
       </Layout>
     )
   }
