@@ -60,11 +60,10 @@ class Topbar extends React.Component {
             <img src={withPrefix('/static/icons/close.svg')} alt="close"/>
           </div>
           <p>
-            {/* <img src={withPrefix('/static/icons/commitment.svg')} alt="fitato in hyderabad"/>
+            <img src={withPrefix('/static/icons/commitment.svg')} alt="fitato in hyderabad"/>
             <a href="https://offer.fitato.fit/commitment" target="_blank" rel="noreferrer noopener" onClick={this.handleClose}>
             Commit to a new you, this new year <img src={withPrefix('/static/icons/arrow-forward-white.svg')} alt="arrow forward white" className="partial-topbar--arrow"/>
-            </a> */}
-            <a href="tel:+918200396237">Having trouble with your Fitato app? Please give us a call and we’ll have it resolved.</a>
+            </a>
             {/* <Link to="/partners/#hyderabad" onClick={this.handleClose}>
             We&apos;re now in Hyderabad. Check out our facility partners.
             </Link> */}
