@@ -50,14 +50,6 @@ const Next = () => (
         </div>
       </section>
 
-      {/* <section className="index-section-join">
-        <div className="container">
-          <h2>Workout At The Best Fitness Studios<br />With Your Fitato Pass</h2>
-          <p>Do you want a guide to the best fitness studios near you?<br />Just put in your details and we’ll get back to you with a personalized fitness plan!</p>
-          <MCForm formClass="f-cf-index-join" />
-        </div>
-      </section> */}
-
       {/* <section className="index-section-plans">
         <Plans />
       </section> */}
@@ -96,7 +88,13 @@ const Next = () => (
         </div>
       </section>
 
-      <div className="separator"><div className="container"></div></div>
+      <section className="index-section-join">
+        <div className="container">
+          <h2>Workout At The Best Fitness Studios<br />With Your Fitato Pass</h2>
+          <p>Do you want a guide to the best fitness studios near you?<br />Just put in your details and we’ll get back to you with a personalized fitness plan!</p>
+          <MCForm formClass="f-cf-index-join" />
+        </div>
+      </section>
 
       <section className="index-section-partners">
         <div className="container">
