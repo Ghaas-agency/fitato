@@ -9,7 +9,7 @@ import DownloadSwipe from '../partials/DownloadSwipe'
 import Layout from '../components/index'
 import '../css/next.css'
 
-const HomePage = () => (
+const Next = () => (
   <Layout>
     <Helmet title="Fitato&reg;: Fitness for the Intelligent Indian"
     style={[{
@@ -41,9 +41,9 @@ const HomePage = () => (
             </div>
             <div className="index-section-pass__item">
               <h2>Your One-Stop Fitness Solution</h2>
-              <p>Take your pick from Yoga, Zumba, MMA, CrossFit, Swimming, Strength Training and plenty more.</p>
-              <p>Workout in any of our 300+ fitness studios spread across your city with one single Fitato Pass. Everything at the cost of one membership.</p>
-              <p>Fitato is the most holistic approach to fitness out there! Join us and be a part of our Fitness Revolution!</p>
+              <p>Pick from Yoga, Zumba, MMA, CrossFit, Swimming, Strength Training and plenty more.</p>
+              <p>Workout in any of our 400+ fitness studios spread across Pune and Hyderabad — with one single Fitato Pass.</p>
+              <p>Join us and be a part of our Fitness Revolution!</p>
               <Link to="/how-it-works/" className="button" style={{marginLeft: '0'}}>Learn how it works</Link>
             </div>
           </div>
@@ -88,9 +88,11 @@ const HomePage = () => (
 
       <section className="index-section-community">
         <div className="container">
-          <h2>More Than Just a Fitness Membership</h2>
-          <p>Fitness just does't end with a membership. It starts there. With Fitato, you don't just get a fitness membership but you also get a fitness community — The Fitato Community. A Community that goes to workouts together, treks together, dances together, eats together, plays together and stays together.</p>
-          <p>Join the Fitato Community now and never miss out on any exciting Fitato Exclusive events.</p>
+          <div className="index-section-community__wrapper">
+            <h2>More Than Just a Fitness Membership</h2>
+            <p>You don't just get a fitness membership, you get a fitness community — The Fitato Community. Enjoy workouts, treking, dancing, sports, fitness, and much more together.</p>
+            <p>Join the Fitato Community at Fitato Exclusive Events.</p>
+          </div>
         </div>
       </section>
 
@@ -218,4 +220,4 @@ const HomePage = () => (
   </Layout>
 )
 
-export default HomePage
+export default Next

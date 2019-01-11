@@ -116,11 +116,17 @@ const PartnersPage = () => (
           <AccordionItem title="Kukatpally, Miyapur" className="accordion-item" expandedClassName="accordion-item-active">
             <img src={withPrefix('/static/partners/hyderabad/kukatpally.jpg')} alt="fitato partners in kukatpally miyapur hyderabad" />
           </AccordionItem>
-          <AccordionItem title="Other Areas" className="accordion-item" expandedClassName="accordion-item-active">
-            <img src={withPrefix('/static/partners/hyderabad/other.jpg')} alt="fitato partners in hyderabad" />
+          <AccordionItem title="KPHB" className="accordion-item" expandedClassName="accordion-item-active">
+            <img src={withPrefix('/static/partners/hyderabad/kphb.jpg')} alt="fitato partners in kphb hyderabad" />
+          </AccordionItem>
+          <AccordionItem title="Miyapur" className="accordion-item" expandedClassName="accordion-item-active">
+            <img src={withPrefix('/static/partners/hyderabad/miyapur.jpg')} alt="fitato partners in miyapur hyderabad" />
+          </AccordionItem>
+          <AccordionItem title="Secunderabad" className="accordion-item" expandedClassName="accordion-item-active">
+            <img src={withPrefix('/static/partners/hyderabad/secunderabad.jpg')} alt="fitato partners in secunderabad hyderabad" />
           </AccordionItem>
           <AccordionItem title="Other Areas" className="accordion-item" expandedClassName="accordion-item-active">
-            <img src={withPrefix('/static/partners/hyderabad/other2.jpg')} alt="fitato partners in hyderabad" />
+            <img src={withPrefix('/static/partners/hyderabad/other.jpg')} alt="fitato partners in hyderabad" />
           </AccordionItem>
         </Accordion>
 

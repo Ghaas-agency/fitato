@@ -203,8 +203,11 @@
 } */
 
 .index-section-community {
-  padding: 75px 0;
+  padding: 75px 10%;
+}
 
+.index-section-community__wrapper {
+  width: 50%;
 }
 
 .index-section-how {
@@ -267,6 +270,7 @@
 
 .index-section-partners {
   padding: 75px 2%;
+  text-align: center;
 }
 
 .index-section-partners__wrapper {
@@ -325,6 +329,7 @@
   -moz-box-flex: 1;
   flex: 1;
   min-width: 130px;
+  max-width: 135px;
   text-align: center;
   margin: 10px;
 }
