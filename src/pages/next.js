@@ -13,7 +13,7 @@ const Next = () => (
   <Layout>
     <Helmet title="Fitato&reg;: Fitness for the Intelligent Indian"
     style={[{
-      "cssText": `.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}')}@media (max-width: 767px) {.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}} .index-section-callback{background-image:url('${withPrefix('/static/index/fitness-barbell.jpg')}')}`
+      "cssText": `.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}')}@media (max-width: 767px) {.index-section-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}} .index-section-callback{background-image:url('${withPrefix('/static/index/fitness-barbell.jpg')}')} .index-section-community{background-image:url('${withPrefix('/static/index/fitato-community-bg.jpg')}')}`
     }]}
     />
     <div className="home-page">
