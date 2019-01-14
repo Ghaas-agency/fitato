@@ -62,7 +62,7 @@
 
 @media (max-width: 480px) {
   .index-section-hero {
-    padding: 20px 5%;
+    padding: 20px 3%;
     padding-top: 20px;
     background-position: center;
     background-size: cover;
@@ -135,6 +135,7 @@
     -webkit-flex: 100%;
     -moz-box-flex: 100%;
     flex: 100%;
+    padding: 30px 3%;
   }
 
   .index-section-pass__item:first-child {
@@ -234,8 +235,9 @@
 
 @media only screen and (max-width: 767px) {
   .index-section-community {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: left;
   }
 
   .index-section-community__wrapper {
@@ -600,7 +602,7 @@
 
 @media only screen and (max-width: 767px) {
   .index-section-callback {
-    padding: 75px 5% 200px 5%;
+    padding: 75px 3% 200px 3%;
     background-position: right bottom;
     background-size: 65%;
   }

@@ -76,8 +76,6 @@ const Next = () => (
         </div>
       </section> */}
 
-      <div className="separator"><div className="container"></div></div>
-
       <section className="index-section-community">
         <div className="container">
           <div className="index-section-community__wrapper">
@@ -91,7 +89,7 @@ const Next = () => (
       <section className="index-section-join">
         <div className="container">
           <h2>Workout At The Best Fitness Studios<br />With Your Fitato Pass</h2>
-          <p>Do you want a guide to the best fitness studios near you?<br />Just put in your details and we’ll get back to you with a personalized fitness plan!</p>
+          <p>Intrigued? Looking for more information on the Fitato exclusive events?<br />Let us arrange a call back from our team.</p>
           <MCForm formClass="f-cf-index-join" />
         </div>
       </section>
