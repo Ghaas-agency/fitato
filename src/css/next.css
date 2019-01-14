@@ -167,6 +167,7 @@
 .index-section-join .partial-mc-form__main>div {
   display: inline-block;
   margin: 0 10px;
+  max-width: 200px;
 }
 
 .index-section-join .partial-mc-form__main .partial-mc-form__main--radio {

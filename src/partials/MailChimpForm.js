@@ -14,15 +14,15 @@ const MCForm = props => (
       
         <div className="mc-field-group">
           <label htmlFor="mce-FULLNAME">Name</label>
-          <input type="text" name="FULLNAME" className="required" id="mce-FULLNAME" placeholder="Enter your name" />
+          <input type="text" name="FULLNAME" className="required" id="mce-FULLNAME" placeholder="Ashok Kumar" />
         </div>
         <div className="mc-field-group size1of2">
           <label htmlFor="mce-PHONE">Phone</label>
-          <input type="text" name="PHONE" className="required" id="mce-PHONE" placeholder="Enter your contact number" />
+          <input type="text" name="PHONE" className="required" id="mce-PHONE" placeholder="9876543210" />
         </div>
         <div className="mc-field-group">
           <label htmlFor="mce-EMAIL">Email</label>
-          <input type="email" name="EMAIL" className="required email" placeholder="Enter your email address" id="mce-EMAIL" />
+          <input type="email" name="EMAIL" className="required email" placeholder="name@company.com" id="mce-EMAIL" />
         </div>
         <div className="mc-field-group input-group">
           <label>City</label>
