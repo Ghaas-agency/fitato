@@ -76,7 +76,7 @@ const FAQPage = () => (
               <p>Most of the classes and places on the app can be visited any number of times through the Fitato pass. Only a few of our partners have a limited monthly access, which has been mentioned in the description of these classes on the app. Note that you can only book up to 1 class in a day.</p>
             </AccordionItem>
             <AccordionItem title="What is Fitato’s refund policy?" titleTag="h4" className="accordion-item" expandedClassName="accordion-item-active">
-              <p>Fitato does not initiate refunds under any circumstances.</p><p>A refund might be considered under an exceptional circumstance, where if a facility where a user was working out earlier, has been deactivated from the app.</p>
+              <p>Fitato does not initiate refunds under any circumstances.</p>
             </AccordionItem>
             <AccordionItem title="Can the fitato membership be frozen or put on hold?" titleTag="h4" className="accordion-item" expandedClassName="accordion-item-active">
               <p>No, you cannot put your fitato membership oh hold or pause it.</p>
