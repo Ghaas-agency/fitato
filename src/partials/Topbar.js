@@ -1,5 +1,5 @@
 import React from 'react'
-import { /* Link, */ withPrefix } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 const displayBlock = {
   display: 'block'
@@ -25,7 +25,7 @@ class Topbar extends React.Component {
   topbarLocalStorageCheck() {
     if(!(typeof(sessionStorage) === "undefined")) {
       if(sessionStorage.getItem('topbarToggle') === 'false' || sessionStorage.getItem('topbarToggle') === false) {
-        return false;
+        return true;
       } else {
         return true;
       }
@@ -60,13 +60,13 @@ class Topbar extends React.Component {
             <img src={withPrefix('/static/icons/close.svg')} alt="close"/>
           </div>
           <p>
-            <img src={withPrefix('/static/icons/commitment.svg')} alt="fitato in hyderabad"/>
-            <a href="https://offer.fitato.fit/commitment" target="_blank" rel="noreferrer noopener" onClick={this.handleClose}>
+            <img src={withPrefix('/static/icons/confetti.svg')} alt="fitato in hyderabad"/>
+            {/* <a href="https://offer.fitato.fit/commitment" target="_blank" rel="noreferrer noopener" onClick={this.handleClose}>
             Commit to a new you, this new year <img src={withPrefix('/static/icons/arrow-forward-white.svg')} alt="arrow forward white" className="partial-topbar--arrow"/>
-            </a>
-            {/* <Link to="/partners/#hyderabad" onClick={this.handleClose}>
+            </a> */}
+            <Link to="/partners/#hyderabad" onClick={this.handleClose}>
             We&apos;re now in Hyderabad. Check out our facility partners.
-            </Link> */}
+            </Link>
           </p>
         </div>
       </div>
