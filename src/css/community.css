@@ -1,8 +1,14 @@
 /* Hero section. */
 
 .comm-hero {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 150px;
   min-height: 600px;
+  background-size: 80%;
+  background-position: right top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
 
 .comm-hero__wrapper {
@@ -23,7 +29,7 @@
 .comm-hero--title {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 4.25rem;
   color: #EB1F2E;
 }
 
@@ -35,7 +41,7 @@
 /* Join section. */
 
 .comm-join {
-  padding: 10px 0;
+  padding: 0px 0;
   text-align: center;
 }
 
@@ -69,7 +75,11 @@
 }
 
 .comm-join__wrapper {
+  position: relative;
+  z-index: 9;
   padding: 50px;
+  margin-top: -75px;
+  background-color: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
   -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
@@ -85,29 +95,237 @@
 /* About Fitato. */
 
 .comm-about {
-  padding: 100px 0;
+  padding-top: 75px;
 }
 
-/* The Fitato Advantage */
+.comm-about__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.comm-about__item {
+  flex: 1;
+}
+
+.comm-about__item:first-child {
+  text-align: center;
+}
+
+.comm-about img {
+  max-width: 450px;
+}
+
+/* The Fitato `age */
 
 .comm-advantage {
-  padding: 100px 0;
+  padding-top: 100px;
+}
+
+.comm-advantage h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.comm-advantage__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
+  position: relative;
+  z-index: 9;
+}
+
+.comm-advantage__item {
+  flex: 1;
+  padding: 60px 30px;
+  margin: 10px 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.comm-advantage p {
+  margin-bottom: 0;
 }
 
 /* The Fitato Community */
 
 .comm-community {
-  padding: 100px 0;
+  padding-top: 300px;
+  padding-bottom: 180px;
+  margin-top: -80px;
+  color: #ffffff;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.comm-community__wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.comm-community p {
+  margin: 0;
+}
+
+.comm-community--tri-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 150px 1880px 0 0;
+  border-color: #ffffff transparent transparent transparent;
 }
 
 /* Community Workouts To Choose From. */
 
 .comm-workouts {
-  padding: 100px 0;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.comm-workouts h2 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comm-workouts__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.comm-workouts__item {
+  flex: 1;
+  padding: 80px 30px;
+  margin: 5px;
+  min-width: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.8);
+  background-blend-mode: overlay;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.comm-workouts__item p {
+  margin: 0;
+  color: #ffffff;
+  opacity: 0;
+  font-size: 22px;
+  cursor: default;
+  transform: translateY(10px);
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.comm-workouts__item:hover {
+  background-color: rgba(0, 0, 0, .7);
+  filter: grayscale(0);
+}
+
+.comm-workouts__item:hover p {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* The Fitato Captains */
 
 .comm-captains {
-  padding: 100px 0;
+  padding: 100px 3%;
 }
+
+.comm-captains h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.comm-captains h3 {
+  margin-bottom: 10px;
+}
+
+.comm-captains__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comm-captains__wrapper-item {
+  flex: 50%;
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+  .comm-captains__wrapper {
+    flex-direction: column;
+  }
+
+  .comm-captains__wrapper-item {
+    flex: 100%;
+    max-width: 95%;
+  }
+}
+
+.comm-captains__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.comm-captains__left {
+  flex: 1;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.comm-captains__left img {
+  border-radius: 50%;
+  max-width: 180px;
+}
+
+@media only screen and (max-width: 979px) {
+  .comm-captains__left img {
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .comm-captains__left img {
+    max-width: 100px;
+  }
+}
+
+.comm-captains__right {
+  flex: 2;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .comm-captains__right {
+    margin-right: 0px;
+  }
+}
+
+.comm-captains__right p {
+  margin-bottom: 10px;
+}
+

@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { /* Link, */ withPrefix } from 'gatsby'
-import Layout from '../components/index'
-import FooterInfo from '../partials/FooterInfo'
+import Layout from '../components/index-app'
 import '../css/community.css'
 import MCForm from '../partials/MailChimpForm'
 // import SocialLinks from '../partials/SocialLinks'
@@ -15,8 +14,8 @@ const CommunityPage = () => (
           title="Experience the Fitato Way of Life | Join Fitato Community"
           style={[{
             "cssText": `
-            .college-hero {background-image: url('${withPrefix('/static/champion/fitato-campus-champion-hero.jpg')}')}/* @media (max-width: 767px) {.college-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}} */
-            .college-what, .college-get {background-image: url('${withPrefix('/static/champion/fitato-campus-champion-pattern.jpg')}')}
+            .comm-hero {background-image: url('${withPrefix('/static/community/fitato-community-hero.jpg')}')}/* @media (max-width: 767px) {.college-hero {background-image: url('${withPrefix('/static/fitato-home-hero-bg-mobile.jpg')}')}} */
+            .comm-community {background-image: url('${withPrefix('/static/index/fitato-community-bg.jpg')}')}
             `
           }]}
         >
@@ -50,12 +49,19 @@ const CommunityPage = () => (
           </div>
         </section>
 
-        <section className="comm-about">
+        {/* <section className="comm-about">
           <div className="container">
-            <h2>About Fitato</h2>
-            <p>Fitato is a hyper-local fitness solution that aims at providing you fitness freedom. With a single membership, you get access to the best gyms and fitness centres in your city anytime you want.</p>
+            <div className="comm-about__items">
+              <div className="comm-about__item">
+                <img src={withPrefix('/static/fitato-discover.jpg')} alt="fitato discover"/>
+              </div>
+              <div className="comm-about__item">
+                <h2>About Fitato</h2>
+                <p>Fitato is a hyper-local fitness solution that aims at providing you fitness freedom. With a single membership, you get access to the best gyms and fitness centres in your city anytime you want.</p>
+              </div>
+            </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="comm-advantage">
           <div className="container">
@@ -74,41 +80,44 @@ const CommunityPage = () => (
         </section>
 
         <section className="comm-community">
+          <div className="comm-community--tri-top"></div>
           <div className="container">
-            <h2>The Fitato Community</h2>
-            <p>You may choose to head out and go for a secluded, boring workout at a gym, but it will get mundane soon.  Not with Fitato.  The Fitato community makes your workout time, your happy hour. With the Fitato Community, you will laugh, you will click pictures, you will enjoy and you will workout.</p>
+            <div className="comm-community__wrapper">
+              <h2>The Fitato Community</h2>
+              <p>You may choose to head out and go for a secluded, boring workout at a gym, but it will get mundane soon.  Not with Fitato.  The Fitato community makes your workout time, your happy hour. With the Fitato Community, you will laugh, you will click pictures, you will enjoy and you will workout.</p>
+            </div>
           </div>
         </section>
 
         <section className="comm-workouts">
           <div className="container">
-            <h2>Community Workouts To Choose From</h2>
+            <h2>Thousands Of Community Workouts To Choose From</h2>
             <div className="comm-workouts__items">
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/zumba.jpg') + ')'}}>
                 <p>Zumba</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/aerial-yoga.jpg') + ')'}}>
                 <p>Aerial Yoga</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/salsa.jpg') + ')'}}>
                 <p>Salsa Nights</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/strength-flexibility.jpg') + ')'}}>
                 <p>Strength and Flexibility</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/mallakhamb.jpg') + ')'}}>
                 <p>Mallakhamb</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/core-training.jpg') + ')'}}>
                 <p>Activate Your Core</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/pop-pilates.jpg') + ')'}}>
                 <p>Pop-Pilates</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/piloxing.jpg') + ')'}}>
                 <p>Piloxing</p>
               </div>
-              <div className="comm-workouts__item">
+              <div className="comm-workouts__item" style={{backgroundImage: 'url(' + withPrefix('/static/community/workouts/aqua-yoga.jpg') + ')'}}>
                 <p>Aqua Yoga</p>
               </div>
             </div>
@@ -118,88 +127,90 @@ const CommunityPage = () => (
         <section className="comm-captains">
           <div className="container">
             <h2>The Fitato Captains</h2>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
+            <div className="comm-captains__wrapper">
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/sehej-maini.jpg')} alt="sehej maini"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Sehej Maini</h3>
+                    <p>Crossfit addict and trainer and a professional powerlifting champion. </p>
+                  </div>
+                </div>
               </div>
-              <div className="comm-captains__right">
-                <h3>Sehej Maini</h3>
-                <p>Area of operation: Kharadi</p>
-                <p>Crossfit addict and trainer and a professional powerlifting champion. </p>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/mallika-rathod.jpg')} alt="mallika rathod"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Mallika Rathod</h3>
+                    <p>Yoga practitioner and trainer, an expert in aerial and aqua yoga.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/kaaba-khan.jpg')} alt="kaaba khan"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Kaaba Khan</h3>
+                    <p>Yoga practitioner and trainer with over three years of experience.</p>
+                  </div>
+                </div>
               </div>
-              <div className="comm-captains__right">
-                <h3>Mallika Rathod</h3>
-                <p>Area of operation: NIBM Road</p>
-                <p>Yoga practitioner and trainer, an expert in aerial and aqua yoga.</p>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/reetu-thakur.jpg')} alt="reetu thakur"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Reetu Thakur</h3>
+                    <p>Functional training expert and trainer and also a young mother.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/atharva-deshmukh.jpg')} alt="atharva deshmukh"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Atharva Deshmukh</h3>
+                    <p>Professional trainer for multiple activities like HIIT, Crossfit, etc.</p>
+                  </div>
+                </div>
               </div>
-              <div className="comm-captains__right">
-                <h3>Kaaba Khan</h3>
-                <p>Area of operation: Koregaon Park</p>
-                <p>Yoga practitioner and trainer with over three years of experience.</p>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/trisha-kapur.jpg')} alt="trisha kapur"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Trisha Kapur</h3>
+                    <p>Professional swimmer and weight training expert and a law student.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
-              </div>
-              <div className="comm-captains__right">
-                <h3>Reetu Thakur</h3>
-                <p>Area of operation: Kothrud</p>
-                <p>Functional training expert and trainer and also a young mother.</p>
-              </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
-              </div>
-              <div className="comm-captains__right">
-                <h3>Atharva Deshmukh</h3>
-                <p>Area of operation: Aundh/Baner</p>
-                <p>Professional trainer for multiple activities like HIIT, Crossfit, etc.</p>
-              </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
-              </div>
-              <div className="comm-captains__right">
-                <h3>Trisha Kapur</h3>
-                <p>Area of operation: Viman Nagar</p>
-                <p>Professional swimmer and weight training expert and a law student.</p>
-              </div>
-            </div>
-            <div className="comm-captains__items">
-              <div className="comm-captains__left">
-                <img src="" alt=""/>
-              </div>
-              <div className="comm-captains__right">
-                <h3>Ritika Narwariya</h3>
-                <p>Area of operation: PCMC</p>
-                <p>Certified Pop-pilates expert as well as a  Strong by Zumba instructor.</p>
+              <div className="comm-captains__wrapper-item">
+                <div className="comm-captains__items">
+                  <div className="comm-captains__left">
+                    <img src={withPrefix('/static/community/ritika-narwariya.jpg')} alt="ritika narwariya"/>
+                  </div>
+                  <div className="comm-captains__right">
+                    <h3>Ritika Narwariya</h3>
+                    <p>Certified Pop-pilates expert as well as a  Strong by Zumba instructor.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
       </div>
-      <FooterInfo />
     </Layout>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js" />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `var scroll = new SmoothScroll('a[href*="#"]', {updateURL: false,easing: 'easeInOutCubic'});`,
-      }}
-    />
   </>
 )
 
