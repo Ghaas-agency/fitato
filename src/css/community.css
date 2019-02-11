@@ -4,7 +4,7 @@
   padding-top: 100px;
   padding-bottom: 150px;
   min-height: 600px;
-  background-size: 80%;
+  background-size: 85%;
   background-position: right top;
   background-repeat: no-repeat;
   position: relative;
@@ -13,12 +13,6 @@
 
 .comm-hero__wrapper {
   width: 45%;
-}
-
-@media only screen and (max-width: 767px) {
-  .comm-hero__wrapper {
-    width: 100%;
-  }
 }
 
 .comm-hero h1 {
@@ -38,43 +32,51 @@
   line-height: 1.25;
 }
 
+@media only screen and (max-width: 1200px) {
+  .comm-hero {
+    background-size: cover;
+    background-position: 0%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comm-hero {
+    padding-top: 50px;
+    background-size: 100%;
+    background-position: center bottom;
+    min-height: 630px;
+  }
+
+  .comm-hero__wrapper {
+    width: 100%;
+  }
+
+  .comm-hero h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .comm-hero--title {
+    font-size: 2.25rem;
+  }
+}
+
 /* Join section. */
-
-.comm-join {
-  padding: 0px 0;
-  text-align: center;
-}
-
-.comm-join p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .comm-join form {
   margin-bottom: 0;
 }
 
-.comm-join .partial-mc-form__main {
-  padding-top: 20px;
-}
-
-.comm-join .partial-mc-form__main>div {
+.comm-join .mc-field-group {
+  width: 47.5%;
   display: inline-block;
-  margin: 0 10px;
-  max-width: 200px;
 }
 
-.comm-join .partial-mc-form__main .partial-mc-form__main--radio {
-  margin-top: 7px;
+.comm-join .mc-field-group:nth-child(odd) {
+  margin-right: 5%;
 }
 
-.comm-join .partial-mc-form__main .partial-mc-form__main--radio li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.comm-join__wrapper {
+.comm-join__items {
   position: relative;
   z-index: 9;
   padding: 50px;
@@ -84,40 +86,27 @@
   -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
   -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comm-join__item {
+  flex: 1;
+  margin: 0 20px;
 }
 
 @media only screen and (max-width: 767px) {
-  .comm-join .partial-mc-form__main>div {
-    display: block;
+  .comm-join__items {
+    flex-direction: column;
+    padding: 50px 3%;
+  }
+
+  .comm-join__item {
+    max-width: 75vw;
   }
 }
 
-/* About Fitato. */
-
-.comm-about {
-  padding-top: 75px;
-}
-
-.comm-about__items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.comm-about__item {
-  flex: 1;
-}
-
-.comm-about__item:first-child {
-  text-align: center;
-}
-
-.comm-about img {
-  max-width: 450px;
-}
-
-/* The Fitato `age */
+/* The Fitato Page */
 
 .comm-advantage {
   padding-top: 100px;
@@ -150,6 +139,17 @@
 
 .comm-advantage p {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .comm-advantage__items {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .comm-advantage__item {
+    margin: 10px 0px;
+  }
 }
 
 /* The Fitato Community */
@@ -216,7 +216,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(0.8);
+  filter: grayscale(1);
   background-blend-mode: overlay;
   -webkit-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
@@ -245,6 +245,22 @@
 .comm-workouts__item:hover p {
   opacity: 1;
   transform: translateY(0px);
+}
+
+@media only screen and (max-width: 767px) {
+  .comm-workouts__items {
+    flex-direction: column;
+  }
+
+  .comm-workouts__item {
+    background-color: rgba(0, 0, 0, .7);
+    filter: grayscale(0);
+  }
+  
+  .comm-workouts__item p {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 /* The Fitato Captains */
@@ -329,3 +345,20 @@
   margin-bottom: 10px;
 }
 
+.comm-cta {
+  position: fixed;
+  bottom: -70px;
+  right: 20px;
+  z-index: 99;
+}
+
+/* @media only screen and (max-width: 767px) {
+  .comm-cta {
+    bottom: -70px;
+    right: unset !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 100%;
+  }
+} */
