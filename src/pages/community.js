@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { /* Link, */ withPrefix } from 'gatsby'
-import Layout from '../components/index-app'
+import Layout from '../components/index-comm'
 import '../css/community.css'
 // import SocialLinks from '../partials/SocialLinks'
 
@@ -91,7 +91,7 @@ class CommunityPage extends React.Component {
                             <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
                             <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
                           </div>
-                          <div style={{position: 'absolute', left: '-5000px', margin: '0'}} aria-hidden="true"><input type="text" name="b_c70dd7220cee163ff5b3fa95d_c05180cc83" tabIndex="-1" value=""/></div>
+                          <div style={{position: 'absolute', left: '-5000px', margin: '0'}} aria-hidden="true"><input type="text" name="b_c70dd7220cee163ff5b3fa95d_c05180cc83" tabIndex="-1"/></div>
                           <div className="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" className="button" style={{marginLeft: '0'}}/></div>
                         </div>
                       </form>
