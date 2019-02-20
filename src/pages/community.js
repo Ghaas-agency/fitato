@@ -64,7 +64,7 @@ class CommunityPage extends React.Component {
                 <div className="comm-join__items">
                   <div className="comm-join__item">
                     <h2>Start Now</h2>
-                    <p>Enjoy a free community workout facilitated by a Fitato Captain, stay on for a little chat and let them guide you what’s the best way to get fit for you.</p>
+                    <p>Enjoy a free community workout facilitated by a Fitato Captain, stay on for a little chat and let them guide you what’s the best way to get fit for you. <span className="red">All you need to do is download the Fitato app.</span></p>
                     <p>Fill this sign up form and leave the rest to us!</p>
                   </div>
                   <div className="comm-join__item">
