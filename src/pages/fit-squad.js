@@ -87,7 +87,7 @@ const FitSquadPage = () => (
           
           <div className="fit-squad-page-exclusive__contact">
             <h4>Need recommendations or a crafted plan?</h4>
-            <a href="tel:+918200396237" className="button">Speak to us</a>
+            <a href="tel:+918448448546" className="button">Speak to us</a>
           </div>
         </div>
       </div>

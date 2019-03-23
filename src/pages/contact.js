@@ -27,7 +27,7 @@ const ContactPage = () => (
         </div>
         <ul className="footer-ul">
           <li><a href="mailto:connect@fitato.fit">connect@fitato.fit</a></li>
-          <li><p>+91 8200396237</p></li>
+          <li><p>+91 8448448546</p></li>
         </ul>
         <SocialLinks cname="footer-social" />
       </div>

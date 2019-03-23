@@ -45,7 +45,7 @@ const Plans = props => (
         </div>
       </div>
       <div className="partial-plans__speak">
-        <p style={{marginBottom: '0'}}>You'll receive a confirmation call and email as soon as your payment is processed. Need recommendations or a crafted plan, please reach out to us at <a href="tel:+918200396237">+91 8200396237</a>.</p>
+        <p style={{marginBottom: '0'}}>You'll receive a confirmation call and email as soon as your payment is processed. Need recommendations or a crafted plan, please reach out to us at <a href="tel:+918448448546">+91 8448448546</a>.</p>
       </div>
       <div className="partial-plans__fitquad">
         {(props.tag === 'h1') ? <h2>Looking for more than one pass?</h2> : <h3>Looking for more than one pass?</h3>}
