@@ -6,6 +6,7 @@ module.exports = {
   pathPrefix: `/fitato-fit`,
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -15,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: ["/thank-you", "/contact", "/faq", "/community"]
+        exclude: ['/thank-you', '/contact', '/faq', '/community'],
       },
     },
   ],
-}
+};

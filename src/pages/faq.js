@@ -1,50 +1,47 @@
-import React from 'react'
-import { withPrefix } from 'gatsby'
-import Helmet from 'react-helmet'
-import { Accordion, AccordionItem } from 'react-sanfona'
-import Layout from '../components/index-app'
-import { getFaqs } from '../utils/contentProvider'
-import '../css/faq.css'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/index-app';
+import FAQs from '../partials/FAQs/FAQs';
+import { getFaqs } from '../utils/contentProvider';
+import '../css/faq.css';
 
 const FAQPage = () => (
-    <Layout>
-      <Helmet
-        title="Frequently Asked Questions | Fitato"
-      >
-        <meta name="description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types." />
-        <meta itemprop="name" content="Frequently Asked Questions | Fitato"/>
-        <meta itemprop="description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
-        <meta name="twitter:title" content="Frequently Asked Questions | Fitato"/>
-        <meta name="twitter:description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
-        <meta property="og:title" content="Frequently Asked Questions | Fitato"/>
-        <meta property="og:description" content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."/>
-        <link rel="canonical" href="https://www.fitato.fit/faqs/"/>
-      </Helmet>
-      <div className="faq-page" style={{paddingTop: '50px', paddingBottom: '50px'}}>
-        <div className="container">
-          <h1>Frequently Asked Questions</h1>
-          <p>Let&apos;s help you step by step.</p>
-          <Accordion>
-            {getFaqs().map(i => (
-              <AccordionItem
-                key={i.id}
-                title={i.title}
-                titleTag="h4"
-                className="accordion-item"
-                expandedClassName="accordion-item-active"
-              >
-                {i.content}
-              </AccordionItem>
-            ))}
-          </Accordion>
-
-          <style dangerouslySetInnerHTML={{
-            __html: `.accordion-item>h4::before,.accordion-item>h3::before{content: url('${withPrefix('/static/icons/arrow-down.svg')}');}.accordion-item-active>h4::before,.accordion-item-active>h3::before{content: url('${withPrefix('/static/icons/arrow-up.svg')}');}`
-            }}>
-          </style>
-        </div>
+  <Layout>
+    <Helmet title="Frequently Asked Questions | Fitato">
+      <meta
+        name="description"
+        content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."
+      />
+      <meta itemProp="name" content="Frequently Asked Questions | Fitato" />
+      <meta
+        itemProp="description"
+        content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."
+      />
+      <meta
+        name="twitter:title"
+        content="Frequently Asked Questions | Fitato"
+      />
+      <meta
+        name="twitter:description"
+        content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."
+      />
+      <meta property="og:title" content="Frequently Asked Questions | Fitato" />
+      <meta
+        property="og:description"
+        content="Resolve your doubts related to registrations, memberships, pass activation, how it works, facility queries and pass types."
+      />
+      <link rel="canonical" href="https://www.fitato.fit/faqs/" />
+    </Helmet>
+    <div
+      className="faq-page"
+      style={{ paddingTop: '50px', paddingBottom: '50px' }}>
+      <div className="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Let&apos;s help you step by step.</p>
+        <FAQs data={getFaqs} />
       </div>
-    </Layout>
-  )
+    </div>
+  </Layout>
+);
 
-export default FAQPage
+export default FAQPage;
