@@ -27,33 +27,3 @@
 .faq-page h2:hover {
   color: #EB1F2E;
 }
-
-.react-sanfona-item {
-  padding: 20px 0;
-  margin: -2px 0;
-}
-
-.react-sanfona-item-body-wrapper {
-  color: #1E1E1E;
-  margin-top: 20px;
-  padding-left: 30px;
-}
-
-.react-sanfona-item-title {
-  position: relative;
-  padding-left: 30px;
-}
-
-.accordion-item>h4::before,
-.accordion-item>h3::before {
-  position: absolute;
-  top: -1px;
-  left: 0px;
-}
-
-.accordion-item-active>h4::before,
-.accordion-item-active>h3::before {
-  position: absolute;
-  top: -1px;
-  left: 0px;
-}
