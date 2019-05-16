@@ -95,8 +95,8 @@ export function getFaqs() {
               partner gyms and studios for 30 days
             </li>
             <li>
-              Monthly All-Access Pass - Gives you workout access to all our
-              partner gyms and studios for 30 days
+              Bi-Monthly All-Access Pass - Gives you workout access to all our
+              partner gyms and studios for 60 days
             </li>
             <li>
               Quarterly All-Access Pass - Gives you workout access to all our
