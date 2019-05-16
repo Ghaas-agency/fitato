@@ -295,9 +295,11 @@ const CollegePage = () => (
         </section>
       </div>
     </Layout>
-    <script>
-      {`new SmoothScroll('a[href*="#"]', {updateURL: false,easing: 'easeInOutCubic'});`}
-    </script>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `new SmoothScroll('a[href*="#"]', {updateURL: false,easing: 'easeInOutCubic'});`,
+      }}
+    />
   </>
 );
 

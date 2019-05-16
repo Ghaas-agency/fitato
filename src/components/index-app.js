@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -89,9 +90,11 @@ const Index = ({ children }) => (
             content="Fitato: One Pass to Fitness"
           />
 
-          <script type="text/javascript">
-            {`!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`,
+            }}
+          />
 
           <link
             rel="shortcut icon"
@@ -119,20 +122,23 @@ const Index = ({ children }) => (
         </Helmet>
 
         <noscript>
-          {`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M6HNZB"
+            frameBorder="0"
+            height="0"
+            width="0"
+            title="GTM"
+            style={{ visibility: 'hidden', display: 'none' }}
+          />
         </noscript>
         <Header />
         <main>{children}</main>
         <Footer />
-        {/* <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `var scroll = new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic'});`,
+            __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,
           }}
-        /> */}
-        <script>
-          {`var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`}
-        </script>
+        />
       </>
     )}
   />

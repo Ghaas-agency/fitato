@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -89,9 +90,11 @@ const Index = ({ children }) => (
             content="Fitato: One Pass to Fitness"
           />
 
-          <script type="text/javascript">
-            {`!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-M6HNZB",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");`,
+            }}
+          />
 
           <link
             rel="shortcut icon"
@@ -138,13 +141,17 @@ const Index = ({ children }) => (
         </script>
         */}
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" />
-        <script>
-          {`new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic',updateURL: false});`}
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic',updateURL: false});`,
+          }}
+        />
         {/* <script src="//widget.manychat.com/691732724260748.js" async="async" /> */}
-        <script>
-          {`var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`}
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,
+          }}
+        />
       </>
     )}
   />
