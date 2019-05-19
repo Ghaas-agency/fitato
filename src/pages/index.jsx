@@ -25,7 +25,7 @@ import {
   IndexTestimonials,
   IndexMedia,
   IndexCallback,
-} from './index.styled';
+} from 'css/index.styled';
 
 const Index = () => (
   <Layout>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
-import Layout from '../../components/index';
-import Main from './corporate.styled';
-import AppIcons from '../../partials/AppIcons';
-import SocialLinks from '../../partials/SocialLinks';
-import ContactLinks from '../../partials/ContactLinks';
-import WorkplaceMCForm from '../../partials/WorkplaceMCForm';
+import Layout from 'components/index';
+import Main from 'css/corporate.styled';
+import AppIcons from 'partials/AppIcons';
+import SocialLinks from 'partials/SocialLinks';
+import ContactLinks from 'partials/ContactLinks';
+import WorkplaceMCForm from 'partials/WorkplaceMCForm';
 
 const WorkplacePage = () => (
   <Layout>

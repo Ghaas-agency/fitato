@@ -1,10 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Plans from '../../partials/Plans';
-import Layout from '../../components/index';
-import FAQs from '../../partials/FAQs/FAQs';
-import { getPricingFaqs } from '../../utils/contentProvider';
-import PricingFaq from './purchaseFitato.styled';
+import Plans from 'partials/Plans';
+import Layout from 'components/index';
+import FAQs from 'partials/FAQs/FAQs';
+import { getPricingFaqs } from 'utils/contentProvider';
+import PricingFaq from 'css/purchaseFitato.styled';
 
 const PricingPage = () => (
   <Layout>
