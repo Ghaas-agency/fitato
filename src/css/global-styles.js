@@ -59,13 +59,13 @@ const GlobalStyles = createGlobalStyle`
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     text-decoration: none;
-    color: #EB1F2E;
+    color: ${({ theme: { colors } }) => colors.red};
   }
 
   a:active,
   a:hover {
     outline-width: 0;
-    border-bottom: 1px solid #EB1F2E;
+    border-bottom: 1px solid ${({ theme: { colors } }) => colors.red};
   }
 
   abbr[title] {
@@ -270,7 +270,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: #1E1E1E;
+    color: ${({ theme: { colors } }) => colors.darkGrey};
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     word-wrap: break-word;
@@ -777,7 +777,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   option {
-    color: #1E1E1E;
+    color: ${({ theme: { colors } }) => colors.darkGrey};
   }
 
   input[type="text"],
@@ -793,7 +793,7 @@ const GlobalStyles = createGlobalStyle`
   input[type="number"]:focus,
   select:focus {
     outline: none;
-    border-color: #1E1E1E;
+    border-color: ${({ theme: { colors } }) => colors.darkGrey};
   }
 
   /* 
@@ -816,17 +816,17 @@ const GlobalStyles = createGlobalStyle`
   .line {
     height: 4px;
     width: 80px;
-    background-color: #EB1F2E;
+    background-color: ${({ theme: { colors } }) => colors.red};
     margin: 20px 0;
     border-radius: 5px;
   }
 
   .red {
-    color: #EB1F2E;
+    color:  ${({ theme: { colors } }) => colors.red};
   }
 
   .yellow {
-    color: #f6ea15;
+    color:  ${({ theme: { colors } }) => colors.yellow};
   }
 
   .align-center {
@@ -841,12 +841,16 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 700;
   }
 
+  .italic {
+    font-style: italic;
+  }
+
   .button,
   .button:visited,
   input[type="submit"],
   input[type="submit"]:visited {
     display: inline-block;
-    background-color: #EB1F2E;
+    background-color: ${({ theme: { colors } }) => colors.red};
     color: #ffffff;
     padding: 10px 15px;
     -webkit-border-radius: 5px;
@@ -889,7 +893,7 @@ const GlobalStyles = createGlobalStyle`
   .button-inverted:visited {
     display: inline-block;
     background-color: #ffffff;
-    color: #EB1F2E;
+    color: ${({ theme: { colors } }) => colors.red};
     padding: 10px 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -941,13 +945,6 @@ const GlobalStyles = createGlobalStyle`
       border: 0;
       outline: 0;
     }
-  }
-
-  .separator .container {
-    height: 1px;
-    width: 75%;
-    background-color: #eee3e3;
-    margin: 0 auto;
   }
 
   /* Pricing, Download and Contact Pages */
@@ -1155,7 +1152,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-box-shadow: 5.66px 5.66px 0px 0px rgba(219, 186, 59, 1);
     -moz-box-shadow: 5.66px 5.66px 0px 0px rgba(219, 186, 59, 1);
     box-shadow: 5.66px 5.66px 0px 0px rgba(219, 186, 59, 1);
-    color: #EB1F2E;
+    color: ${({ theme: { colors } }) => colors.red};
     font-size: 120%;
     max-width: 300px;
     margin: 0px auto 30px auto;
@@ -1257,7 +1254,7 @@ const GlobalStyles = createGlobalStyle`
   .partial-plans__item--price {
     font-size: 34px;
     margin-bottom: 10px;
-    color: #EB1F2E;
+    color: ${({ theme: { colors } }) => colors.red};
     font-weight: bold;
   }
 
@@ -1540,7 +1537,7 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     width: 27px;
     height: 27px;
-    border: 2px solid #1e1e1e;
+    border: 2px solid ${({ theme: { colors } }) => colors.darkGrey};
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;

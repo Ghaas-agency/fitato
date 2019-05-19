@@ -311,3 +311,183 @@ export function getPricingFaqs() {
     },
   ];
 }
+
+export function getIndexReviews() {
+  return [
+    {
+      id: 1,
+      name: 'Vishesh Parashar',
+      imgSrc: '/static/index/testimonials/vishesh.jpg',
+      content: (
+        <>
+          &quot;It makes fitness fun &amp; flexible, being a sports person and
+          adventure junkie I hated being tied down to a particular gym. With
+          Fitato, it&apos;s like a new adventure waiting for you every day,
+          sheer variety in fitness with a single pass.&quot;
+        </>
+      ),
+    },
+    {
+      id: 2,
+      name: 'Karen Jophy',
+      imgSrc: '/static/index/testimonials/karen.jpg',
+      content: (
+        <>
+          &quot;The thing I love the most about Fitato is their community
+          events. Fitato Exclusive Events are so fun and exciting. I try to be a
+          part of all of them. From treks, friendly sport matches, games to yoga
+          carnivals, rock-climbing workshops, they have it all. They are the
+          favorite part of my weekends.&quot;
+        </>
+      ),
+    },
+    {
+      id: 3,
+      name: 'Aninda Verma',
+      imgSrc: '/static/index/testimonials/aninda.jpg',
+      content: (
+        <>
+          &quot;The thing I love the most about Fitato is their community
+          events. Fitato Exclusive Events are so fun and exciting. I try to be a
+          part of all of them. From treks, friendly sport matches, games to yoga
+          carnivals, rock-climbing workshops, they have it all. They are the
+          favorite part of my weekends.&quot;
+        </>
+      ),
+    },
+  ];
+}
+
+export function getIndexActivities() {
+  return [
+    {
+      id: 1,
+      title: 'Spinning',
+      imgSrc: '/static/index/activities/spinning.png',
+    },
+    {
+      id: 2,
+      title: 'Gym',
+      imgSrc: '/static/index/activities/gym.png',
+    },
+    {
+      id: 3,
+      title: 'Yoga',
+      imgSrc: '/static/index/activities/yoga.png',
+    },
+    {
+      id: 4,
+      title: 'Meditation',
+      imgSrc: '/static/index/activities/meditation.png',
+    },
+    {
+      id: 5,
+      title: 'Community Events',
+      imgSrc: '/static/index/activities/community.png',
+    },
+    {
+      id: 6,
+      title: 'Swimming',
+      imgSrc: '/static/index/activities/swimming.png',
+    },
+    {
+      id: 7,
+      title: 'Zumba',
+      imgSrc: '/static/index/activities/zumba.png',
+    },
+    {
+      id: 8,
+      title: 'MMA',
+      imgSrc: '/static/index/activities/mma.png',
+    },
+  ];
+}
+
+export function getIndexPartners() {
+  return [
+    {
+      id: 1,
+      title: 'Blitz Athletics',
+      imgSrc: '/static/partners/featured/blitz-athletics.jpg',
+    },
+    {
+      id: 2,
+      title: 'Urbounce',
+      imgSrc: '/static/partners/featured/urbounce.jpg',
+    },
+    {
+      id: 3,
+      title: 'Recomp Fitness',
+      imgSrc: '/static/partners/featured/recomp.jpg',
+    },
+    {
+      id: 4,
+      title: 'Evolve Fitness',
+      imgSrc: '/static/partners/featured/evolve-fitness.jpg',
+    },
+    {
+      id: 5,
+      title: <>Gold&apos;s Gym</>,
+      imgSrc: '/static/partners/featured/golds-gym.jpg',
+    },
+    {
+      id: 6,
+      title: 'MultiFit',
+      imgSrc: '/static/partners/featured/multifit.jpg',
+    },
+    {
+      id: 7,
+      title: 'Endure Fitness Club',
+      imgSrc: '/static/partners/featured/endure-fitness-club.jpg',
+    },
+    {
+      id: 8,
+      title: 'Crossfit Graybar',
+      imgSrc: '/static/partners/featured/crossfit-graybar.jpg',
+    },
+    {
+      id: 9,
+      title: <>Talkwalker&apos;s</>,
+      imgSrc: '/static/partners/featured/talkwalkers.jpg',
+    },
+  ];
+}
+
+export function getIndexMedia() {
+  return [
+    {
+      id: 1,
+      href:
+        'http://bwdisrupt.businessworld.in/article/Fitato-Aims-to-be-the-Umbrella-Brand-for-All-Niche-Fitness-Facilities-in-the-Country/14-02-2017-112929/',
+      imgSrc: '/static/index/media/businessworld.jpg',
+      title: 'Business World',
+    },
+    {
+      id: 2,
+      href:
+        'http://www.indianweb2.com/2017/03/22/fitato-indias-classpass-fine-tuned-indian-market/',
+      imgSrc: '/static/index/media/indianweb2.jpg',
+      title: 'Indian Web 2',
+    },
+    {
+      id: 3,
+      href:
+        'https://yourstory.com/mystory/97218e7c14-i-need-2-minutes-of-your-time-this-is-for-us-',
+      imgSrc: '/static/index/media/yourstory.jpg',
+      title: 'Your Story',
+    },
+    {
+      id: 4,
+      href: 'http://www.iamwire.com/2017/02/fitato-story/148767',
+      imgSrc: '/static/index/media/iamwire.jpg',
+      title: 'I Am Wire',
+    },
+    {
+      id: 5,
+      href:
+        'http://www.letsintern.com/blog/weekly-spotlight-5-indian-start-ups-you-should-know-about-14/',
+      imgSrc: '/static/index/media/letsintern.jpg',
+      title: <>Let&apos;s Intern</>,
+    },
+  ];
+}

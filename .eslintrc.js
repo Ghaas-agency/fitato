@@ -67,6 +67,7 @@ module.exports = {
     'react/sort-comp': 0,
     'react/jsx-closing-bracket-location': 0,
     'require-yield': 0,
+    'indent': 0,
   },
   settings: {
     'import/resolver': {

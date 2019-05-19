@@ -5,16 +5,16 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "gatsby": "^2.4.6",
+    "gatsby": "^2.5.5",
     "gatsby-link": "^2.1.1",
     "gatsby-plugin-nprogress": "^2.0.10",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sitemap": "^2.1.0",
     "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.36",
     "pug": "^2.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -42,6 +42,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.17.1"
   },
   "repository": {
