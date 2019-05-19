@@ -30,7 +30,7 @@ const AppIcons = ({ btnClass }) => (
 );
 
 AppIcons.propTypes = {
-  btnClass: PropTypes.string.isRequired,
+  btnClass: PropTypes.string,
 };
 
 export default AppIcons;

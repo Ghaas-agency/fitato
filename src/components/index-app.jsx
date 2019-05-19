@@ -10,7 +10,7 @@ import Footer from './footer';
 const Index = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutCommQuery {
+      query LayoutAppQuery {
         site {
           siteMetadata {
             title
@@ -134,13 +134,18 @@ const Index = ({ children }) => (
         <Header />
         <main>{children}</main>
         <Footer />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement("script"),t=document.getElementsByTagName("script")[0];e.async=!0,e.src="https://embed.tawk.to/5bddee4a4cfbc9247c1e9aab/default",e.charset="UTF-8",e.setAttribute("crossorigin","*"),t.parentNode.insertBefore(e,t)}();`,
+          }}
+        />
       </>
     )}
   />
 );
 
 Index.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
 };
 
 export default Index;

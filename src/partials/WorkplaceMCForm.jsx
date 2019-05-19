@@ -81,7 +81,6 @@ const WorkplaceMCForm = () => (
             type="text"
             name="b_c70dd7220cee163ff5b3fa95d_13392e4199"
             tabIndex="-1"
-            value=""
           />
         </div>
         <div className="clear">
