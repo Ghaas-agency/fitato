@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import { Link, withPrefix } from 'gatsby';
-import Topbar from '../partials/Topbar';
+import Topbar from '../partials/Topbar/Topbar';
 import '../css/header.css';
 
 const displayBlock = {

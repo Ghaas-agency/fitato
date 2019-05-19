@@ -158,7 +158,7 @@ const Index = ({ children }) => (
 );
 
 Index.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.element || PropTypes.array,
 };
 
 export default Index;
