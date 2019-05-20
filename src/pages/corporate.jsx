@@ -3,10 +3,13 @@ import { Link, withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from 'components/index';
 import Main from 'css/corporate.styled';
-import AppIcons from 'partials/AppIcons';
-import SocialLinks from 'partials/SocialLinks';
-import ContactLinks from 'partials/ContactLinks';
-import WorkplaceMCForm from 'partials/WorkplaceMCForm';
+import {
+  AppIcons,
+  SocialLinks,
+  ContactLinks,
+  WorkplaceMCForm,
+  CurrentlyOperatingIn,
+} from 'partials';
 
 const WorkplacePage = () => (
   <Layout>
@@ -295,26 +298,7 @@ const WorkplacePage = () => (
           </div>
         </div>
 
-        <div className="workplace-locations">
-          <div className="container">
-            <div className="workplace-locations__heading">
-              <h3>Currently Operating In</h3>
-            </div>
-            <div className="workplace-locations__imgs">
-              <div className="workplace-locations__img">
-                <img src={withPrefix('/static/icons/pune.svg')} alt="pune" />
-                <p>Pune</p>
-              </div>
-              <div className="workplace-locations__img">
-                <img
-                  src={withPrefix('/static/icons/hyderabad.svg')}
-                  alt="hyderabad"
-                />
-                <p>Hyderabad</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CurrentlyOperatingIn />
 
         <div className="workplace-section-clients">
           <div className="container">

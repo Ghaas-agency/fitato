@@ -8,11 +8,6 @@ import {
   getIndexPartners,
   getIndexMedia,
 } from 'utils/contentProvider';
-import Separator from 'partials/Separator';
-import FooterInfo from 'partials/FooterInfo';
-import AppIcons from 'partials/AppIcons';
-import MCForm from 'partials/MailChimpForm';
-import DownloadSwipe from 'partials/DownloadSwipe';
 import theme from 'css/theme';
 import {
   IndexHero,
@@ -26,6 +21,14 @@ import {
   IndexMedia,
   IndexCallback,
 } from 'css/index.styled';
+import {
+  Separator,
+  FooterInfo,
+  AppIcons,
+  MailChimpForm,
+  DownloadSwipe,
+  CurrentlyOperatingIn,
+} from 'partials';
 
 const Index = () => (
   <Layout>
@@ -57,8 +60,8 @@ const Index = () => (
             <div className="line" />
             <div className="content--text">
               <p>
-                Your universal all access pass to premium gyms, studios &amp;
-                exclusive Fitato community events.
+                Your all access pass to premium gyms, studios &amp; exclusive
+                Fitato community events.
               </p>
               {/* <Link to="/download/" className="button">Download the app</Link> */}
               <p
@@ -207,7 +210,7 @@ const Index = () => (
             <br />
             Let us arrange a call back from our team.
           </p>
-          <MCForm formClass="f-cf-index-join" />
+          <MailChimpForm formClass="f-cf-index-join" />
         </div>
       </IndexJoin>
 
@@ -296,6 +299,10 @@ const Index = () => (
         </div>
       </IndexMedia>
 
+      <Separator />
+
+      <CurrentlyOperatingIn />
+
       <section style={{ background: 'none' }}>
         <DownloadSwipe btnClass="f-ai-index-download" />
       </section>
@@ -309,7 +316,7 @@ const Index = () => (
               you.
             </p>
             <div className="form">
-              <MCForm formClass="f-cf-index-speak" />
+              <MailChimpForm formClass="f-cf-index-speak" />
             </div>
           </div>
         </div>

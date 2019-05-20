@@ -1,10 +1,11 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import Helmet from 'react-helmet';
 import { /* Link, */ withPrefix } from 'gatsby';
-import Layout from '../components/index-app';
-import '../css/be-a-champion.css';
-// import SocialLinks from '../partials/SocialLinks'
+import Layout from 'components/index-app';
+import 'css/be-a-champion.css';
+// import SocialLinks from 'partials/SocialLinks'
 
 const CollegePage = () => (
   <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link, withPrefix } from 'gatsby';
-import Layout from '../components/index';
+import Layout from 'components/index';
 
 const NotFoundPage = () => (
   <Layout>

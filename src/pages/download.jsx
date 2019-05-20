@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
-import Layout from '../components/index';
-import AppIcons from '../partials/AppIcons';
+import Layout from 'components/index';
+import AppIcons from 'partials/AppIcons';
 
 const DownloadPage = () => (
   <Layout>

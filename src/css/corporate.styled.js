@@ -541,61 +541,6 @@ const Main = styled.div`
     filter: opacity(0.9);
   }
 
-  .workplace-locations {
-    padding: 100px 0;
-    background-color: #ffffff;
-  }
-
-  .workplace-locations .container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .workplace-locations__heading,
-  .workplace-locations__imgs {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -moz-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-
-  .workplace-locations__heading {
-    text-align: right;
-    padding: 0 25px;
-  }
-
-  .workplace-locations__imgs {
-    padding: 0 15px;
-    border-left: 1px solid #dddddd;
-  }
-
-  .workplace-locations__img {
-    display: inline-block;
-    text-align: center;
-  }
-
-  .workplace-locations__img img {
-    width: 90px;
-    margin: 15px;
-  }
-
   .workplace-section-clients {
     padding: 100px 15% 70px 15%;
     text-align: center;
