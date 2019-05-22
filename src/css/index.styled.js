@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { withPrefix } from 'gatsby';
 
+const indexHeroBg = `url('${withPrefix(
+  '/static/fitato-home-hero-bg-mobile.jpg',
+)}')`;
+
 export const IndexHero = styled.section`
   min-height: 650px;
   padding: 75px 5% 100px 5%;
@@ -20,9 +24,7 @@ export const IndexHero = styled.section`
 
   @media only screen and (max-width: 767px) {
     padding-top: 50px;
-    background-image: url('${withPrefix(
-      '/static/fitato-home-hero-bg-mobile.jpg',
-    )}');
+    background-image: ${indexHeroBg};
   }
 
   @media only screen and (max-width: 480px) {
@@ -85,7 +87,7 @@ export const IndexHero = styled.section`
 `;
 
 export const IndexPass = styled.section`
-  padding-top: 20px;
+  padding-top: 5px;
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
@@ -116,12 +118,14 @@ export const IndexPass = styled.section`
   }
 `;
 
+const indexCommunityBg = `url('${withPrefix(
+  '/static/index/fitato-community-bg.jpg',
+)}')`;
+
 export const IndexCommunity = styled.section`
-  padding: 125px 10%;
+  padding: 105px 10%;
   padding-bottom: 150px;
-  background-image: url('${withPrefix(
-    '/static/index/fitato-community-bg.jpg',
-  )}');
+  background-image: ${indexCommunityBg};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -145,8 +149,8 @@ export const IndexCommunity = styled.section`
 `;
 
 export const IndexAccess = styled.section`
-  padding-top: 75px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 60px;
 
   h2 {
     @media only screen and (max-width: 767px) {
@@ -236,8 +240,8 @@ export const IndexAccess = styled.section`
 `;
 
 export const IndexFlexible = styled.section`
-  padding-top: 75px;
-  padding-bottom: 25px;
+  padding-top: 100px;
+  padding-bottom: 55px;
   text-align: center;
 
   img {
@@ -285,7 +289,7 @@ export const IndexJoin = styled.section`
 
   .container {
     background-color: #ffffff;
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 20px;
     padding-left: 5%;
     padding-right: 5%;
@@ -322,8 +326,8 @@ export const IndexJoin = styled.section`
 `;
 
 export const IndexPartners = styled.section`
-  padding: 75px 2%;
-  padding-top: 125px;
+  padding: 95px 2%;
+  padding-top: 145px;
   text-align: center;
 
   p {
@@ -412,7 +416,7 @@ export const IndexPartners = styled.section`
 `;
 
 export const IndexTestimonials = styled.section`
-  padding: 75px 0;
+  padding: 100px 0;
   text-align: center;
 
   .items {
@@ -465,8 +469,8 @@ export const IndexTestimonials = styled.section`
 `;
 
 export const IndexMedia = styled.section`
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 
   .container {
@@ -502,7 +506,7 @@ export const IndexMedia = styled.section`
 `;
 
 export const IndexCallback = styled.section`
-  padding: 75px 0 50px 0;
+  padding: 100px 0 70px 0;
   background-color: #000000;
   color: #ffffff;
   background-image: url('${withPrefix('/static/index/fitness-barbell.jpg')}');

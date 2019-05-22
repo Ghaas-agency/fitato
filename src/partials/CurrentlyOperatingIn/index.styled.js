@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledLocations = styled.section`
-  padding: 75px 0;
+  padding: 95px 0;
   background-color: #ffffff;
 
   .container {
