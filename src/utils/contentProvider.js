@@ -347,11 +347,9 @@ export function getIndexReviews() {
       imgSrc: '/static/index/testimonials/aninda.jpg',
       content: (
         <>
-          &quot;The thing I love the most about Fitato is their community
-          events. Fitato Exclusive Events are so fun and exciting. I try to be a
-          part of all of them. From treks, friendly sport matches, games to yoga
-          carnivals, rock-climbing workshops, they have it all. They are the
-          favorite part of my weekends.&quot;
+          &quot;After paying gym fees for years and never getting my
+          money&apos;s worth, I&apos;m happy I can fit in workouts I want, when
+          I want.&quot;
         </>
       ),
     },

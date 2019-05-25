@@ -247,7 +247,7 @@ const Index = () => (
 
       <IndexTestimonials>
         <div className="container">
-          <h2>Our Customers Fell In Love With Us</h2>
+          <h2>Fitato Community Speaks</h2>
           <div className="items">
             {getIndexReviews().map((i) => (
               <div key={i.id} className="item">
