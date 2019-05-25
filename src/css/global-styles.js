@@ -845,6 +845,10 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic;
   }
 
+  .uppercase {
+    text-transform: uppercase;
+  }
+
   .button,
   .button:visited,
   input[type="submit"],

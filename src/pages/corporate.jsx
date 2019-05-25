@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from 'components/index';
-import Main from 'css/corporate.styled';
 import {
   AppIcons,
   SocialLinks,
@@ -10,6 +9,12 @@ import {
   WorkplaceMCForm,
   CurrentlyOperatingIn,
 } from 'partials';
+import Main, {
+  WorkplaceIntro,
+  WorkplaceAbout,
+  WorkplaceAdvantage,
+  WorkplaceWellness,
+} from 'css/corporate.styled';
 
 const WorkplacePage = () => (
   <Layout>
@@ -42,205 +47,82 @@ const WorkplacePage = () => (
     </Helmet>
     <Main>
       <div className="workplace-page">
-        <div
-          className="workplace-section-intro"
-          style={{
-            backgroundImage: `url('${withPrefix(
-              '/static/workplace/fitato-for-workplace-bg.jpg',
-            )}')`,
-          }}>
+        <WorkplaceIntro>
           <div className="container">
-            <div className="workplace-section-intro__content">
-              <h1>Holistic Wellness For The New Age Workplace</h1>
-              <p>
-                Get the Fitato advantage for your employees and see the
-                happiness, health and productivity soar!
-              </p>
+            <div className="content">
+              <h1 className="uppercase italic">Fitato For Workplace</h1>
+              <p>Corporate Wellness Solutions For The New Age Workplace</p>
               <span className="button" style={{ marginLeft: '0' }}>
-                Learn More
+                Know More
               </span>
             </div>
           </div>
-        </div>
+        </WorkplaceIntro>
 
-        <div className="workplace-section-onepass">
+        <WorkplaceAbout>
           <div className="container">
-            <h2>One Pass | Limitless Fitness Options</h2>
+            <div className="content">
+              <h2>About Us</h2>
+              <p>
+                Fitato is a hyper-local, tech-enabled fitness solution presently
+                active in the city of Pune and Hyderabad. Our aim is to provide
+                flexibility in fitness by offering a single membership to the
+                best gyms and fitness studios in the city. With that, one could
+                enjoy yoga one day, go for a swim the other and trek the next
+                day.
+              </p>
+            </div>
           </div>
-        </div>
+        </WorkplaceAbout>
 
-        <div className="workplace-section-your">
-          <div className="container">
-            <h2>Your Holistic Health and Wellness Partner</h2>
-            <div className="workplace-section-your__items">
-              <div className="workplace-section-your__item">
+        <WorkplaceAdvantage>
+          <div className="container align-center">
+            <h2>The Fitato Advantage</h2>
+            <div className="items">
+              <div className="item">
                 <img
-                  src={withPrefix('/static/workplace/mind.svg')}
-                  alt="mind"
+                  src={withPrefix(
+                    '/static/workplace/fitato-advantage-no-restrictions.jpg',
+                  )}
+                  alt="fitness no restrictions"
                 />
-                <h3>Mentally Fit</h3>
+                <h3>No Restrictions</h3>
                 <p>
-                  An uncluttered mind will always triumph. Our corporate
-                  wellness program includes activities and exercises that boost
-                  productivity, decreas stress levels, increase creativity and
-                  guarantee great results. Show your employees you care with our
-                  corporate wellness program.
+                  Fitato allows users to choose a fitness activity of their
+                  choice, at a facility they like for a time slot of their
+                  convenience.
                 </p>
               </div>
-              <div className="workplace-section-your__item">
+              <div className="item">
                 <img
-                  src={withPrefix('/static/workplace/body.svg')}
-                  alt="body"
+                  src={withPrefix(
+                    '/static/workplace/fitato-advantage-fitness-community.jpg',
+                  )}
+                  alt="fitness community"
                 />
-                <h3>Physically Fit</h3>
+                <h3>Fitness Community</h3>
                 <p>
-                  Give your employees the gift of health! Healthier employees
-                  mean less absenteeism, better performance, and faster results.
-                  Employees are the most important asset in your organization
-                  and your healthy, happy employees will stay with you for a
-                  long, long time.
-                </p>
-              </div>
-              <div className="workplace-section-your__item">
-                <img
-                  src={withPrefix('/static/workplace/community.svg')}
-                  alt="community"
-                />
-                <h3>Socially Fit</h3>
-                <p>
-                  Tough times never last, tough teams do. Our workplace wellness
-                  program boosts employee morale and encourages camaraderie and
-                  teamwork. Happier employees support each other and work
-                  towards a common goal.
+                  Users can engage in Fitato Exclusive community workouts and
+                  fitness events like treks, go-karting and so much more with
+                  the fun-loving Fitato community.
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </WorkplaceAdvantage>
 
-        <div className="workplace-section-about">
-          <div className="container">
-            <h2>What is Fitato For The Workplace?</h2>
+        <WorkplaceWellness>
+          <div className="container align-center">
+            <h2>Our Corporate Wellness Program</h2>
             <p>
-              Fitato is a hyperlocal, tech-enabled fitness solution which is
-              sweeping India by storm. Gift your employees a single membership
-              pass to access the best gyms and fitness studios across the city -
-              so your employees can access gyms they want, whenever and wherever
-              they want.
+              Fitato is a hyper-local, tech-enabled fitness solution presently
+              active in the city of Pune and Hyderabad. Our aim is to provide
+              flexibility in fitness by offering a single membership to the best
+              gyms and fitness studios in the city. With that, one could enjoy
+              yoga one day, go for a swim the other and trek the next day.
             </p>
-            <p>
-              What’s more, our customized corporate plans bring you a variety of
-              on-demand fitness sessions right at your workplace.
-            </p>
-            <p>
-              This is the corporate fitness program for the new age offices!
-            </p>
-            <span className="button">Get in touch</span>
           </div>
-        </div>
-
-        <div className="workplace-section-employees">
-          <div className="container">
-            <div className="workplace-section-employees__wrapper">
-              <h2 className="align-center">The Fitato Advantage</h2>
-              <div className="workplace-section-employees__row">
-                <div>
-                  <h3>For Employees</h3>
-                  <p>
-                    Each and every one of your employees and team members get a
-                    flexible fitness plan they’re bound to love. Customised
-                    fitness options - from Yoga to MMA, Crossfit to Swimming,
-                    there’s something for everybody!
-                  </p>
-                  <p>
-                    Nothing says Employee Benefits better than a Fitato Pass.
-                  </p>
-                </div>
-                <div className="workplace-section-employees__row--img">
-                  <img
-                    src={withPrefix('/static/workplace/employees.svg')}
-                    alt="employee"
-                  />
-                </div>
-              </div>
-              <div className="workplace-section-employees__row">
-                <div className="workplace-section-employees__row--img workplace-section-employees__row--img2">
-                  <img
-                    src={withPrefix('/static/workplace/employer.svg')}
-                    alt="employer"
-                  />
-                </div>
-                <div className="workplace-section-employees__row--c2">
-                  <h3>For Employers</h3>
-                  <p>
-                    It’s very difficult to make everyone happy. And run it well!
-                    Fitato For Workplaces is built for the new age workplace.
-                    All the stats you need, on a single dashboard. Plus a range
-                    of in-office activities you can choose from.
-                  </p>
-                  <p>Caring for your employees was never this easy!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="workplace-section-why">
-          <div className="container">
-            <h2>
-              The Corporate Wellness Program
-              <br />
-              for the Indian Workplace
-            </h2>
-            <div className="workplace-section-why__items">
-              <div className="workplace-section-why__item">
-                <div className="workplace-section-why__item--left">
-                  <img
-                    src={withPrefix('/static/workplace/money.svg')}
-                    alt="money"
-                  />
-                </div>
-                <div className="workplace-section-why__item--right">
-                  <p>Cost-efficient plans, perfect for organisations.</p>
-                </div>
-              </div>
-              <div className="workplace-section-why__item">
-                <div className="workplace-section-why__item--left">
-                  <img
-                    src={withPrefix('/static/workplace/barbell.svg')}
-                    alt="barbell"
-                  />
-                </div>
-                <div className="workplace-section-why__item--right">
-                  <p>On-demand fitness for everyone in the organisation.</p>
-                </div>
-              </div>
-              <div className="workplace-section-why__item">
-                <div className="workplace-section-why__item--left">
-                  <img
-                    src={withPrefix('/static/workplace/face.svg')}
-                    alt="face"
-                  />
-                </div>
-                <div className="workplace-section-why__item--right">
-                  <p>Variety of activities makes fitness fun.</p>
-                </div>
-              </div>
-              <div className="workplace-section-why__item">
-                <div className="workplace-section-why__item--left">
-                  <img
-                    src={withPrefix('/static/workplace/clock.svg')}
-                    alt="clock"
-                  />
-                </div>
-                <div className="workplace-section-why__item--right">
-                  <p>Offers flexibility of time and place.</p>
-                </div>
-              </div>
-            </div>
-            <span className="button align-center">Arrange a Call Back</span>
-          </div>
-        </div>
+        </WorkplaceWellness>
 
         <div className="workplace-section-classes">
           <div className="container">

@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import { Link, withPrefix } from 'gatsby';
-import Topbar from '../partials/Topbar/Topbar';
+// import Topbar from '../partials/Topbar/Topbar';
 import '../css/header.css';
 
 const displayBlock = {
@@ -74,7 +74,7 @@ class Header extends Component {
       <>
         <div className="main-header-placeholder" />
         <nav className="main-header">
-          <Topbar />
+          {/* <Topbar /> */}
           <div className="main-header-container">
             <img
               src={withPrefix('/static/icons/menu.svg')}

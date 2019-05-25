@@ -1,230 +1,122 @@
 import styled from 'styled-components';
+import { withPrefix } from 'gatsby';
 
-const Main = styled.div`
-  .workplace-page p,
-  .workplace-page small,
-  .workplace-page li {
-    color: rgb(51, 51, 51);
-    color: rgba(0, 0, 0, 0.7);
+const workplaceIntroBg = `url('${withPrefix(
+  '/static/workplace/workplace-intro-bg.jpg',
+)}')`;
+
+export const WorkplaceIntro = styled.section`
+  min-height: 650px;
+  padding: 10px 0 10px 0;
+  padding-top: 0;
+  background-image: ${workplaceIntroBg};
+  background-size: 55vw;
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 979px) {
+    background-position: center;
   }
 
-  .workplace-page .button {
+  .container {
+    width: 94%;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+  }
+
+  p {
     font-size: 17px;
-  }
-
-  .workplace-section-intro {
-    min-height: 35vh;
-    padding: 100px 0 70px 0;
-    padding-top: 0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: -50px;
-  }
-
-  .workplace-section-intro p {
-    font-size: 24px;
     line-height: 1.4em;
   }
 
-  .workplace-section-intro__content {
-    padding: 30px;
-    padding-top: 100px;
-    margin-left: 55%;
-  }
+  .content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 50%;
 
-  .workplace-section-your {
-    padding: 100px 0 80px 0;
-    text-align: center;
-    background-color: #efefef;
-  }
+    @media only screen and (max-width: 797px) {
+      max-width: 100%;
+    }
 
-  .workplace-section-your img {
-    width: 200px;
-  }
-
-  .workplace-section-your__items {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-top: 25px;
-  }
-
-  .workplace-section-your__item {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -moz-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-width: 250px;
-    padding: 20px 50px;
-  }
-
-  @media (max-width: 800px) {
-    .workplace-section-your__item {
-      -webkit-box-flex: 50%;
-      -webkit-flex: 50%;
-      -moz-box-flex: 50%;
-      -ms-flex: 50%;
-      flex: 50%;
-      padding: 20px 25px;
+    @media only screen and (max-width: 480px) {
+      padding: 30px 3%;
+      padding-top: 70px;
     }
   }
 
-  .workplace-section-onepass {
-    background-color: #1e1e1e;
-    text-align: center;
-    padding: 25px 0;
-    color: #ffffff;
+  @media only screen and (max-width: 797px) {
+    min-height: 550px;
+    background-position: -150% 130%;
+    background-size: 120%;
   }
 
-  .workplace-section-onepass h2 {
-    margin: 0.5em 0;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.75em;
+  @media only screen and (max-width: 480px) {
+    background-position: -90% 115%;
+    background-size: 130%;
+    min-height: 600px;
   }
+`;
 
-  .workplace-section-about {
-    padding: 100px 20%;
-    padding-bottom: 75px;
-    text-align: center;
-  }
+const workplaceAboutBg = `url('${withPrefix(
+  '/static/workplace/workplace-about-app.png',
+)}')`;
 
-  .workplace-section-employees {
-    padding: 7px 0;
-  }
+export const WorkplaceAbout = styled.section`
+  padding: 110px 0;
+  background-image: ${workplaceAboutBg};
+  background-repeat: no-repeat;
+  background-position: 17% bottom;
+  background-size: 400px;
+  background-color: ${({ theme: { colors } }) => colors.red};
+  color: #ffffff;
 
-  .workplace-section-employees__wrapper {
-    padding: 75px;
-    padding-bottom: 50px;
-    /* background-color: #efefef; */
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-  }
+  .content {
+    width: 50%;
+    margin-left: auto;
 
-  @media only screen and (max-width: 767px) {
-    .workplace-section-employees__wrapper {
-      padding: 40px 25px;
-      padding-bottom: 15px;
+    p {
+      max-width: 525px;
     }
   }
+`;
 
-  .workplace-section-employees__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
+export const WorkplaceAdvantage = styled.section`
+  padding: 100px 0;
+
+  .items {
     display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 30px 0;
-  }
-
-  .workplace-section-employees__row > div {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    -moz-box-flex: 1;
-    flex: 1;
-    -ms-flex-item-align: center;
-    -webkit-align-self: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-
-  .workplace-section-employees__row--img {
-    text-align: center;
-  }
-
-  .workplace-section-employees__row--img img {
-    max-width: 270px;
-  }
-
-  .workplace-section-why {
-    padding: 100px 0%;
-    padding-top: 75px;
-    background-blend-mode: hue;
-    background-color: rgba(255, 255, 255, 0.9);
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-  }
-
-  .workplace-section-why__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 20px 0;
-  }
-
-  .workplace-section-why__item {
-    -webkit-box-flex: 50%;
-    -ms-flex: 50%;
-    -webkit-flex: 50%;
-    -moz-box-flex: 50%;
-    flex: 50%;
-    padding: 20px;
-    text-align: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
 
-  .workplace-section-why__item--left > img {
-    width: 75px;
-  }
+    .item {
+      flex: 1;
+      margin: 10px 30px;
 
-  .workplace-section-why__item--right,
-  .workplace-section-why__item--left {
-    font-size: 130%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -moz-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: left;
-  }
+      img {
+        max-height: 220px;
+      }
 
-  .workplace-section-why__item--right {
-    -webkit-box-flex: 3;
-    -webkit-flex: 3;
-    -moz-box-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
+      p {
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+`;
+
+export const WorkplaceWellness = styled.section``;
+
+const Main = styled.div`
+  .workplace-page .button {
+    font-size: 17px;
   }
 
   .workplace-section-classes {
@@ -589,18 +481,6 @@ const Main = styled.div`
   }
 
   @media (max-width: 979px) {
-    .workplace-section-intro {
-      background-position: center;
-    }
-
-    .workplace-section-intro h1 {
-      font-size: 38px;
-    }
-
-    .workplace-section-about {
-      padding: 100px 15%;
-    }
-
     .workplace-modal {
       width: 70%;
       /* left: 15%; */
@@ -616,62 +496,6 @@ const Main = styled.div`
   }
 
   @media (max-width: 767px) {
-    .workplace-section-intro {
-      min-height: 550px;
-      background-position: -150% 130%;
-      -webkit-background-size: 120% 120%;
-      -moz-background-size: 120%;
-      -o-background-size: 120%;
-      background-size: 120%;
-    }
-
-    .workplace-section-intro__content {
-      padding: 30px;
-      padding-top: 50px;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-
-    .workplace-section-about {
-      padding: 100px 10%;
-    }
-
-    .workplace-section-why__item {
-      -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-      -webkit-flex: 100%;
-      -moz-box-flex: 100%;
-      flex: 100%;
-    }
-
-    .workplace-section-why__item--left > img {
-      width: 50px;
-    }
-
-    .workplace-section-employees__row > div {
-      -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-      -webkit-flex: 100%;
-      -moz-box-flex: 100%;
-      flex: 100%;
-    }
-
-    .workplace-section-employees__row--img2 {
-      -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-      -webkit-order: 2;
-      -moz-box-ordinal-group: 3;
-      order: 2;
-    }
-
-    .workplace-section-employees__row--c2 {
-      -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-      -webkit-order: 1;
-      -moz-box-ordinal-group: 2;
-      order: 1;
-    }
-
     .workplace-section-cta {
       padding: 100px 10%;
     }
@@ -697,49 +521,9 @@ const Main = styled.div`
     .workplace-section-classes {
       padding: 100px 3%;
     }
-
-    .workplace-section-employees__row--img img {
-      max-width: 200px;
-    }
   }
 
   @media (max-width: 480px) {
-    .workplace-section-intro {
-      background-position: -90% 115%;
-      -webkit-background-size: 130% 130%;
-      -moz-background-size: 130%;
-      -o-background-size: 130%;
-      background-size: 130%;
-      min-height: 600px;
-    }
-
-    .workplace-section-intro__content {
-      padding: 30px 3%;
-      padding-top: 70px;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-
-    .workplace-section-about {
-      padding: 100px 5%;
-    }
-
-    .workplace-section-why__item--left {
-      -webkit-box-flex: 30%;
-      -ms-flex: 30%;
-      -webkit-flex: 30%;
-      -moz-box-flex: 30%;
-      flex: 30%;
-    }
-
-    .workplace-section-why__item--right {
-      -webkit-box-flex: 70%;
-      -ms-flex: 70%;
-      -webkit-flex: 70%;
-      -moz-box-flex: 70%;
-      flex: 70%;
-    }
-
     .workplace-section-cta {
       padding: 100px 5%;
     }
