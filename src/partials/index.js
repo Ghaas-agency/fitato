@@ -12,7 +12,6 @@ import Separator from './Separator';
 import SignupPopup from './SignupPopup';
 import SocialLinks from './SocialLinks';
 import TestimonialsCarousel from './TestimonialsCarousel';
-import WorkplaceMCForm from './WorkplaceMCForm';
 
 export {
   CurrentlyOperatingIn,
@@ -29,5 +28,4 @@ export {
   SignupPopup,
   SocialLinks,
   TestimonialsCarousel,
-  WorkplaceMCForm,
 };

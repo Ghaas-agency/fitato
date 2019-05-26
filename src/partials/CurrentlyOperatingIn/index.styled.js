@@ -2,7 +2,12 @@ import styled from 'styled-components';
 
 const StyledLocations = styled.section`
   padding: 95px 0;
-  background-color: #ffffff;
+  background-color: ${({ redBg, theme: { colors } }) =>
+    redBg ? colors.red : '#ffffff'};
+
+  h3 {
+    color: ${({ redBg }) => (redBg ? '#ffffff' : 'inherit')};
+  }
 
   .container {
     display: flex;
@@ -33,6 +38,10 @@ const StyledLocations = styled.section`
     img {
       width: 90px;
       margin: 15px;
+    }
+
+    p {
+      color: ${({ redBg }) => (redBg ? '#ffffff' : 'inherit')};
     }
   }
 `;

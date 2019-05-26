@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby';
 import StyledLocations from './index.styled';
 
-const CurrentlyOperatingIn = () => (
-  <StyledLocations>
+const CurrentlyOperatingIn = ({ redBg }) => (
+  <StyledLocations redBg={redBg}>
     <div className="container">
       <div className="heading">
         <h3>Currently Operating In</h3>
@@ -24,5 +25,9 @@ const CurrentlyOperatingIn = () => (
     </div>
   </StyledLocations>
 );
+
+CurrentlyOperatingIn.propTypes = {
+  redBg: PropTypes.bool,
+};
 
 export default CurrentlyOperatingIn;
