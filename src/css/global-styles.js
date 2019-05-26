@@ -829,6 +829,10 @@ const GlobalStyles = createGlobalStyle`
     color:  ${({ theme: { colors } }) => colors.yellow};
   }
 
+  .white {
+    color: #ffffff;
+  }
+
   .align-center {
     text-align: center;
   }
@@ -845,24 +849,19 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic;
   }
 
+  .uppercase {
+    text-transform: uppercase;
+  }
+
   .button,
-  .button:visited,
-  input[type="submit"],
-  input[type="submit"]:visited {
+  input[type="submit"] {
     display: inline-block;
     background-color: ${({ theme: { colors } }) => colors.red};
     color: #ffffff;
     padding: 10px 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     font-weight: 700;
-    -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
-    -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     border-bottom-width: 0;
     text-transform: uppercase;
@@ -871,23 +870,20 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+      background-color: #ee3a46;
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+      border-bottom-width: 0;
+    }
+
+    &:active {
+      background-color: ${({ theme: { colors } }) => colors.red};
+    }
   }
 
-  .button:hover,
-  .button:focus,
-  input[type="submit"]:hover,
-  input[type="submit"]:focus {
-    -webkit-transform: translateY(-2px);
-    -moz-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    -o-transform: translateY(-2px);
-    transform: translateY(-2px);
-    background-color: #ee3a46;
-    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
-    -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
-    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
-    border-bottom-width: 0;
-  }
 
   .button-inverted,
   .button-inverted:visited {
@@ -895,16 +891,9 @@ const GlobalStyles = createGlobalStyle`
     background-color: #ffffff;
     color: ${({ theme: { colors } }) => colors.red};
     padding: 10px 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     font-weight: 700;
-    -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
-    -moz-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     border-bottom-width: 0;
     text-transform: uppercase;
@@ -915,13 +904,7 @@ const GlobalStyles = createGlobalStyle`
 
   .button-inverted:hover,
   .button-inverted:focus {
-    -webkit-transform: translateY(-2px);
-    -moz-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    -o-transform: translateY(-2px);
     transform: translateY(-2px);
-    -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
-    -moz-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
     border-bottom-width: 0;
   }
