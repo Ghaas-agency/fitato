@@ -334,3 +334,74 @@ export const WorkplaceCTA = styled.section`
     }
   }
 `;
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.25s ease-in-out;
+  overflow: auto;
+  padding: 30px;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  z-index: ${({ show }) => (show ? 99 : -1)};
+
+  .content {
+    position: absolute;
+    border-radius: 3px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 50%;
+    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+  }
+
+  .title {
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+
+    h3 {
+      margin-bottom: 0;
+      font-size: 1.5em;
+    }
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  small {
+    display: block;
+    padding-bottom: 10px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+
+    img {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      border: 2px solid #1e1e1e;
+      padding: 2px;
+      filter: opacity(0.4);
+
+      &:hover,
+      &:focus {
+        filter: opacity(0.9);
+      }
+    }
+  }
+`;

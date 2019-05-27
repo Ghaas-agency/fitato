@@ -153,7 +153,7 @@ const Index = ({ children }) => (
           <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js" />
           <script
             dangerouslySetInnerHTML={{
-              __html: `new SmoothScroll('a[href*="#"]', {offset: 150,easing: 'easeInOutCubic',updateURL: false});`,
+              __html: `new SmoothScroll('a[href*="#"]', {offset: 80, easing: 'easeInOutCubic', updateURL: false, speedAsDuration: true});`,
             }}
           />
           {/* <script
