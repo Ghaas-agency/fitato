@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby';
 import StyledLocations from './index.styled';
 
-const CurrentlyOperatingIn = ({ redBg }) => (
+const CurrentlyOperatingIn = ({ redBg, title }) => (
   <StyledLocations redBg={redBg}>
     <div className="container">
       <div className="heading">
-        <h3>Currently Operating In</h3>
+        <h3>{title || 'Currently Operating In'}</h3>
       </div>
       <div className="imgs">
         <div className="img">
@@ -28,6 +28,7 @@ const CurrentlyOperatingIn = ({ redBg }) => (
 
 CurrentlyOperatingIn.propTypes = {
   redBg: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 export default CurrentlyOperatingIn;
