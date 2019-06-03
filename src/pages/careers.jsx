@@ -1,12 +1,13 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
-import { CurrentlyOperatingIn } from 'partials';
+import { CurrentlyOperatingIn, SocialLinks } from 'partials';
 import {
   CareersHero,
   CareersAbout,
   CareersWhy,
   CareersJoin,
+  CareersSocial,
 } from 'css/careers.styled';
 import Layout from '../components/index';
 
@@ -44,7 +45,7 @@ const CareersPage = () => (
             need to be a part of your team.
           </p>
           <a
-            href="https://angel.co/company/fitato-health-solutions"
+            href="https://angel.co/company/fitato"
             target="_blank"
             rel="noopener noreferrer"
             className="button">
@@ -192,7 +193,7 @@ const CareersPage = () => (
                 our organisation here.
               </p>
               <a
-                href="https://angel.co/company/fitato-health-solutions"
+                href="https://angel.co/company/fitato"
                 className="button"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -211,6 +212,12 @@ const CareersPage = () => (
       </CareersJoin>
 
       <CurrentlyOperatingIn redBg title="Hiring Now In" />
+
+      <CareersSocial>
+        <div className="container align-center">
+          <SocialLinks />
+        </div>
+      </CareersSocial>
     </Layout>
   </>
 );

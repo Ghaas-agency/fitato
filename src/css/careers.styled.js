@@ -166,3 +166,31 @@ export const CareersJoin = styled.section`
     }
   }
 `;
+
+export const CareersSocial = styled.div`
+  background-color: ${({ theme: { colors } }) => colors.darkGrey};
+  padding-top: 35px;
+  padding-bottom: 1px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 15px;
+
+      a {
+        border: 0 !important;
+      }
+    }
+
+    img {
+      filter: invert(1);
+
+      &:hover {
+        filter: invert(0.8);
+      }
+    }
+  }
+`;
