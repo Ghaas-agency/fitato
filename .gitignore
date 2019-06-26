@@ -8,4 +8,4 @@ public/*
 .prettierrc
 firebase-debug.log
 package-lock.json
-i.txt
+.vscode
