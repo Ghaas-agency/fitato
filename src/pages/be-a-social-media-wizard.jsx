@@ -71,9 +71,9 @@ const SocialMediaWizardPage = () => (
             people in Pune think about fitness. And we want you to help us bring
             this revolution to your college! If you’re deeply passionate about
             fitness and see yourself as a changemaker - hop on this journey with
-            us. As a Fitato Campus Champion - you’ll get exclusive Champion-only
-            access to merchandise, cool parties and you’ll get to be the face of
-            fitness in your college and on social media.
+            us. As a Fitato Social Wizard- you’ll get exclusive access to
+            merchandise, cool parties and you’ll get to be the face of fitness
+            in your college and on social media.
           </p>
         </div>
       </Be>
@@ -89,7 +89,7 @@ const SocialMediaWizardPage = () => (
                 alt="free fitato membership"
               />
               <h3>Free Fitato Membership</h3>
-              <p>For all Fitato Champions</p>
+              <p>For all Fitato Social Wizards</p>
             </div>
             <div className="item">
               <img

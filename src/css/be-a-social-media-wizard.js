@@ -12,6 +12,10 @@ export const Hero = styled.section`
     padding-bottom: 380px;
   }
 
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 300px;
+  }
+
   img {
     display: inline-block;
     position: absolute;
