@@ -4,27 +4,26 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.2",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "gatsby": "^2.5.5",
-    "gatsby-link": "^2.1.1",
-    "gatsby-plugin-nprogress": "^2.0.10",
-    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby": "^2.10.5",
+    "gatsby-plugin-nprogress": "^2.1.0",
+    "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-react-svg": "^2.1.1",
-    "gatsby-plugin-sitemap": "^2.1.0",
-    "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.36",
-    "pug": "^2.0.3",
+    "gatsby-plugin-sitemap": "^2.2.0",
+    "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-source-filesystem": "^2.1.1",
+    "pug": "^2.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-sanfona": "^1.4.0",
-    "react-slick": "^0.23.2",
+    "react-slick": "^0.24.0",
     "reactjs-localstorage": "0.0.7",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.2.0",
-    "url-loader": "^1.1.2"
+    "styled-components": "^4.3.2",
+    "url-loader": "^2.0.1"
   },
   "keywords": [
     "gatsby"
@@ -36,13 +35,13 @@
     "del": "del-cli public/** !public !public/static/** !public/favicon.ico !public/robots.txt"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react": "^7.14.2",
     "gatsby-plugin-root-import": "^2.0.5",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",

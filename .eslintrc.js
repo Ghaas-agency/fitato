@@ -71,9 +71,6 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      webpack: {
-        config: path.join(__dirname, './webpack/config.base.js'),
-      },
       node: {
         paths: path.join(__dirname, './src'),
       },

@@ -126,7 +126,7 @@ const Index = ({ children }) => (
               href={withPrefix('/static/fitato-icon-114.png')}
             />
             <link
-              href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900"
               rel="stylesheet"
             />
           </Helmet>
