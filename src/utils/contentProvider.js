@@ -489,3 +489,178 @@ export function getIndexMedia() {
     },
   ];
 }
+
+export function getPartners() {
+  return {
+    pune: [
+      {
+        id: 0,
+        title: 'Viman Nagar',
+        src: '/static/partners/pune/viman-nagar.jpg',
+      },
+      {
+        id: 1,
+        title: 'Kalyani Nagar',
+        src: '/static/partners/pune/kalyani-nagar.jpg',
+      },
+      {
+        id: 2,
+        title: 'Koregaon Park',
+        src: '/static/partners/pune/koregaon-park.jpg',
+      },
+      {
+        id: 3,
+        title: 'Shivaji Nagar, Deccan, Law Road',
+        src:
+          '/static/partners/pune/shivaji-nagar-deccan-and-law-college-road.jpg',
+      },
+      {
+        id: 4,
+        title: 'Aundh',
+        src: '/static/partners/pune/aundh.jpg',
+      },
+      {
+        id: 5,
+        title: 'Baner',
+        src: '/static/partners/pune/baner.jpg',
+      },
+      {
+        id: 6,
+        title: 'Kothrud',
+        src: '/static/partners/pune/kothrud.jpg',
+      },
+      {
+        id: 7,
+        title: 'Kondhwa',
+        src: '/static/partners/pune/kondhwa.jpg',
+      },
+      {
+        id: 8,
+        title: 'Wanowrie & Camp',
+        src: '/static/partners/pune/wanowrie-and-camp.jpg',
+      },
+      {
+        id: 9,
+        title: 'Pimpri Chinchwad',
+        src: '/static/partners/pune/pimpri-chinchwad.jpg',
+      },
+      {
+        id: 10,
+        title: 'Pimple Saudagar',
+        src: '/static/partners/pune/pimple-saudagar.jpg',
+      },
+      {
+        id: 11,
+        title: 'Wakad and Hinjewadi',
+        src: '/static/partners/pune/wakad-and-hinjewadi.jpg',
+      },
+      {
+        id: 12,
+        title: 'Kharadi and Hadapsar',
+        src: '/static/partners/pune/kharadi-and-hadapsar.jpg',
+      },
+      {
+        id: 13,
+        title: 'City Areas and Satara Road',
+        src: '/static/partners/pune/city-areas-and-satara-road.jpg',
+      },
+      {
+        id: 14,
+        title: 'Sinhagadh Road and Nanded City',
+        src: '/static/partners/pune/sinhagadh-road-and-nanded-city.jpg',
+      },
+    ],
+    hyderabad: [
+      {
+        id: 0,
+        title: 'Banjara Hills',
+        src: '/static/partners/hyderabad/banjara-hills.jpg',
+      },
+      {
+        id: 1,
+        title: 'Jubilee Hills',
+        src: '/static/partners/hyderabad/jubilee-hills.jpg',
+      },
+      {
+        id: 2,
+        title: 'Madhapur',
+        src: '/static/partners/hyderabad/madhapur.jpg',
+      },
+      {
+        id: 3,
+        title: 'Kondapur',
+        src: '/static/partners/hyderabad/kondapur.jpg',
+      },
+      {
+        id: 4,
+        title: 'Gachibowli',
+        src: '/static/partners/hyderabad/gachibowli.jpg',
+      },
+      {
+        id: 5,
+        title: 'Tolichowki',
+        src: '/static/partners/hyderabad/tolichowki.jpg',
+      },
+      {
+        id: 6,
+        title: 'Kukatpally',
+        src: '/static/partners/hyderabad/kukatpally.jpg',
+      },
+      {
+        id: 7,
+        title: 'KPHB',
+        src: '/static/partners/hyderabad/kphb.jpg',
+      },
+      {
+        id: 8,
+        title: 'Miyapur',
+        src: '/static/partners/hyderabad/miyapur.jpg',
+      },
+      {
+        id: 9,
+        title: 'Ameerpet',
+        src: '/static/partners/hyderabad/ameerpet.jpg',
+      },
+      {
+        id: 10,
+        title: 'Maredpally & Kharkhana',
+        src: '/static/partners/hyderabad/maredpally-kharkhana.jpg',
+      },
+      {
+        id: 11,
+        title: 'Uppal, Tarnaka & Begumpet',
+        src: '/static/partners/hyderabad/uppal-tarnaka-begumpet.jpg',
+      },
+      {
+        id: 12,
+        title: 'Sri Nagar Colony',
+        src: '/static/partners/hyderabad/sri-nagar-colony.jpg',
+      },
+      {
+        id: 13,
+        title: 'Manikonda',
+        src: '/static/partners/hyderabad/manikonda.jpg',
+      },
+      {
+        id: 14,
+        title: 'Somajiguda & Himayat Nagar',
+        src: '/static/partners/hyderabad/somajiguda-himayat-nagar.jpg',
+      },
+      {
+        id: 15,
+        title: 'Sainikpuri & Tirumulgherry',
+        src: '/static/partners/hyderabad/sainikpuri-tirumulgherry.jpg',
+      },
+      {
+        id: 16,
+        title: 'Suchitra, Kompally & Alwal',
+        src: '/static/partners/hyderabad/suchitra-kompally-alwal.jpg',
+      },
+      {
+        id: 17,
+        title: 'Other Areas',
+        src: '/static/partners/hyderabad/other.jpg',
+      },
+    ],
+  };
+}

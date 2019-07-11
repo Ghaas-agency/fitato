@@ -90,13 +90,6 @@ export const PartnersStyled = styled.div`
       }
     }
   }
-
-  .partners-page__location-title {
-    margin-top: 80px;
-    font-size: 2em !important;
-    font-weight: 500 !important;
-    color: ${({ theme: { colors } }) => colors.darkGrey} !important;
-  }
 `;
 
 export const Menu = styled.div`
@@ -161,4 +154,11 @@ export const Menu = styled.div`
       border-bottom: none !important;
     }
   }
+`;
+
+export const LocationTitle = styled.h2`
+  margin-top: 80px;
+  font-size: 2em !important;
+  font-weight: 500 !important;
+  color: ${({ theme: { colors } }) => colors.darkGrey} !important;
 `;
