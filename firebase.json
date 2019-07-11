@@ -101,6 +101,11 @@
         "source" : "/theroom*",
         "destination" : "/",
         "type" : 301
+      },
+      {
+        "source" : "/be-a-champion*",
+        "destination" : "/be-a-social-media-wizard/",
+        "type" : 301
       }
     ],
     "headers": [

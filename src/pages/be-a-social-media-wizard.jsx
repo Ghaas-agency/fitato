@@ -3,7 +3,14 @@ import React from 'react';
 import { withPrefix } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from 'components/index-app';
-import { Hero, Be, Get, Do, Need, CTA } from 'css/be-a-social-media-wizard';
+import {
+  Hero,
+  Be,
+  Get,
+  Do,
+  Need,
+  CTA,
+} from 'css/be-a-social-media-wizard.styled';
 
 const SocialMediaWizardPage = () => (
   <>
