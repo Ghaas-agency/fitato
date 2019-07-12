@@ -420,8 +420,8 @@ export function getIndexPartners() {
     },
     {
       id: 4,
-      title: 'Evolve Fitness',
-      imgSrc: '/static/partners/featured/evolve-fitness.jpg',
+      title: 'Fitso Seals',
+      imgSrc: '/static/partners/featured/fitso-seals.png',
     },
     {
       id: 5,
