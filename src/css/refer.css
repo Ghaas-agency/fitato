@@ -71,7 +71,7 @@
   margin: 5px 0px;
 }
 
-.refer-page__hero-items li span {
+.refer-page__hero-items li button {
   font-size: 18px;
   padding: 10px 20px;
   background-color: #f5f5f5;
@@ -80,17 +80,17 @@
   cursor: pointer;
 }
 
-.refer-page__hero-items li:first-child span {
+.refer-page__hero-items li:first-child button {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.refer-page__hero-items li:last-child span {
+.refer-page__hero-items li:last-child button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.refer-page__hero-items li span:hover {
+.refer-page__hero-items li button:hover {
   border: 1px solid #EB1F2E;
 }
 

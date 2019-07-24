@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
-import Helmet from 'react-helmet';
 import Layout from 'components/index-app';
 import {
   Hero,
@@ -15,36 +15,10 @@ import {
 const SocialMediaWizardPage = () => (
   <>
     <Layout>
-      <Helmet title="Represent Fitato On You Campus | Fitato Social Wizard">
-        <meta
-          name="description"
-          content="If you are passionate about leading a healthy lifestyle and are a social buff, join us as a Social Wizard. Lead the Fitness revolution on your campus."
-        />
-        <meta
-          itemProp="name"
-          content="Represent Fitato On You Campus | Fitato Social Wizard"
-        />
-        <meta
-          itemProp="description"
-          content="If you are passionate about leading a healthy lifestyle and are a social buff, join us as a Social Wizard. Lead the Fitness revolution on your campus."
-        />
-        <meta
-          name="twitter:title"
-          content="Represent Fitato On You Campus | Fitato Social Wizard"
-        />
-        <meta
-          name="twitter:description"
-          content="If you are passionate about leading a healthy lifestyle and are a social buff, join us as a Social Wizard. Lead the Fitness revolution on your campus."
-        />
-        <meta
-          property="og:title"
-          content="Represent Fitato On You Campus | Fitato Social Wizard"
-        />
-        <meta
-          property="og:description"
-          content="If you are passionate about leading a healthy lifestyle and are a social buff, join us as a Social Wizard. Lead the Fitness revolution on your campus."
-        />
-      </Helmet>
+      <MetaTitleDescription
+        title="Represent Fitato On You Campus | Fitato Social Wizard"
+        description="If you are passionate about leading a healthy lifestyle and are a social buff, join us as a Social Wizard. Lead the Fitness revolution on your campus."
+      />
       <Hero>
         <div className="container">
           <img

@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
 import FooterInfo from '../partials/FooterInfo';
 /* import SignupPopup from '../partials/SignupPopup' */
@@ -69,48 +70,22 @@ class HowItWorksPage extends React.Component {
   render() {
     return (
       <Layout>
+        <MetaTitleDescription
+          title="How Fitato Works | Flexibility At Your Fingertips"
+          description="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."
+        />
+        <Helmet
+          style={[
+            {
+              cssText: `.works-hero {background-image: url('${withPrefix(
+                '/static/how-it-works/fitato-how-it-works-hero-bg.jpg',
+              )}')}@media (max-width: 480px) {.works-hero {background-image: url('${withPrefix(
+                '/static/how-it-works/fitato-how-it-works-hero-bg-mobile.jpg',
+              )}')}}`,
+            },
+          ]}
+        />
         <div className="works-page">
-          <Helmet
-            title="How Fitato Works | Flexibility At Your Fingertips"
-            style={[
-              {
-                cssText: `.works-hero {background-image: url('${withPrefix(
-                  '/static/how-it-works/fitato-how-it-works-hero-bg.jpg',
-                )}')}@media (max-width: 480px) {.works-hero {background-image: url('${withPrefix(
-                  '/static/how-it-works/fitato-how-it-works-hero-bg-mobile.jpg',
-                )}')}}`,
-              },
-            ]}>
-            <meta
-              name="description"
-              content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."
-            />
-            <meta
-              itemProp="name"
-              content="How Fitato Works | Flexibility At Your Fingertips"
-            />
-            <meta
-              itemProp="description"
-              content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."
-            />
-            <meta
-              name="twitter:title"
-              content="How Fitato Works | Flexibility At Your Fingertips"
-            />
-            <meta
-              name="twitter:description"
-              content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."
-            />
-            <meta
-              property="og:title"
-              content="How Fitato Works | Flexibility At Your Fingertips"
-            />
-            <meta
-              property="og:description"
-              content="Fitato is your single membership to access the best gyms and fitness studios in your city. Learn how it works."
-            />
-          </Helmet>
-
           <section className="works-hero">
             <div className="container">
               <h1>Flexibility At Your Fingertips</h1>

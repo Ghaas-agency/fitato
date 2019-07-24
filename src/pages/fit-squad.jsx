@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
 import Layout from '../components/index';
 /* import SignupPopup from '../partials/SignupPopup' */
@@ -8,29 +8,11 @@ import '../css/fit-squad.css';
 
 const FitSquadPage = () => (
   <Layout>
+    <MetaTitleDescription
+      title="Fit Squad Plans | Fitato"
+      description="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"
+    />
     <div className="fit-squad-page">
-      <Helmet title="Fit Squad Plans | Fitato">
-        <meta
-          name="description"
-          content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"
-        />
-        <meta itemProp="name" content="Fit Squad Plans | Fitato" />
-        <meta
-          itemProp="description"
-          content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"
-        />
-        <meta name="twitter:title" content="Fit Squad Plans | Fitato" />
-        <meta
-          name="twitter:description"
-          content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"
-        />
-        <meta property="og:title" content="Fit Squad Plans | Fitato" />
-        <meta
-          property="og:description"
-          content="When at the gym, parter up! Bring your friends along and get group discounts on all your passes!"
-        />
-      </Helmet>
-
       <div
         className="fit-squad-page-hero" /* style={{backgroundImage: 'url(' + withPrefix('/static/') + ')'}} */
       >

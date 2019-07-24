@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
 import { Accordion, AccordionItem } from 'react-sanfona';
 import { PartnersStyled, Menu, LocationTitle } from 'css/partners.styled';
@@ -12,27 +12,10 @@ const { pune, hyderabad } = getPartners();
 
 const PartnersPage = () => (
   <Layout>
-    <Helmet title="Fitato Partners">
-      <meta
-        name="description"
-        content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."
-      />
-      <meta itemProp="name" content="Fitato Partners" />
-      <meta
-        itemProp="description"
-        content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."
-      />
-      <meta name="twitter:title" content="Fitato Partners" />
-      <meta
-        name="twitter:description"
-        content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."
-      />
-      <meta property="og:title" content="Fitato Partners" />
-      <meta
-        property="og:description"
-        content="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."
-      />
-    </Helmet>
+    <MetaTitleDescription
+      title="Fitato Partners"
+      description="View the list of all the Fitness centers partnered with us. Everything Crossfit to MMA, Swmming to yoga, Boxing to Zumba and lot more."
+    />
     <PartnersStyled>
       <div className="container">
         <h1>Fitato Partner Network</h1>

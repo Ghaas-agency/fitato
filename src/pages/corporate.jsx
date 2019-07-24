@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { Link, withPrefix } from 'gatsby';
-import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import Layout from 'components/index';
 import { SocialLinks, ContactLinks, CurrentlyOperatingIn } from 'partials';
 import {
@@ -119,33 +119,10 @@ const WorkplacePage = () => {
 
   return (
     <Layout>
-      <Helmet title="Workplace Wellness Programs | Fitato">
-        <meta
-          name="description"
-          content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
-        />
-        <meta itemProp="name" content="Workplace Wellness Programs | Fitato" />
-        <meta
-          itemProp="description"
-          content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
-        />
-        <meta
-          name="twitter:title"
-          content="Workplace Wellness Programs | Fitato"
-        />
-        <meta
-          name="twitter:description"
-          content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
-        />
-        <meta
-          property="og:title"
-          content="Workplace Wellness Programs | Fitato"
-        />
-        <meta
-          property="og:description"
-          content="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
-        />
-      </Helmet>
+      <MetaTitleDescription
+        title="Workplace Wellness Programs | Fitato"
+        description="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
+      />
       <WorkplaceIntro>
         <div className="container">
           <div className="content">

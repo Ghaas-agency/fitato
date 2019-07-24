@@ -1,34 +1,20 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import Layout from '../components/index-app';
 import MCForm from '../partials/MailChimpForm';
 import SocialLinks from '../partials/SocialLinks';
 
 const ContactPage = () => (
   <Layout>
+    <MetaTitleDescription
+      title="Contact Us | Fitato"
+      description="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
+    />
+    <Helmet>
+      <link rel="canonical" href="https://www.fitato.fit/contact-us/" />
+    </Helmet>
     <div className="contact-page align-center">
-      <Helmet title="Contact Us | Fitato">
-        <meta
-          name="description"
-          content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
-        />
-        <meta itemProp="name" content="Contact Us | Fitato" />
-        <meta
-          itemProp="description"
-          content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
-        />
-        <meta name="twitter:title" content="Contact Us | Fitato" />
-        <meta
-          name="twitter:description"
-          content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
-        />
-        <meta property="og:title" content="Contact Us | Fitato" />
-        <meta
-          property="og:description"
-          content="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
-        />
-        <link rel="canonical" href="https://www.fitato.fit/contact-us/" />
-      </Helmet>
       <div className="container">
         <h1>Get in Touch With Us - Available 24/7</h1>
         <div className="contact-page-form">

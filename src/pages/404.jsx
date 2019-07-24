@@ -1,32 +1,15 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { Link, withPrefix } from 'gatsby';
 import Layout from 'components/index';
 
 const NotFoundPage = () => (
   <Layout>
+    <MetaTitleDescription
+      title="404 - Page Not Found - Fitato"
+      description="This is just a 404 - Page Not Found page."
+    />
     <div className="page-404">
-      <Helmet title="404 - Page Not Found - Fitato">
-        <meta
-          name="description"
-          content="This is just a 404 - Page Not Found page."
-        />
-        <meta itemProp="name" content="404 - Page Not Found - Fitato" />
-        <meta
-          itemProp="description"
-          content="This is just a 404 - Page Not Found page."
-        />
-        <meta name="twitter:title" content="404 - Page Not Found - Fitato" />
-        <meta
-          name="twitter:description"
-          content="This is just a 404 - Page Not Found page."
-        />
-        <meta property="og:title" content="404 - Page Not Found - Fitato" />
-        <meta
-          property="og:description"
-          content="This is just a 404 - Page Not Found page."
-        />
-      </Helmet>
       <div className="container">
         <img
           src={withPrefix('/static/icons/confused.svg')}
