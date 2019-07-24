@@ -39,6 +39,9 @@ const FooterInfo = () => (
             <Link to="/reviews/">Reviews</Link>
           </li>
           <li>
+            <Link to="/community/">Fitato Community</Link>
+          </li>
+          <li>
             <Link to="/how-to-refer/">Refer Your Friends</Link>
           </li>
           <li>
