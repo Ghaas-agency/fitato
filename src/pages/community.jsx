@@ -413,7 +413,7 @@ class CommunityPage extends React.Component {
           className="button"
           style={{
             position: 'fixed',
-            bottom: this.state.showCTA ? 20 : -70,
+            bottom: this.state.showCTA ? 50 : -70,
             right: 20,
             zIndex: 99,
           }}>
