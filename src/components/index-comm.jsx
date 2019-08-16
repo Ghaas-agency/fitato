@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from 'css/theme';
 import GlobalStyles from 'css/global-styles';
 import MetaCommonHead from 'partials/MetaCommonHead';
+import OfferPopup from 'partials/OfferPopup/OfferPopup';
 import Header from './header-app';
 import Footer from './footer';
 
@@ -16,6 +17,7 @@ const Index = ({ children }) => (
       <Header />
       <main>{children}</main>
       <Footer />
+      <OfferPopup />
     </>
   </ThemeProvider>
 );
