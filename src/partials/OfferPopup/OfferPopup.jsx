@@ -34,10 +34,11 @@ const OfferPopup = () => {
           showPopup ? { opacity: 1, zIndex: 900 } : { opacity: 0, zIndex: -2 }
         }>
         <PopupContainer>
-          <Link to="/download/">
+          <Link to="/download/" className="ga-click-offer-popup">
             <img
               src={withPrefix('/static/experience-fitness-freedom-offer.jpg')}
               alt="fitato experience fitness freedom offer"
+              className="ga-click-offer-popup"
             />
           </Link>
         </PopupContainer>
