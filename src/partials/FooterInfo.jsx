@@ -53,7 +53,9 @@ const FooterInfo = () => (
         </ul>
       </div>
       <div className="footer-info__col3">
-        <h4>Contact Us</h4>
+        <h4>Join Us</h4>
+        <Link to="/careers/">Careers</Link>
+        <h4 style={{ marginTop: 35 }}>Contact Us</h4>
         <ContactLinks cname="footer-ul" />
         <SocialLinks cname="footer-social" />
       </div>
