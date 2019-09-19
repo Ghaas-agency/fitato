@@ -6,10 +6,12 @@ const OfferPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    if (!(typeof sessionStorage === 'undefined'))
-      setShowPopup(
-        !(sessionStorage.getItem('fitato_offer_img_popup') === 'shown'),
-      );
+    setTimeout(() => {
+      if (!(typeof sessionStorage === 'undefined'))
+        setShowPopup(
+          !(sessionStorage.getItem('fitato_offer_img_popup') === 'shown'),
+        );
+    }, 10000);
   }, []);
 
   useEffect(() => {
