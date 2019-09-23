@@ -11,7 +11,7 @@ const OfferPopup = () => {
         setShowPopup(
           !(sessionStorage.getItem('fitato_offer_img_popup') === 'shown'),
         );
-    }, 10000);
+    }, 15000);
   }, []);
 
   useEffect(() => {
