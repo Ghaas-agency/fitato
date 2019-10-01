@@ -22,7 +22,7 @@ const OfferPopup = () => {
 
       window.onkeydown = (e) => {
         if (showPopup && (e.key === 'Escape' || e.key === 'Esc'))
-          setShowPopup(false);
+          popupToggleHandler();
       };
     }
   }, [showPopup]);
