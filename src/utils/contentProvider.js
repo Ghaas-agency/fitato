@@ -51,7 +51,7 @@ export function getFaqs() {
           <p>
             You can activate your pass by&nbsp;
             <Link to="/download/">downloading the Fitato app</Link>
-            from the Google Play Store or App Store.
+            &nbsp;from the Google Play Store or App Store.
           </p>
           <ol>
             <li>
@@ -174,7 +174,7 @@ export function getFaqs() {
         <p>
           In case you want to buy your Fitato pass and start on a later date of
           your choice, please get in touch with our Customer Relations Executive
-          at +91 8866763239 so that they can guide you through it. Do not
+          at +91 8448448546 so that they can guide you through it. Do not
           purchase it from the app. A pass bought from the app gets activated
           from that date itself.
         </p>
@@ -241,7 +241,7 @@ export function getFaqs() {
           emailing us on&nbsp;
           <a href="mailto:partners@fitato.fit">partners@fitato.fit</a>
           &nbsp;or contacting us on&nbsp;
-          <a href="tel:+917875152685">+91 7875152685</a>
+          <a href="tel:+919872456125">+91 9872456125</a>
           &nbsp;and we will try our best to make them part of the Fitato family.
         </p>
       ),
@@ -281,7 +281,7 @@ export function getPricingFaqs() {
           In case you want to buy your Fitato pass and start on a later date of
           your choice, please get in touch with our Customer Relations Executive
           at&nbsp;
-          <a href="tel:+918866763239">+91 8866763239</a>
+          <a href="tel:+918448448546">+91 8448448546</a>
           &nbsp;so that they can guide you through it. Do not purchase it from
           the app. A pass bought from the app gets activated from that date
           itself.

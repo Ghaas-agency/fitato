@@ -19,6 +19,11 @@ const OfferPopup = () => {
       document.querySelector('html').style.overflow = showPopup
         ? 'hidden'
         : 'auto';
+
+      window.onkeydown = (e) => {
+        if (showPopup && (e.key === 'Escape' || e.key === 'Esc'))
+          setShowPopup(false);
+      };
     }
   }, [showPopup]);
 
