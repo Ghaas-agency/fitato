@@ -13,6 +13,7 @@ export const IndexHero = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1520px;
+  overflow: hidden;
 
   &::after {
     content: '';

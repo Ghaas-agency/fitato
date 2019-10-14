@@ -256,6 +256,33 @@ export function getFaqs() {
         </p>
       ),
     },
+    {
+      id: 17,
+      title: 'Can the Fitato Partners change after I purchase the membership?',
+      content: (
+        <p>
+          Yes, our fitness partners may change over time. We keep adding new
+          partners to the list, to expand the choices available to you.
+          Sometimes existing partners may also be temporarily removed due to
+          their business constraints or if we&apos;re working with them to
+          ensure a seamless experience for members.
+        </p>
+      ),
+    },
+    {
+      id: 18,
+      title: 'Can the facility timings for activities and sessions change?',
+      content: (
+        <p>
+          We regularly update the timings for classes, sessions and group
+          activities on the app to ensure that you have a comfortable
+          experience. However, there is a slight possibility that certain
+          last-minute update timings are not conveyed by the facilities. In such
+          a case, we&apos;d recommend you call the facility before confirming a
+          session, especially group classes and activities.
+        </p>
+      ),
+    },
   ];
 }
 
