@@ -6,13 +6,25 @@ const indexHeroBg = `url('${withPrefix(
 )}')`;
 
 export const IndexHero = styled.section`
+  position: relative;
   min-height: 650px;
   padding: 75px 5% 100px 5%;
   background-image: url('${withPrefix('/static/fitato-home-hero-bg.jpg')}');
   background-position: center;
   background-repeat: no-repeat;
-  -moz-background-size: cover;
-  background-size: cover;
+  background-size: 1520px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background-color: #EC2232;
+    height: 100%;
+    width: 50vw;
+  }
 
   @media only screen and (max-width: 1200px) {
     padding: 100px 0;
@@ -510,8 +522,8 @@ export const IndexCallback = styled.section`
   background-color: #000000;
   color: #ffffff;
   background-image: url('${withPrefix('/static/index/fitness-barbell.jpg')}');
-  background-position: right;
-  background-size: 55%;
+  background-position: calc(50% + 350px) center;
+  background-size: 840px;
   background-repeat: no-repeat;
 
   @media only screen and (max-width: 979px) {

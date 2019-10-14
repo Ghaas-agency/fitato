@@ -25,23 +25,39 @@
   -moz-box-orient: horizontal;
   -moz-box-direction: normal;
   flex-direction: row;
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
   background-blend-mode: color-burn;
   /* background-color: #efefef; */
-  padding: 0 3%;
+  margin: 50px -20px 0;
+}
+
+.reviews-page-content__col {
+  min-width: calc(33.33% - 40px);
+  max-width: calc(33.33% - 40px);
+  flex: 1;
+  margin: 20px;
 }
 
 .reviews-page-content__item {
-  min-width: 300px;
-  max-width: 350px;
   padding: 50px;
+  margin-bottom: 100px;
   background-color: #efefef;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .reviews-page-content {
+    flex-direction: column;
+    margin: 50px 0 0;
+  }
+
+  .reviews-page-content__col {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
 }
 
 .reviews-page-content__item h3 {

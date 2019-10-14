@@ -118,16 +118,25 @@ const WorkplacePage = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <Layout>
+    <Layout style={{ overflow: 'hidden' }}>
       <MetaTitleDescription
         title="Workplace Wellness Programs | Fitato"
         description="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
       />
       <WorkplaceIntro>
+        <img
+          src={withPrefix('/static/workplace/workplace-hero.png')}
+          alt="fitato fitness app"
+          className="app-image"
+        />
         <div className="container">
-          <div className="content">
-            <h1 className="uppercase italic">Fitato For Workplace</h1>
-            <p>Corporate Wellness Solutions For The New Age Workplace</p>
+          <div className="content align-center">
+            <h1 className="uppercase italic white">
+              The Perfect
+              <span className="yellow"> Diwali Gift </span>
+              for Your Employees
+            </h1>
+            <p className="white bold">Corporate Wellness Solutions By Fitato</p>
             <button
               type="button"
               className="button"

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby';
 import AppIcons from './AppIcons';
 
-const DownloadSwipe = ({ btnClass }) => (
-  <div className="partial-download-swipe">
+const DownloadSwipe = ({ btnClass, style }) => (
+  <div className="partial-download-swipe" style={style}>
     <div className="container">
       <div className="partial-download-swipe__left">
         <h2>Download the Fitato App</h2>
@@ -26,6 +26,7 @@ const DownloadSwipe = ({ btnClass }) => (
 
 DownloadSwipe.propTypes = {
   btnClass: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default DownloadSwipe;

@@ -9,13 +9,13 @@ import OfferPopup from 'partials/OfferPopup/OfferPopup';
 import Header from './header';
 import Footer from './footer';
 
-const Index = ({ children }) => (
+const Index = ({ children, style }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyles />
       <MetaCommonHead />
       <Header />
-      <main>{children}</main>
+      <main style={style}>{children}</main>
       <Footer />
       <OfferPopup />
       {/* <div className="fb-customerchat" page_id="691732724260748" />
@@ -45,6 +45,7 @@ const Index = ({ children }) => (
 
 Index.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
+  style: PropTypes.object,
 };
 
 export default Index;

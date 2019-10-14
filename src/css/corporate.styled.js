@@ -1,61 +1,119 @@
 import styled from 'styled-components';
 import { withPrefix } from 'gatsby';
 
-const workplaceIntroBg = `url('${withPrefix(
-  '/static/workplace/workplace-intro-bg.jpg',
-)}')`;
+const cracker = `url('${withPrefix('/static/workplace/cracker.png')}')`;
+
+const cracker2 = `url('${withPrefix('/static/workplace/cracker-2.png')}')`;
 
 export const WorkplaceIntro = styled.section`
-  min-height: 650px;
+  min-height: 700px;
   padding: 10px 0 10px 0;
   padding-top: 0;
-  background-image: ${workplaceIntroBg};
-  background-size: 760px;
-  background-repeat: no-repeat;
-  background-position: calc(50% + 300px);
+  background-image: ${cracker}, ${cracker2}, ${cracker2}, ${cracker2},
+    ${cracker2};
+  background-size: 300px, 200px, 150px, 50px, 30px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center calc(50% - 100px), calc(50% - 540px) -50px,
+    -75px bottom, calc(50% - 650px) 200px, calc(50% - 340px) 150px;
+  background-color: ${({ theme: { colors } }) => colors.red};
   display: flex;
   align-items: center;
-
-  @media only screen and (max-width: 1200px) {
-    background-position: calc(50% + 350px);
-  }
+  position: relative;
 
   @media only screen and (max-width: 979px) {
-    min-height: 550px;
-    background-position: calc(50% + 400px);
+    background-position: center calc(50% - 100px), left -50px, -75px bottom,
+      calc(50% - 650px) 200px, calc(50% - 340px) 150px;
   }
 
   @media only screen and (max-width: 767px) {
     align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: overlay;
-    background-position: 75% center;
-    background-size: auto 100vh;
+    background-position: calc(100% + 75px) 200px, -150px -50px, -75px bottom,
+      calc(50% - 650px) 200px, calc(50% - 340px) 150px;
+    background-size: 250px, 200px, 150px, 50px, 30px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding-bottom: 500px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: calc(50% + 350px);
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    @media only screen and (max-width: 1200px) {
+      left: calc(50% + 250px);
+    }
+
+    @media only screen and (max-width: 979px) {
+      left: calc(50% + 150px);
+    }
+
+    @media only screen and (max-width: 767px) {
+      content: unset;
+    }
+  }
+
+  .app-image {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: calc(50% + 400px);
+    height: 600px;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 1200px) {
+      left: calc(50% + 300px);
+    }
+
+    @media only screen and (max-width: 979px) {
+      left: calc(50% + 200px);
+      height: 450px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      top: calc(50% + 150px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .container {
     width: 96%;
+    position: relative;
+    z-index: 2;
   }
 
   h1 {
-    font-size: 72px;
+    font-size: 48px;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.15;
+    letter-spacing: 1px;
     margin-top: 0;
+    margin-bottom: 10px;
 
     @media only screen and (max-width: 979px) {
-      font-size: 60px;
+      font-size: 40px;
     }
 
     @media only screen and (max-width: 767px) {
       color: #ffffff;
       margin-top: 50px;
-      font-size: 52px;
+      font-size: 32px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      margin-top: 15px;
     }
   }
 
   p {
-    font-size: 17px;
+    font-size: 1.1em;
     line-height: 1.4em;
 
     @media only screen and (max-width: 767px) {
@@ -74,8 +132,12 @@ export const WorkplaceIntro = styled.section`
 
     @media only screen and (max-width: 480px) {
       padding: 30px 3%;
-      padding-top: 70px;
     }
+  }
+
+  .button {
+    background-color: ${({ theme: { colors } }) => colors.yellow};
+    color: ${({ theme: { colors } }) => colors.darkGrey};
   }
 `;
 
@@ -87,7 +149,7 @@ export const WorkplaceAbout = styled.section`
   padding: 110px 0;
   background-image: ${workplaceAboutBg};
   background-repeat: no-repeat;
-  background-position: 17% bottom;
+  background-position: calc(50% - 370px) bottom;
   background-size: 400px;
   background-color: ${({ theme: { colors } }) => colors.red};
   color: #ffffff;
@@ -110,6 +172,7 @@ export const WorkplaceAbout = styled.section`
     @media only screen and (max-width: 767px) {
       margin-right: auto;
       width: 100%;
+      text-align: center;
     }
 
     p {
