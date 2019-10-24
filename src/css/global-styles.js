@@ -593,27 +593,31 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .white {
-    color: #ffffff;
+    color: #ffffff !important;
   }
 
   .align-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .normal {
-    font-weight: 400;
+    font-weight: 400 !important;
   }
 
   .bold {
-    font-weight: 700;
+    font-weight: 700 !important;
+  }
+
+  .extra-bold {
+    font-weight: 900 !important;
   }
 
   .italic {
-    font-style: italic;
+    font-style: italic !important;
   }
 
   .uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 
   .heading-underline {

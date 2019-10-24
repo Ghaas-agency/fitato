@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'gatsby'
 
 const Plans = ({ tag }) => (
   <div className="partial-plans">
@@ -25,11 +24,11 @@ const Plans = ({ tag }) => (
               Purchase the Fitato Quarterly pass and get unlimited access to
               every Fitato partner facility for 3 months!
             </p>
-            <p className="partial-plans__item--price">&#8377;5,499</p>
+            <p className="partial-plans__item--price">&#8377;6,599</p>
           </div>
           <div className="partial-plans__item--cta">
             <a
-              href="https://imjo.in/u76vFn"
+              href="https://imjo.in/UAt7PD"
               target="_blank"
               rel="noopener noreferrer"
               className="button button-fluid">
@@ -50,11 +49,11 @@ const Plans = ({ tag }) => (
               Purchase the Fitato Bi-Monthly pass and get unlimited access to
               every Fitato partner facility for 2 months!
             </p>
-            <p className="partial-plans__item--price">&#8377;3,899</p>
+            <p className="partial-plans__item--price">&#8377;4,599</p>
           </div>
           <div className="partial-plans__item--cta">
             <a
-              href="https://imjo.in/TQqWQ9"
+              href="https://imjo.in/6hbX9E"
               target="_blank"
               rel="noopener noreferrer"
               className="button button-fluid">
@@ -75,11 +74,11 @@ const Plans = ({ tag }) => (
               Purchase the Fitato Monthly pass and get unlimited access to every
               Fitato partner facility for 1 month!
             </p>
-            <p className="partial-plans__item--price">&#8377;2,199</p>
+            <p className="partial-plans__item--price">&#8377;2,499</p>
           </div>
           <div className="partial-plans__item--cta">
             <a
-              href="https://imjo.in/wdS88s"
+              href="https://imjo.in/wjZhss"
               target="_blank"
               rel="noopener noreferrer"
               className="button button-fluid">
