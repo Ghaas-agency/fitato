@@ -118,7 +118,7 @@ const WorkplacePage = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <Layout style={{ overflow: 'hidden' }}>
+    <Layout style={{ overflow: 'hidden' }} hideOfferPopup>
       <MetaTitleDescription
         title="Workplace Wellness Programs | Fitato"
         description="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
