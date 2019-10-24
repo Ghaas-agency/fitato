@@ -5,8 +5,9 @@ import Layout from 'components/index';
 import FooterInfo from 'partials/FooterInfo';
 import MetaTitleDescription from 'partials/MetaTitleDescription';
 import DownloadSwipe from 'partials/DownloadSwipe';
+import SectionPartners from 'partials/SectionPartners';
 
-import { Hero, Features, Partners, What, Find } from 'css/pune.styled';
+import { Hero, Features, What, Find } from 'css/pune.styled';
 
 const PunePage = () => (
   <Layout>
@@ -55,37 +56,7 @@ const PunePage = () => (
       </div>
     </Features>
 
-    <Partners>
-      <div className="container">
-        <h2 className="align-center heading-underline">Our Partners</h2>
-        <div className="items">
-          <img
-            src={withPrefix('/static/pune/multifit-logo.png')}
-            alt="multifit logo"
-          />
-          <img
-            src={withPrefix('/static/pune/urbounce-logo.png')}
-            alt="urbounce logo"
-          />
-          <img
-            src={withPrefix('/static/pune/recomp-logo.png')}
-            alt="recomp logo"
-          />
-          <img
-            src={withPrefix('/static/pune/golds-gym-logo.png')}
-            alt="golds-gym logo"
-          />
-          <img
-            src={withPrefix('/static/pune/talwalkars-logo.png')}
-            alt="talwalkars logo"
-          />
-          <img
-            src={withPrefix('/static/pune/firstfitt-logo.png')}
-            alt="firstfitt logo"
-          />
-        </div>
-      </div>
-    </Partners>
+    <SectionPartners city="pune" />
 
     <What>
       <div className="container">

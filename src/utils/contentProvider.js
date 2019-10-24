@@ -701,3 +701,22 @@ export function getPartners() {
     ],
   };
 }
+
+export const partnersImages = {
+  pune: [
+    'multifit',
+    'urbounce',
+    'recomp',
+    'golds-gym',
+    'talwalkars',
+    'firstfitt',
+  ],
+  hyderabad: [
+    'functional45',
+    'chisel',
+    'fitso-seals',
+    'golds-gym',
+    'beats',
+    'anahata',
+  ],
+};
