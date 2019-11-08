@@ -40,6 +40,9 @@ export const Hero = styled.section`
 `;
 
 const fitnessFlexibility = withPrefix('/static/pune/fitness-flexibility.jpg');
+const fitnessFlexibilityM = withPrefix(
+  '/static/pune/fitness-flexibility-m.jpg',
+);
 const fitnessCommunity = withPrefix('/static/pune/fitness-community.jpg');
 
 export const Features = styled.section`
@@ -75,6 +78,10 @@ export const Features = styled.section`
 
     &:first-child {
       background-image: url('${fitnessFlexibility}');
+
+      @media only screen and (max-width: 480px) {
+        background-image: url('${fitnessFlexibilityM}');
+      }
     }
 
     &:last-child {
@@ -107,6 +114,11 @@ export const Features = styled.section`
     @media only screen and (max-width: 480px) {
       padding: 30px;
       padding-bottom: 80px;
+
+      &:first-child {
+        background-size: cover;
+        background-position: calc(100% + 20px);
+      }
       
       &:last-child {
         background-size: cover;
@@ -121,8 +133,16 @@ export const Features = styled.section`
         max-width: 80% !important;
       }
     }
+
+    @media only screen and (max-width: 380px) {
+      &:first-child {
+        background-position: calc(100% + 50px);
+      }
+    }
   }
 `;
+
+const whatBg = withPrefix('/static/pune/fitato-community-m.jpg');
 
 export const What = styled.section`
   padding: 100px 0;
@@ -136,8 +156,10 @@ export const What = styled.section`
   }
 
   @media only screen and (max-width: 767px) {
-    padding-top: 350px;
-    background-position: calc(50%) -200px;
+    padding-top: 60vw;
+    background-position: center top;
+    background-size: contain;
+    background-image: url('${whatBg}');
 
     h2 {
       &::before {
@@ -145,12 +167,6 @@ export const What = styled.section`
         transform: translateX(-50%) !important;
       }
     }
-  }
-
-  @media only screen and (max-width: 480px) {
-    padding-top: 180px;
-    background-size: 450px;
-    background-position: calc(50%) -100px;
   }
 
   .items {
