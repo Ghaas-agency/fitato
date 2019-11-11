@@ -1,94 +1,14 @@
 import styled from 'styled-components';
-import { withPrefix } from 'gatsby';
 
 export const PartnersStyled = styled.div`
   padding: 100px 0;
   text-align: center;
   border-top: 1px solid #ffffff;
 
-  .react-sanfona {
-    padding: 5px 10%;
-    border-radius: 5px;
-
-    @media only screen and (max-width: 767px) {
-      padding: 5px 10%;
-    }
-
-    @media only screen and (max-width: 480px) {
-      padding: 5px 0;
-    }
-
-    &-item {
-      padding: 0px;
-      margin: 20px 10px;
-      border-radius: 5px;
-      box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2),
-        0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-      transition: all 0.2s ease-in-out;
-
-      &-body-wrapper {
-        padding: 0 30px;
-        border-radius: 0px 0px 5px 5px;
-        margin-top: 0;
-
-        img {
-          margin-bottom: 30px;
-        }
-
-        @media only screen and (max-width: 480px) {
-          padding: 0px;
-          background-color: ${({ theme: { colors } }) => colors.lightGrey};
-          border-radius: 0px 0px 5px 5px;
-
-          img {
-            margin-bottom: 0px;
-          }
-        }
-      }
-
-      &-title {
-        font-weight: normal;
-        transition: all 0.2s ease-in-out;
-        text-align: left;
-        padding: 30px;
-        padding-left: 50px;
-        font-size: 1.35em;
-        position: relative;
-
-        &:hover {
-          background-color: ${({ theme: { colors } }) => colors.lightGrey};
-          border-radius: 5px;
-        }
-      }
-    }
-  }
-
   h2 {
     font-weight: normal;
     color: ${({ theme: { colors } }) => colors.red};
     font-size: 135%;
-  }
-
-  .accordion-item,
-  .accordion-item-active {
-    & > h3,
-    & > h3 {
-      &::before {
-        content: url('${withPrefix('/static/icons/arrow-down.svg')}');
-        position: absolute;
-        top: 31px;
-        left: 20px;
-      }
-    }
-  }
-
-  .accordion-item-active {
-    & > h3,
-    & > h3 {
-      &::before {
-        content: url('${withPrefix('/static/icons/arrow-up.svg')}');
-      }
-    }
   }
 `;
 
@@ -154,11 +74,4 @@ export const Menu = styled.div`
       border-bottom: none !important;
     }
   }
-`;
-
-export const LocationTitle = styled.h2`
-  margin-top: 80px;
-  font-size: 2em !important;
-  font-weight: 500 !important;
-  color: ${({ theme: { colors } }) => colors.darkGrey} !important;
 `;

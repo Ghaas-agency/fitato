@@ -38,16 +38,16 @@ export const IndexHero = styled.section`
   @media only screen and (max-width: 767px) {
     padding-top: 50px;
     background-image: ${indexHeroBg};
+    background-position: center;
+    background-size: cover;
+    background-color: #ffffff;
   }
 
   @media only screen and (max-width: 480px) {
     padding: 20px 3%;
     padding-top: 20px;
-    background-position: center;
-    background-size: cover;
     min-height: 90vh;
     color: #ffffff;
-    background-color: #ffffff;
 
     .button,
     .button-inverted {
@@ -89,7 +89,7 @@ export const IndexHero = styled.section`
       width: 50%;
     }
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 767px) {
       width: 100%;
 
       &--text {

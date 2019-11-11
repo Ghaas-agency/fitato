@@ -3,16 +3,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import { Link, withPrefix } from 'gatsby';
+
 // import Topbar from '../partials/Topbar/Topbar';
-import '../css/header.css';
 
-const displayBlock = {
-  display: 'block',
-};
-
-const displayNone = {
-  display: 'none',
-};
+import { MainHeader } from 'css/header.styled';
 
 const wwidth = typeof window === 'undefined' ? 800 : window.innerWidth;
 
@@ -21,6 +15,7 @@ class Header extends Component {
     toggleMenu: false,
     toggleMenuBg: false,
     windowWidth: wwidth,
+    showPartnersMenu: false,
   };
 
   handleMenuClick = () => {
@@ -72,8 +67,11 @@ class Header extends Component {
   render() {
     return (
       <>
-        <div className="main-header-placeholder" />
-        <nav className="main-header">
+        <div
+          className="main-header-placeholder"
+          style={{ height: 77, backgroundColor: '#ffffff' }}
+        />
+        <MainHeader>
           {/* <Topbar /> */}
           <div className="main-header-container">
             <img
@@ -89,77 +87,125 @@ class Header extends Component {
                 alt="fitato"
               />
             </Link>
+            <ul
+              className={`menu-links${this.state.toggleMenu ? ' active' : ''}
+              `}>
+              <li>
+                <Link
+                  to="/how-it-works/"
+                  className="menu-link-item"
+                  activeClassName="menu-link-item-active"
+                  onClick={this.handleMenuClick}>
+                  How It Works
+                </Link>
+              </li>
+              <li className="menu-links__partners">
+                <Link
+                  to="/partners/"
+                  className="menu-link-item"
+                  activeClassName="menu-link-item-active"
+                  onClick={this.handleMenuClick}>
+                  Facilities
+                </Link>
+                <button
+                  type="button"
+                  className="button-unstyled"
+                  style={
+                    this.state.showPartnersMenu
+                      ? { transform: 'rotate(180deg)' }
+                      : {}
+                  }
+                  onClick={() =>
+                    this.setState((prevState) => ({
+                      showPartnersMenu: !prevState.showPartnersMenu,
+                    }))
+                  }>
+                  <img
+                    src={withPrefix('/static/icons/arrow-down.svg')}
+                    alt="arrow down"
+                  />
+                </button>
+                <ul
+                  className={`menu-links__partners-items${
+                    this.state.showPartnersMenu ? ' active' : ''
+                  }`}>
+                  <li>
+                    <Link to="/pune/">Pune</Link>
+                  </li>
+                  <li>
+                    <Link to="/hyderabad/">Hyderabad</Link>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <Link
+                  to="/purchase-fitato/"
+                  className="menu-link-item"
+                  activeClassName="menu-link-item-active"
+                  onClick={this.handleMenuClick}>
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://blog.fitato.fit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="menu-link-item">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/contact-us/"
+                  className="menu-link-item"
+                  activeClassName="menu-link-item-active"
+                  onClick={this.handleMenuClick}>
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/faqs/"
+                  className="menu-link-item"
+                  activeClassName="menu-link-item-active"
+                  onClick={this.handleMenuClick}>
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/download/"
+                  className="button"
+                  onClick={this.handleMenuClick}
+                  style={{
+                    marginRight: '0',
+                    marginTop: '0',
+                    marginBottom: '0',
+                    marginLeft: '10px',
+                  }}>
+                  Download now
+                </Link>
+              </li>
+            </ul>
             <div
-              className="menu-links"
-              style={this.state.toggleMenu ? displayBlock : displayNone}>
-              <Link
-                to="/how-it-works/"
-                className="menu-link-item"
-                activeClassName="menu-link-item-active"
-                onClick={this.handleMenuClick}>
-                How It Works
-              </Link>
-              <Link
-                to="/partners/"
-                className="menu-link-item"
-                activeClassName="menu-link-item-active"
-                onClick={this.handleMenuClick}>
-                Facilities
-              </Link>
-              <Link
-                to="/purchase-fitato/"
-                className="menu-link-item"
-                activeClassName="menu-link-item-active"
-                onClick={this.handleMenuClick}>
-                Pricing
-              </Link>
-              <a
-                href="https://blog.fitato.fit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="menu-link-item">
-                Blog
-              </a>
-              <Link
-                to="/contact-us/"
-                className="menu-link-item"
-                activeClassName="menu-link-item-active"
-                onClick={this.handleMenuClick}>
-                Contact Us
-              </Link>
-              <Link
-                to="/faqs/"
-                className="menu-link-item"
-                activeClassName="menu-link-item-active"
-                onClick={this.handleMenuClick}>
-                FAQ
-              </Link>
-              <Link
-                to="/download/"
-                className="button"
-                onClick={this.handleMenuClick}
-                style={{
-                  marginRight: '0',
-                  marginTop: '0',
-                  marginBottom: '0',
-                  marginLeft: '10px',
-                }}>
-                Download now
-              </Link>
-            </div>
-            <div
-              className="menu-close-x"
-              onClick={this.handleMenuClick}
-              style={this.state.toggleMenuBg ? displayBlock : displayNone}>
-              x
+              className={`menu-close-x${
+                this.state.toggleMenuBg ? ' active' : ''
+              }`}
+              onClick={this.handleMenuClick}>
+              <img
+                src={withPrefix('/static/icons/close-dark.svg')}
+                alt="close icon"
+              />
             </div>
           </div>
           <div
-            className="mobile-menu-bg"
-            style={this.state.toggleMenuBg ? displayBlock : displayNone}
+            className={`mobile-menu-bg${
+              this.state.toggleMenuBg ? ' active' : ''
+            }`}
             onClick={this.handleBgClick}
           />
-        </nav>
+        </MainHeader>
       </>
     );
   }

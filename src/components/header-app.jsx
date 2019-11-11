@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, withPrefix } from 'gatsby';
-import '../css/header.css';
+
+import { MainHeader } from 'css/header.styled';
 
 const Header = () => (
   <>
-    <nav className="main-header" style={{ position: 'relative' }}>
+    <MainHeader className="main-header" style={{ position: 'relative' }}>
       <div className="main-header-container" style={{ textAlign: 'center' }}>
         <Link className="menu-logo" to="/">
           <img
@@ -14,7 +15,7 @@ const Header = () => (
           />
         </Link>
       </div>
-    </nav>
+    </MainHeader>
   </>
 );
 

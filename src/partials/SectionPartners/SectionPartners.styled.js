@@ -41,6 +41,13 @@ export const Section = styled.section`
           transition: unset;
         }
       }
+
+      & > span {
+        @media only screen and (max-width: 767px) {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
     }
 
     &-items {

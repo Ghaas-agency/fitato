@@ -116,7 +116,11 @@ const SectionPartners = ({ city }) => {
                     {i.activities
                       .split(',')
                       .map((a) =>
-                        a.length > 0 ? <li key={a}>{a}</li> : <></>,
+                        a.length > 0 ? (
+                          <li key={a}>{a}</li>
+                        ) : (
+                          <React.Fragment key={a}></React.Fragment>
+                        ),
                       )}
                   </ul>
                 </div>

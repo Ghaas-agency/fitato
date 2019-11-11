@@ -1,14 +1,12 @@
 import React from 'react';
-import MetaTitleDescription from 'partials/MetaTitleDescription';
-import { withPrefix } from 'gatsby';
-import { Accordion, AccordionItem } from 'react-sanfona';
-import { PartnersStyled, Menu, LocationTitle } from 'css/partners.styled';
-import { getPartners } from 'utils/contentProvider';
+import { Link, withPrefix } from 'gatsby';
+
 import Layout from 'components/index';
+import MetaTitleDescription from 'partials/MetaTitleDescription';
 import GetStarted from 'partials/GetStarted';
 import FooterInfo from 'partials/FooterInfo';
 
-const { pune, hyderabad } = getPartners();
+import { PartnersStyled, Menu } from 'css/partners.styled';
 
 const PartnersPage = () => (
   <Layout>
@@ -19,10 +17,10 @@ const PartnersPage = () => (
     <PartnersStyled>
       <div className="container">
         <h1>Fitato Partner Network</h1>
-        <h2>300+ Fitness Studios | 1000+ Activities | One Pass</h2>
+        <h2>400+ Fitness Studios | 1000+ Activities | One Pass</h2>
 
         <Menu>
-          <a href="#pune" className="item">
+          <Link to="/pune/" className="item">
             <h3>Pune</h3>
             <p>
               See facilities&nbsp;
@@ -37,8 +35,8 @@ const PartnersPage = () => (
               alt="fitato facilities in Pune"
               className="item--img"
             />
-          </a>
-          <a href="#hyderabad" className="item">
+          </Link>
+          <Link to="/hyderabad/" className="item">
             <h3>Hyderabad</h3>
             <p>
               See facilities&nbsp;
@@ -53,42 +51,8 @@ const PartnersPage = () => (
               alt="fitato facilities in Hyderabad"
               className="item--img"
             />
-          </a>
+          </Link>
         </Menu>
-
-        <LocationTitle id="pune">Facilities in Pune</LocationTitle>
-
-        <Accordion allowMultiple>
-          {pune.map((i) => (
-            <AccordionItem
-              key={i.id}
-              title={i.title}
-              className="accordion-item"
-              expandedClassName="accordion-item-active">
-              <img
-                src={withPrefix(i.src)}
-                alt={`Fitato Partners in ${i.title}, Pune`}
-              />
-            </AccordionItem>
-          ))}
-        </Accordion>
-
-        <LocationTitle id="hyderabad">Facilities in Hyderabad</LocationTitle>
-
-        <Accordion allowMultiple>
-          {hyderabad.map((i) => (
-            <AccordionItem
-              key={i.id}
-              title={i.title}
-              className="accordion-item"
-              expandedClassName="accordion-item-active">
-              <img
-                src={withPrefix(i.src)}
-                alt={`Fitato Partners in ${i.title}, Hyderabad`}
-              />
-            </AccordionItem>
-          ))}
-        </Accordion>
       </div>
     </PartnersStyled>
     <GetStarted />
