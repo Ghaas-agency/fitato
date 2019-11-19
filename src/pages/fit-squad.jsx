@@ -17,10 +17,10 @@ const FitSquadPage = () => (
         className="fit-squad-page-hero" /* style={{backgroundImage: 'url(' + withPrefix('/static/') + ')'}} */
       >
         <div className="fit-squad-page-hero__left">
-          <h1>
-            When at the Gym,
+          <h1 className="italic uppercase extra-bold">
+            Get Fit With
             <br />
-            <span className="red">partner up!</span>
+            <span className="red"> Your Squad!</span>
           </h1>
           <p>
             The more, the merrier. Bring your friends along and get group
@@ -47,14 +47,14 @@ const FitSquadPage = () => (
               <div className="pricing-col__body">
                 <p>Group of 5 purchasing the 3-month Fitato Pass together</p>
                 <p className="pricing-col__body--price">
-                  <strike>₹27,495</strike>
+                  <strike>₹32,995</strike>
                   <br />
-                  ₹19,000
+                  ₹23,500
                 </p>
               </div>
               <div className="pricing-col__cta">
                 <a
-                  href="https://imjo.in/zaJZPk"
+                  href="https://imjo.in/YdHDCc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button-fluid">
@@ -70,14 +70,14 @@ const FitSquadPage = () => (
               <div className="pricing-col__body">
                 <p>Group of 3 purchasing the 3-month Fitato Pass together</p>
                 <p className="pricing-col__body--price">
-                  <strike>₹16,497</strike>
+                  <strike>₹19,797</strike>
                   <br />
-                  ₹12,000
+                  ₹15,000
                 </p>
               </div>
               <div className="pricing-col__cta">
                 <a
-                  href="https://imjo.in/6mvyEf"
+                  href="https://imjo.in/GQTXsK"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button-fluid">
@@ -93,14 +93,14 @@ const FitSquadPage = () => (
               <div className="pricing-col__body">
                 <p>Group of 2 purchasing the 3-month Fitato Pass together</p>
                 <p className="pricing-col__body--price">
-                  <strike>₹10,998</strike>
+                  <strike>₹13,198</strike>
                   <br />
-                  ₹8,200
+                  ₹10,200
                 </p>
               </div>
               <div className="pricing-col__cta">
                 <a
-                  href="https://imjo.in/xAqb2Q"
+                  href="https://imjo.in/c5gnK6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button button-fluid">
