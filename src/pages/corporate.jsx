@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, withPrefix } from 'gatsby';
 import MetaTitleDescription from 'partials/MetaTitleDescription';
 import Layout from 'components/index';
@@ -12,7 +12,6 @@ import {
   WorkplaceClasses,
   WorkplaceClients,
   WorkplaceCTA,
-  Modal,
 } from 'css/corporate.styled';
 
 const Form = () => (
@@ -114,244 +113,237 @@ const Form = () => (
   </div>
 );
 
-const WorkplacePage = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  return (
-    <Layout style={{ overflow: 'hidden' }} hideOfferPopup>
-      <MetaTitleDescription
-        title="Workplace Wellness Programs | Fitato"
-        description="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
-      />
-      <WorkplaceIntro>
-        <div className="container">
-          <div className="content">
-            <h1 className="uppercase italic">Fitato For Workplace</h1>
-            <p>Corporate Wellness Solutions For The New Age Workplace</p>
-            <button
+const WorkplacePage = () => (
+  <Layout style={{ overflow: 'hidden' }} hideOfferPopup>
+    <MetaTitleDescription
+      title="Workplace Wellness Programs | Fitato"
+      description="Corporate Wellness Programs for your workplace, brought to you by Fitato. Get customized wellness programs for your team’s health and fitness needs."
+    />
+    <WorkplaceIntro>
+      <div className="container">
+        <div className="content">
+          <h1 className="red">
+            <span style={{ fontSize: '0.95em' }}>Give Your Employees</span>
+            <br />
+            The Gift Of Fitness And Well-Being
+          </h1>
+          <p>Try Corporate Wellness Solutions For The New Age Workplace</p>
+          <Form />
+          {/* <button
               type="button"
               className="button"
               onClick={() => setShowModal(true)}
               style={{ marginLeft: '0' }}>
               Know More
-            </button>
-          </div>
+            </button> */}
         </div>
-      </WorkplaceIntro>
+      </div>
+    </WorkplaceIntro>
 
-      <WorkplaceAbout>
-        <div className="container">
-          <div className="content">
-            <h2>About Us</h2>
+    <WorkplaceAbout>
+      <div className="container">
+        <div className="content">
+          <h2>About Us</h2>
+          <p>
+            Fitato is a hyper-local, tech-enabled fitness solution presently
+            active in the city of Pune and Hyderabad. Our aim is to provide
+            flexibility in fitness by offering a single membership to the best
+            gyms and fitness studios in the city. With that, one could enjoy
+            yoga one day, go for a swim the other and trek the next day.
+          </p>
+        </div>
+      </div>
+    </WorkplaceAbout>
+
+    <WorkplaceAdvantage>
+      <div className="container align-center">
+        <h2>The Fitato Advantage</h2>
+        <div className="items">
+          <div className="item">
+            <img
+              src={withPrefix(
+                '/static/workplace/fitato-advantage-no-restrictions.jpg',
+              )}
+              alt="fitness no restrictions"
+            />
+            <h3>No Restrictions</h3>
             <p>
-              Fitato is a hyper-local, tech-enabled fitness solution presently
-              active in the city of Pune and Hyderabad. Our aim is to provide
-              flexibility in fitness by offering a single membership to the best
-              gyms and fitness studios in the city. With that, one could enjoy
-              yoga one day, go for a swim the other and trek the next day.
+              Fitato allows users to choose a fitness activity of their choice,
+              at a facility they like for a time slot of their convenience.
+            </p>
+          </div>
+          <div className="item">
+            <img
+              src={withPrefix(
+                '/static/workplace/fitato-advantage-fitness-community.jpg',
+              )}
+              alt="fitness community"
+            />
+            <h3>Fitness Community</h3>
+            <p>
+              Users can engage in Fitato Exclusive community workouts and
+              fitness events like treks, go-karting and so much more with the
+              fun-loving Fitato community.
             </p>
           </div>
         </div>
-      </WorkplaceAbout>
+      </div>
+    </WorkplaceAdvantage>
 
-      <WorkplaceAdvantage>
-        <div className="container align-center">
-          <h2>The Fitato Advantage</h2>
-          <div className="items">
-            <div className="item">
-              <img
-                src={withPrefix(
-                  '/static/workplace/fitato-advantage-no-restrictions.jpg',
-                )}
-                alt="fitness no restrictions"
-              />
-              <h3>No Restrictions</h3>
+    <WorkplaceWellness>
+      <div className="container align-center">
+        <h2 className="white">Our Corporate Wellness Program</h2>
+        <p className="white intro">
+          We bring to you a holistic wellness program for your organisation
+          which not only allows your employees to access multiple fitness
+          facilities across the city but also lets you organise in-house health
+          and fitness sessions for them.
+        </p>
+        <div className="benefits">
+          <h3 className="uppercase align-center">Program Benefits</h3>
+          <div className="benefits-items">
+            <div className="content">
+              <h4>Fitato Pass For All</h4>
               <p>
-                Fitato allows users to choose a fitness activity of their
-                choice, at a facility they like for a time slot of their
-                convenience.
+                Each an every employee at your organisation will get a
+                single-access pass to all the best gyms and fitness studios in
+                the city. So, you don’t have to worry about where your employee
+                stays, he will find a Fitato partner facility nearby.
               </p>
             </div>
-            <div className="item">
+            <div className="img">
+              <img
+                src={withPrefix('/static/workplace/fitato-pass-for-all.png')}
+                alt="fitato pass for all"
+              />
+            </div>
+          </div>
+          <div className="benefits-items">
+            <div className="img">
               <img
                 src={withPrefix(
-                  '/static/workplace/fitato-advantage-fitness-community.jpg',
+                  '/static/workplace/in-house-wellness-activities.png',
                 )}
-                alt="fitness community"
+                alt="In-house Wellness Activities"
               />
-              <h3>Fitness Community</h3>
+            </div>
+            <div className="content">
+              <h4>In-house Wellness Activities</h4>
               <p>
-                Users can engage in Fitato Exclusive community workouts and
-                fitness events like treks, go-karting and so much more with the
-                fun-loving Fitato community.
+                Choose from a host of fitness activities that we organise at
+                your office campus at a time of your convenience for your
+                employees to promote employee fitness as well as employee
+                relations.
               </p>
+            </div>
+          </div>
+          <div className="benefits-items">
+            <div className="content">
+              <h4>Your Fitness Dashboard</h4>
+              <p>
+                A single dashboard access that tracks and analyses all the
+                fitness activities that each of your employees takes part in.
+              </p>
+            </div>
+            <div className="img">
+              <img
+                src={withPrefix('/static/workplace/your-fitness-dashboard.png')}
+                alt="Your Fitness Dashboard"
+              />
             </div>
           </div>
         </div>
-      </WorkplaceAdvantage>
-
-      <WorkplaceWellness>
-        <div className="container align-center">
-          <h2 className="white">Our Corporate Wellness Program</h2>
-          <p className="white intro">
-            We bring to you a holistic wellness program for your organisation
-            which not only allows your employees to access multiple fitness
-            facilities across the city but also lets you organise in-house
-            health and fitness sessions for them.
-          </p>
-          <div className="benefits">
-            <h3 className="uppercase align-center">Program Benefits</h3>
-            <div className="benefits-items">
-              <div className="content">
-                <h4>Fitato Pass For All</h4>
-                <p>
-                  Each an every employee at your organisation will get a
-                  single-access pass to all the best gyms and fitness studios in
-                  the city. So, you don’t have to worry about where your
-                  employee stays, he will find a Fitato partner facility nearby.
-                </p>
-              </div>
-              <div className="img">
-                <img
-                  src={withPrefix('/static/workplace/fitato-pass-for-all.png')}
-                  alt="fitato pass for all"
-                />
-              </div>
-            </div>
-            <div className="benefits-items">
-              <div className="img">
-                <img
-                  src={withPrefix(
-                    '/static/workplace/in-house-wellness-activities.png',
-                  )}
-                  alt="In-house Wellness Activities"
-                />
-              </div>
-              <div className="content">
-                <h4>In-house Wellness Activities</h4>
-                <p>
-                  Choose from a host of fitness activities that we organise at
-                  your office campus at a time of your convenience for your
-                  employees to promote employee fitness as well as employee
-                  relations.
-                </p>
-              </div>
-            </div>
-            <div className="benefits-items">
-              <div className="content">
-                <h4>Your Fitness Dashboard</h4>
-                <p>
-                  A single dashboard access that tracks and analyses all the
-                  fitness activities that each of your employees takes part in.
-                </p>
-              </div>
-              <div className="img">
-                <img
-                  src={withPrefix(
-                    '/static/workplace/your-fitness-dashboard.png',
-                  )}
-                  alt="Your Fitness Dashboard"
-                />
-              </div>
-            </div>
-          </div>
-          <button
+        {/* <button
             type="button"
             onClick={() => setShowModal(true)}
             className="button">
             Get in touch with us
-          </button>
-        </div>
-      </WorkplaceWellness>
+          </button> */}
+      </div>
+    </WorkplaceWellness>
 
-      <WorkplaceClasses>
-        <div className="container">
-          <h2>Variety of On-Demand Classes</h2>
-          <div className="items">
-            {[
-              { id: 1, title: 'Yoga' },
-              { id: 2, title: 'Self-Defence' },
-              { id: 3, title: 'MMA' },
-              { id: 4, title: 'Zumba' },
-              { id: 5, title: 'Meditation' },
-              { id: 6, title: 'Aqua Zumba Event' },
-              { id: 7, title: 'Capoeira' },
-              { id: 8, title: 'Drumcircles' },
-              { id: 9, title: 'Kho Kho' },
-              { id: 10, title: 'HIIT' },
-              { id: 11, title: 'Functional Training' },
-              { id: 12, title: 'Bokwa' },
-              { id: 13, title: 'Piloxing' },
-              { id: 14, title: 'Diet Workshop' },
-              { id: 15, title: 'Dance' },
-              { id: 16, title: 'Aerobics' },
-            ].map((i) => (
-              <div key={i.id} className="item">
-                <p>{i.title}</p>
-              </div>
-            ))}
+    <WorkplaceClasses>
+      <div className="container">
+        <h2>Variety of On-Demand Classes</h2>
+        <div className="items">
+          {[
+            { id: 1, title: 'Yoga' },
+            { id: 2, title: 'Self-Defence' },
+            { id: 3, title: 'MMA' },
+            { id: 4, title: 'Zumba' },
+            { id: 5, title: 'Meditation' },
+            { id: 6, title: 'Aqua Zumba Event' },
+            { id: 7, title: 'Capoeira' },
+            { id: 8, title: 'Drumcircles' },
+            { id: 9, title: 'Kho Kho' },
+            { id: 10, title: 'HIIT' },
+            { id: 11, title: 'Functional Training' },
+            { id: 12, title: 'Bokwa' },
+            { id: 13, title: 'Piloxing' },
+            { id: 14, title: 'Diet Workshop' },
+            { id: 15, title: 'Dance' },
+            { id: 16, title: 'Aerobics' },
+          ].map((i) => (
+            <div key={i.id} className="item">
+              <p>{i.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </WorkplaceClasses>
+
+    <CurrentlyOperatingIn redBg />
+
+    <WorkplaceClients>
+      <div className="container">
+        <h2>Our Clients</h2>
+        <div className="items">
+          <div className="item">
+            <img src={withPrefix('/static/workplace/ola-cabs.svg')} alt="ola" />
+          </div>
+          <div className="item">
+            <img
+              src={withPrefix('/static/workplace/infosys.png')}
+              alt="infosys"
+            />
+          </div>
+          <div className="item">
+            <img src={withPrefix('/static/workplace/uber.png')} alt="uber" />
+          </div>
+          <div className="item">
+            <img src={withPrefix('/static/workplace/tieto.png')} alt="tieto" />
+          </div>
+          <div className="item">
+            <img
+              src={withPrefix('/static/workplace/zocdoc.png')}
+              alt="zocdoc"
+            />
+          </div>
+          <div className="item">
+            <img
+              src={withPrefix('/static/workplace/bajaj-finserv.png')}
+              alt="bajaj finserv"
+            />
           </div>
         </div>
-      </WorkplaceClasses>
+      </div>
+    </WorkplaceClients>
 
-      <CurrentlyOperatingIn redBg />
-
-      <WorkplaceClients>
-        <div className="container">
-          <h2>Our Clients</h2>
-          <div className="items">
-            <div className="item">
-              <img
-                src={withPrefix('/static/workplace/ola-cabs.svg')}
-                alt="ola"
-              />
-            </div>
-            <div className="item">
-              <img
-                src={withPrefix('/static/workplace/infosys.png')}
-                alt="infosys"
-              />
-            </div>
-            <div className="item">
-              <img src={withPrefix('/static/workplace/uber.png')} alt="uber" />
-            </div>
-            <div className="item">
-              <img
-                src={withPrefix('/static/workplace/tieto.png')}
-                alt="tieto"
-              />
-            </div>
-            <div className="item">
-              <img
-                src={withPrefix('/static/workplace/zocdoc.png')}
-                alt="zocdoc"
-              />
-            </div>
-            <div className="item">
-              <img
-                src={withPrefix('/static/workplace/bajaj-finserv.png')}
-                alt="bajaj finserv"
-              />
-            </div>
-          </div>
+    <WorkplaceCTA>
+      <div className="container">
+        <div className="content">
+          <h2>
+            The Corporate Wellness Program
+            <br />
+            You Need At Your Workplace
+          </h2>
+          <p>Corporate Wellness Solutions For The New Age Workplace</p>
+          <Form />
         </div>
-      </WorkplaceClients>
+      </div>
+    </WorkplaceCTA>
 
-      <WorkplaceCTA>
-        <div className="container">
-          <div className="content">
-            <h2>
-              The Corporate Wellness Program
-              <br />
-              You Need At Your Workplace
-            </h2>
-            <p>Corporate Wellness Solutions For The New Age Workplace</p>
-            <Form />
-          </div>
-        </div>
-      </WorkplaceCTA>
-
-      <Modal show={showModal} onClick={() => setShowModal(false)}>
+    {/* <Modal show={showModal} onClick={() => setShowModal(false)}>
         <div className="content">
           <div className="title">
             <h3>Learn More About the Fitato Corporate Program</h3>
@@ -372,54 +364,53 @@ const WorkplacePage = () => {
             <Form />
           </div>
         </div>
-      </Modal>
+      </Modal> */}
 
-      <footer className="footer-info">
-        <div className="container">
-          <div className="footer-info__col1">
-            <img
-              src={withPrefix('/static/fitato-logo-colored.svg')}
-              alt="fitato"
-              style={{ width: '120px' }}
-            />
-            <p>
-              The Fitato for Workplace program is a corporate health and
-              wellness program designed specially for the modern Indian
-              workplace. Diet plans, workout plans, team building exercises -
-              it&apos;s the only wellness membership your office will ever need!
-            </p>
-          </div>
-          <div className="footer-info__col2">
-            <h4>Learn More</h4>
-            <ul className="footer-ul">
-              <li>
-                <a
-                  href="https://blog.fitato.fit"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <Link to="/faqs/">FAQ</Link>
-              </li>
-              <li>
-                <Link to="/reviews/">Reviews</Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy/">Privacy Policy</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-info__col3">
-            <h4>Contact</h4>
-            <ContactLinks cname="footer-ul" />
-            <SocialLinks cname="footer-social" />
-          </div>
+    <footer className="footer-info">
+      <div className="container">
+        <div className="footer-info__col1">
+          <img
+            src={withPrefix('/static/fitato-logo-colored.svg')}
+            alt="fitato"
+            style={{ width: '120px' }}
+          />
+          <p>
+            The Fitato for Workplace program is a corporate health and wellness
+            program designed specially for the modern Indian workplace. Diet
+            plans, workout plans, team building exercises - it&apos;s the only
+            wellness membership your office will ever need!
+          </p>
         </div>
-      </footer>
-    </Layout>
-  );
-};
+        <div className="footer-info__col2">
+          <h4>Learn More</h4>
+          <ul className="footer-ul">
+            <li>
+              <a
+                href="https://blog.fitato.fit"
+                target="_blank"
+                rel="noopener noreferrer">
+                Blog
+              </a>
+            </li>
+            <li>
+              <Link to="/faqs/">FAQ</Link>
+            </li>
+            <li>
+              <Link to="/reviews/">Reviews</Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy/">Privacy Policy</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-info__col3">
+          <h4>Contact</h4>
+          <ContactLinks cname="footer-ul" />
+          <SocialLinks cname="footer-social" />
+        </div>
+      </div>
+    </footer>
+  </Layout>
+);
 
 export default WorkplacePage;

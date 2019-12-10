@@ -157,11 +157,11 @@ class Header extends Component {
               </li>
               <li>
                 <Link
-                  to="/contact-us/"
+                  to="/corporate/"
                   className="menu-link-item"
                   activeClassName="menu-link-item-active"
                   onClick={this.handleMenuClick}>
-                  Contact Us
+                  For Coporate
                 </Link>
               </li>
               <li>
