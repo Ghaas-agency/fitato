@@ -161,7 +161,7 @@ class Header extends Component {
                   className="menu-link-item"
                   activeClassName="menu-link-item-active"
                   onClick={this.handleMenuClick}>
-                  For Coporate
+                  For Corporates
                 </Link>
               </li>
               <li>
