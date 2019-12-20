@@ -38,7 +38,10 @@ const ReferPage = () => (
           <p className="white" style={{ marginBottom: 10 }}>
             REFER NOW
           </p>
-          <AppIcons />
+          <AppIcons
+            googleLink="https://fitato.page.link/app"
+            appleLink="https://fitato.page.link/app"
+          />
         </div>
       </div>
     </ReferHero>
@@ -49,7 +52,7 @@ const ReferPage = () => (
         <h2 className="normal align-center">
           Help your friends achieve their long lost new year resolutions, and if
           your referrals are successful (they buy the Fitato pass), stand a
-          chance to win exciting prizes*:
+          chance to win exciting prizes*
         </h2>
         <div className="row">
           <div className="col">

@@ -111,13 +111,17 @@ export const ReferPrizes = styled.section`
 
   h2 {
     line-height: 1.4;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media only screen and (max-width: 979px) {
-      font-size: 1.7em;
+      font-size: 1.3em;
     }
 
     @media only screen and (max-width: 480px) {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
   }
 
@@ -184,7 +188,7 @@ export const ReferPrizes = styled.section`
       display: inline-block;
       background-color: ${({ theme: { colors } }) => colors.red};
       padding: 25px 20px;
-      font-size: 1.3em;
+      font-size: 1.2em;
       letter-spacing: 2px;
       border-radius: 3px;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
@@ -203,7 +207,7 @@ export const ReferPrizes = styled.section`
       margin-left: 20px;
       margin-bottom: 0px;
       width: calc(100% - 160px);
-      font-size: 1.4em;
+      font-size: 1.3em;
       line-height: 1.4;
       vertical-align: middle;
 
@@ -214,7 +218,7 @@ export const ReferPrizes = styled.section`
   }
 
   .conditions {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.5;
 
     @media only screen and (max-width: 480px) {

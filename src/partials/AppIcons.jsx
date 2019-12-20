@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withPrefix } from 'gatsby';
 
-const AppIcons = ({ btnClass }) => (
+const AppIcons = ({ btnClass, googleLink, appleLink }) => (
   <div className="partial-app-icons">
     <a
-      href="https://play.google.com/store/apps/details?id=fit.fitato.health&hl=en"
+      href={
+        googleLink ||
+        'https://play.google.com/store/apps/details?id=fit.fitato.health&hl=en'
+      }
       target="_blank"
       rel="noopener noreferrer"
       className={btnClass ? `${btnClass}-android` : ''}>
@@ -16,7 +19,7 @@ const AppIcons = ({ btnClass }) => (
       />
     </a>
     <a
-      href="https://itunes.apple.com/in/app/fitato/id1300323768"
+      href={appleLink || 'https://itunes.apple.com/in/app/fitato/id1300323768'}
       target="_blank"
       rel="noopener noreferrer"
       className={btnClass ? `${btnClass}-ios` : ''}>
@@ -31,6 +34,8 @@ const AppIcons = ({ btnClass }) => (
 
 AppIcons.propTypes = {
   btnClass: PropTypes.string,
+  googleLink: PropTypes.string,
+  appleLink: PropTypes.string,
 };
 
 export default AppIcons;
