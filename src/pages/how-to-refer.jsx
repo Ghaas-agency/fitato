@@ -1,214 +1,125 @@
 import React from 'react';
-import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
-import FooterInfo from '../partials/FooterInfo';
-/* import SignupPopup from '../partials/SignupPopup' */
-import Layout from '../components/index';
 
-import '../css/refer.css';
+import Layout from 'components/index';
 
-const navActive = {
-  backgroundColor: '#EB1F2E',
-  color: '#ffffff',
-  border: '1px solid #EB1F2E',
-};
+import MetaTitleDescription from 'partials/MetaTitleDescription';
+import FooterInfo from 'partials/FooterInfo';
+import AppIcons from 'partials/AppIcons';
 
-class ReferPage extends React.Component {
-  state = {
-    currentView: 1,
-  };
+import { ReferHero, ReferPrizes } from 'css/how-to-refer.styled';
 
-  handleNavClick = (e) => {
-    this.setState(
-      e.target.id === 'show-android'
-        ? { currentView: 1 }
-        : e.target.id === 'show-ios' && { currentView: 2 },
-    );
-  };
-
-  render() {
-    return (
-      <Layout>
-        <MetaTitleDescription
-          title="How to Refer Your Friends | Fitato"
-          description="Working out is more fun with friends. Learn how to refer Fitato to your friends here."
-        />
-        <div className="refer-page">
-          <div className="refer-page__hero">
-            <div className="container">
-              <h1>Share The Wealth, Spread The Joy!</h1>
-              {/* <div className="refer-page__hero-spl">
-                <div className="refer-page__hero-spl--left">
-                  <img src={withPrefix('/static/refer/wallet.png')} alt="refer"/>
-                </div>
-                <div className="refer-page__hero-spl--right">
-                  <p className="refer-page__hero-spl--title">Refer A Friend And Get 40% Cashback On All Passes</p>
-                  <p>Your Friend Gets 40% Cashback  + 20% OFF</p>
-                  <small>Offer valid till 13<sup>th</sup> November 2018</small>
-                </div>
-              </div> */}
-              <h3>How To Refer Your Friends</h3>
-              <ul className="refer-page__hero-items">
-                <li>
-                  <button
-                    type="button"
-                    onClick={this.handleNavClick}
-                    id="show-android"
-                    className="button-unstyled"
-                    style={this.state.currentView === 1 ? navActive : {}}>
-                    Android
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    onClick={this.handleNavClick}
-                    id="show-ios"
-                    className="button-unstyled"
-                    style={this.state.currentView === 2 ? navActive : {}}>
-                    iOS
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div
-            className="refer-page__show"
-            style={
-              this.state.currentView === 1
-                ? { display: 'block' }
-                : { display: 'none' }
-            }>
-            <div className="container">
-              <div className="refer-page__steps">
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>1. Go to the profile section</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-android-step-1.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>2. Tap &quot;REFER AND EARN&quot;</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-android-step-2.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>3. Tap &quot;REFER&quot;</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-android-step-3.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>4. Choose your preferred option</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-android-step-4.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="refer-page__show"
-            style={
-              this.state.currentView === 2
-                ? { display: 'block' }
-                : { display: 'none' }
-            }>
-            <div className="container">
-              <div className="refer-page__steps">
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>1. Go to the profile section</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-ios-step-1.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>2. Tap &quot;Refer &amp; Earn&quot;</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-ios-step-2.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>3. Tap &quot;REFER&quot;</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-ios-step-3.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="refer-page__step">
-                  <div className="refer-page__step--title">
-                    <h3>4. Choose your preferred option</h3>
-                  </div>
-                  <div className="refer-page__step--img">
-                    <img
-                      src={withPrefix(
-                        '/static/refer/fitato-refer-ios-step-4.jpg',
-                      )}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <FooterInfo />
+const ReferPage = () => (
+  <Layout>
+    <MetaTitleDescription
+      title="How to Refer Your Friends | Fitato"
+      description="Working out is more fun with friends. Learn how to refer Fitato to your friends here."
+    />
+    <ReferHero>
+      <div className="first-half"></div>
+      <img
+        src={withPrefix(`/static/refer/models.png`)}
+        alt="models"
+        className="models"
+      />
+      <div className="container">
+        <h1 title="Achieve Your New Year's Resolutions Together">
+          <img
+            src={withPrefix(`/static/refer/together.png`)}
+            alt="Achieve Your New Year's Resolutions Together"
+          />
+        </h1>
+        <p className="refer-text white align-center">
+          Refer 5 or more friend, and stand a chance to
+          <br />
+          <span className="bold">Win a fully paid couples trip to Goa.</span>
+        </p>
+        <div className="share align-center">
+          <p className="white" style={{ marginBottom: 10 }}>
+            REFER NOW
+          </p>
+          <AppIcons />
         </div>
-        {/* <SignupPopup /> */}
-      </Layout>
-    );
-  }
-}
+      </div>
+    </ReferHero>
+
+    <ReferPrizes>
+      <div className="bottom-bar"></div>
+      <div className="container">
+        <h2 className="normal align-center">
+          Help your friends achieve their long lost new year resolutions, and if
+          your referrals are successful (they buy the Fitato pass), stand a
+          chance to win exciting prizes*:
+        </h2>
+        <div className="row">
+          <div className="col">
+            <div
+              className="card"
+              style={{
+                backgroundImage: `url('${withPrefix(
+                  `/static/refer/goa-trip.jpg`,
+                )}'), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.45))`,
+              }}>
+              <div className="card-red">
+                <span>
+                  {/* eslint-disable */}
+                  1<sup>st</sup>
+                  {/* eslint-enable */}
+                </span>
+                <br />
+                PRIZE
+              </div>
+              <p>Two nights and three days paid Goa trip for two</p>
+            </div>
+          </div>
+          <div className="col">
+            <div
+              className="card"
+              style={{
+                backgroundImage: `url('${withPrefix(
+                  `/static/refer/vh1-supersonic.jpg`,
+                )}'), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.45))`,
+              }}>
+              <div className="card-red">
+                <span>
+                  {/* eslint-disable */}
+                  2<sup>nd</sup>
+                  {/* eslint-enable */}
+                </span>
+                <br />
+                PRIZE
+              </div>
+              <p>Vh1 Supersonic Pass for two</p>
+            </div>
+            <div
+              className="card"
+              style={{
+                backgroundImage: `url('${withPrefix(
+                  `/static/refer/fitato-passes.jpg`,
+                )}'), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.45))`,
+              }}>
+              <div className="card-red">
+                <span>
+                  {/* eslint-disable */}
+                  3<sup>rd</sup>
+                  {/* eslint-enable */}
+                </span>
+                <br />
+                PRIZE
+              </div>
+              <p>Two Fitato Quarterly Passes</p>
+            </div>
+          </div>
+        </div>
+        <p className="conditions white align-center">
+          *&nbsp;Two Successful Quarterly Pass referrals must
+          <br />
+          *&nbsp;Winners will be announced in January 2020
+        </p>
+      </div>
+    </ReferPrizes>
+    <FooterInfo />
+  </Layout>
+);
 
 export default ReferPage;

@@ -56,7 +56,7 @@ export const MainHeader = styled.nav`
         margin: 0;
       }
 
-      @media only screen and (max-width: 791px) {
+      @media only screen and (max-width: 853px) {
         display: block;
         margin: 0;
         margin-bottom: 30px;
@@ -75,7 +75,7 @@ export const MainHeader = styled.nav`
         width: 29px;
         height: 25px;
 
-        @media only screen and (max-width: 791px) {
+        @media only screen and (max-width: 853px) {
           display: none;
         }
       }
@@ -99,7 +99,7 @@ export const MainHeader = styled.nav`
         transition: all 0.2s ease-in-out;
         will-change: transform, opacity;
 
-        @media only screen and (max-width: 791px) {
+        @media only screen and (max-width: 853px) {
           display: none;
         }
 
@@ -174,7 +174,7 @@ export const MainHeader = styled.nav`
     display: none;
   }
 
-  @media only screen and (max-width: 791px) {
+  @media only screen and (max-width: 853px) {
     z-index: 9;
 
     .main-header-container {

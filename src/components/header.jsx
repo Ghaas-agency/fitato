@@ -20,7 +20,7 @@ class Header extends Component {
 
   handleMenuClick = () => {
     const { toggleMenu, toggleMenuBg } = this.state;
-    if (this.state.windowWidth > 767) {
+    if (this.state.windowWidth > 853) {
       this.setState({
         toggleMenu: true,
         toggleMenuBg: false,
@@ -50,7 +50,7 @@ class Header extends Component {
   }
 
   updateMenuToggle = () => {
-    if (this.state.windowWidth > 791) {
+    if (this.state.windowWidth > 853) {
       this.setState({ toggleMenu: true, toggleMenuBg: false });
     } else {
       this.setState({ toggleMenu: false, toggleMenuBg: false });
