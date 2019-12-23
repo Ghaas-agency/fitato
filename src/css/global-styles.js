@@ -1226,7 +1226,6 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     z-index: 8;
   }
-
 `;
 
 export default GlobalStyles;

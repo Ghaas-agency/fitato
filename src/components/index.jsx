@@ -2,10 +2,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+
 import theme from 'css/theme';
 import GlobalStyles from 'css/global-styles';
+
 import MetaCommonHead from 'partials/MetaCommonHead';
 import OfferPopup from 'partials/OfferPopup/OfferPopup';
+import Snowfall from 'partials/Snowfall';
+
 import Header from './header';
 import Footer from './footer';
 
@@ -15,6 +19,7 @@ const Index = ({ children, style, hideOfferPopup }) => (
       <GlobalStyles />
       <MetaCommonHead />
       <Header />
+      <Snowfall />
       <main style={style}>{children}</main>
       <Footer />
       {!hideOfferPopup && <OfferPopup />}
