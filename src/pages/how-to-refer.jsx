@@ -5,7 +5,6 @@ import Layout from 'components/index';
 
 import MetaTitleDescription from 'partials/MetaTitleDescription';
 import FooterInfo from 'partials/FooterInfo';
-import AppIcons from 'partials/AppIcons';
 
 import { ReferHero, ReferPrizes } from 'css/how-to-refer.styled';
 
@@ -35,13 +34,9 @@ const ReferPage = () => (
           <span className="bold">Win a fully paid couples trip to Goa.</span>
         </p>
         <div className="share align-center">
-          <p className="white" style={{ marginBottom: 10 }}>
-            REFER NOW
-          </p>
-          <AppIcons
-            googleLink="https://fitato.page.link/app"
-            appleLink="https://fitato.page.link/app"
-          />
+          <a href="https://fitato.page.link/app" className="button-inverted">
+            Refer Now
+          </a>
         </div>
       </div>
     </ReferHero>

@@ -65,7 +65,7 @@ export const ReferHero = styled.section`
     width: 500px;
     font-size: 1.4em;
     line-height: 1.3;
-    margin: 40px 0;
+    margin: 40px 0 20px;
 
     .bold {
       font-size: 1.3em;
@@ -76,9 +76,7 @@ export const ReferHero = styled.section`
     }
 
     @media only screen and (max-width: 979px) {
-      margin: 0 auto;
-      margin-top: 350px;
-      margin-bottom: 40px;
+      margin: 350px auto 20px;
       max-width: 100%;
     }
 
@@ -94,8 +92,9 @@ export const ReferHero = styled.section`
   .share {
     width: 500px;
 
-    p {
-      letter-spacing: 2px;
+    a {
+      font-size: 1.1em;
+      padding: 10px 20px;
     }
 
     @media only screen and (max-width: 979px) {
