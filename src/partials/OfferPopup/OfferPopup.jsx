@@ -43,9 +43,23 @@ const OfferPopup = () => {
         <PopupContainer>
           <Link to="/download/" className="ga-click-offer-popup">
             <img
+              src={withPrefix(
+                '/static/experience-fitness-freedom-offer-400.jpg',
+              )}
+              alt="fitato experience fitness freedom offer"
+              className="ga-click-offer-popup xsmall"
+            />
+            <img
+              src={withPrefix(
+                '/static/experience-fitness-freedom-offer-720.jpg',
+              )}
+              alt="fitato experience fitness freedom offer"
+              className="ga-click-offer-popup small"
+            />
+            <img
               src={withPrefix('/static/experience-fitness-freedom-offer.jpg')}
               alt="fitato experience fitness freedom offer"
-              className="ga-click-offer-popup"
+              className="ga-click-offer-popup large"
             />
           </Link>
         </PopupContainer>

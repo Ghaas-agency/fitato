@@ -29,7 +29,7 @@ const ReferPage = () => (
           />
         </h1>
         <p className="refer-text white align-center">
-          Refer 5 or more friend, and stand a chance to
+          Refer 5 or more friends, and stand a chance to
           <br />
           <span className="bold">Win a fully paid couples trip to Goa.</span>
         </p>

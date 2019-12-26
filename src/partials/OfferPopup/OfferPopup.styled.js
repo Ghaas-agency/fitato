@@ -33,6 +33,37 @@ export const PopupContainer = styled.div`
     vertical-align: middle;
     max-width: 920px;
     width: 100%;
+
+    &.small {
+      display: none;
+    }
+
+    &.xsmall {
+      display: none;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: auto;
+      max-width: 100%;
+
+      &.large {
+        display: none;
+      }
+
+      &.small {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 380px) {
+      &.small {
+        display: none;
+      }
+
+      &.xsmall {
+        display: block;
+      }
+    }
   }
 `;
 
