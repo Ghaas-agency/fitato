@@ -3,6 +3,8 @@ import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { withPrefix } from 'gatsby';
 import Layout from 'components/index';
 import AppIcons from 'partials/AppIcons';
+import MailChimpForm from 'partials/MailChimpForm';
+import { IndexCallback } from 'css/index.styled';
 
 const DownloadPage = () => (
   <Layout>
@@ -25,6 +27,19 @@ const DownloadPage = () => (
         />
       </div>
     </div>
+    <IndexCallback>
+      <div className="container">
+        <div className="wrapper">
+          <h2>Have any queries? Speak to a Fitness Concierge</h2>
+          <p>
+            Fill out the form below and let us tailor a customized plan for you.
+          </p>
+          <div className="form">
+            <MailChimpForm formClass="f-cf-index-speak" />
+          </div>
+        </div>
+      </div>
+    </IndexCallback>
   </Layout>
 );
 
