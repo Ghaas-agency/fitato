@@ -28,12 +28,7 @@ export const PopupContainer = styled.div`
     border: 0 !important;
   }
 
-  img {
-    margin: 0;
-    vertical-align: middle;
-    max-width: 920px;
-    width: 100%;
-
+  .ga-click-offer-popup {
     &.small {
       display: none;
     }
@@ -43,9 +38,6 @@ export const PopupContainer = styled.div`
     }
 
     @media only screen and (max-width: 767px) {
-      width: auto;
-      max-width: 100%;
-
       &.large {
         display: none;
       }
@@ -63,6 +55,18 @@ export const PopupContainer = styled.div`
       &.xsmall {
         display: block;
       }
+    }
+  }
+
+  img {
+    margin: 0;
+    vertical-align: middle;
+    max-width: 920px;
+    width: 100%;
+
+    @media only screen and (max-width: 767px) {
+      width: auto;
+      max-width: 100%;
     }
   }
 `;
