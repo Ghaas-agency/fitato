@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { Link, withPrefix } from 'gatsby';
 
-// import Topbar from '../partials/Topbar/Topbar';
+import Topbar from 'partials/Topbar';
 
 import { MainHeader } from 'css/header.styled';
 
@@ -69,10 +69,11 @@ class Header extends Component {
       <>
         <div
           className="main-header-placeholder"
-          style={{ height: 77, backgroundColor: '#ffffff' }}
-        />
+          style={{ height: 77, backgroundColor: '#ffffff' }}>
+          <span />
+        </div>
         <MainHeader>
-          {/* <Topbar /> */}
+          <Topbar />
           <div className="main-header-container">
             <img
               src={withPrefix('/static/icons/menu.svg')}

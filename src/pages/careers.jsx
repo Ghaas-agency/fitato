@@ -24,7 +24,7 @@ const CareersPage = () => (
           At Fitato, we aim to build careers, instead of providing jobs. Careers
           are built around passion. Fitato is built on a shared passion for
           fitness and a healthy lifestyle. And that’s all you’d need to be a
-          part of your team.
+          part of our team.
         </p>
         <a
           href="https://angel.co/company/fitato"

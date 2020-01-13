@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledTopbar = styled.div`
+  position: relative;
   background-color: #eb1f2e;
   color: #ffffff;
   text-align: center;
@@ -13,11 +14,48 @@ const StyledTopbar = styled.div`
 
   p {
     margin-bottom: 0;
+    height: 35px;
+    font-size: 0.95em;
+
+    .button-inverted {
+      display: inline-block;
+      padding: 4px 12px;
+      margin: 0;
+      margin-left: 15px;
+      font-size: 0.9em;
+    }
+
+    @media only screen and (max-width: 979px) {
+      height: auto;
+      padding-right: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      line-height: 1.3;
+
+      .button-inverted {
+        text-align: center;
+        min-width: 110px;
+        padding: 8px 12px;
+      }
+    }
 
     @media only screen and (max-width: 767px) {
       margin-bottom: 0;
-      margin-right: 25px;
-      margin-left: 15px;
+      font-size: 0.9em;
+
+      .button-inverted {
+        min-width: 100px;
+      }
+    }
+
+    @media only screen and (max-width: 380px) {
+      font-size: 0.8em;
+
+      .button-inverted {
+        min-width: 90px;
+      }
     }
   }
 
@@ -43,16 +81,17 @@ const StyledTopbar = styled.div`
   }
 
   .close {
-    float: right;
-    margin-top: 5px;
-    padding: 3px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 2px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 2px solid #eeeeee;
-    width: 30px;
-    height: 30px;
-    font-size: 0.7em;
+    border: 1.5px solid #eeeeee;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     text-align: center;
     -webkit-transition: all 0.2s ease-in-out;
@@ -61,11 +100,19 @@ const StyledTopbar = styled.div`
     transition: all 0.2s ease-in-out;
     opacity: 0.75;
 
+    img {
+      margin: 0;
+      width: 100%;
+      vertical-align: baseline;
+    }
+
     &:hover {
       opacity: 1;
     }
 
     @media only screen and (max-width: 767px) {
+      right: 10px;
+
       img {
         margin: 0;
       }
