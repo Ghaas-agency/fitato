@@ -448,6 +448,10 @@ export const Page = styled.div`
           min-width: 100%;
           max-width: 100%;
           margin: 20px 0;
+
+          & > div {
+            padding: 20px;
+          }
         }
       }
     }
@@ -569,6 +573,11 @@ export const Page = styled.div`
               margin: 30px 5px;
               min-width: calc(25% - 10px);
               max-width: calc(25% - 10px);
+
+              span {
+                font-size: 14px;
+                font-weight: normal !important;
+              }
             }
           }
         }

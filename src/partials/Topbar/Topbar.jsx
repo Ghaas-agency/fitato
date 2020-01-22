@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { withPrefix } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 
 import StyledTopbar from './Topbar.styled';
 
@@ -22,14 +22,15 @@ const Topbar = () => {
       document.getElementsByClassName(
         'main-header-placeholder',
       )[0].style.height = showTopbar
-        ? `${ref.current.getBoundingClientRect().height + 77}px`
-        : '77px';
+        ? `${ref.current.getBoundingClientRect().height +
+            (window.innerWidth >= 767 ? 77 : 72)}px`
+        : `${window.innerWidth >= 767 ? '77px' : '72px'}`;
     }
   }, [showTopbar]);
 
   useEffect(() => {
     const distance =
-      new Date('January 15, 2020 23:59:59').getTime() - new Date().getTime();
+      new Date('January 15, 2021 23:59:59').getTime() - new Date().getTime();
 
     if (!(typeof sessionStorage === 'undefined'))
       setShowTopbar(
@@ -52,17 +53,12 @@ const Topbar = () => {
             alt="fitato in hyderabad"
           /> */}
           <span>
-            More reasons to stick to your New Year’s resolution. Fitato
-            Quarterly at an unbeatable price!
+            We have stepped up our fitness game in 2020. Are you ready for the
+            challenge?
           </span>
-          <a
-            href="https://offer.fitato.fit/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="button-inverted"
-            onClick={handleClose}>
-            Book Now
-          </a>
+          <Link to="/2020/" className="button-inverted" onClick={handleClose}>
+            Know More
+          </Link>
           {/* <Link to="/partners/#hyderabad" onClick={handleClose}>
             We&apos;re now in Hyderabad. Check out our facility partners.
           </Link> */}

@@ -53,7 +53,7 @@ const Page2020 = () => (
             <div className="offer-features__item">
               <img
                 src={withPrefix('/static/2020/fitato-exclusive-workouts.jpg')}
-                alt=""
+                alt="fitato exclusive workouts"
               />
               <div>
                 <h3>Fitato Exclusive Workouts</h3>
@@ -70,7 +70,7 @@ const Page2020 = () => (
             <div className="offer-features__item">
               <img
                 src={withPrefix('/static/2020/weekend-specials.jpg')}
-                alt=""
+                alt="weekend specials"
               />
               <div>
                 <h3>Weekend Specials</h3>
@@ -229,45 +229,54 @@ const Page2020 = () => (
           <div className="offer-facilities__items">
             <div className="offer-facilities__item">
               <div>
-                <img src={withPrefix('/static/2020/spinning.png')} alt="" />
+                <img
+                  src={withPrefix('/static/2020/spinning.png')}
+                  alt="spinning"
+                />
                 <span>Spinning</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/gym.png')} alt="" />
+                <img src={withPrefix('/static/2020/gym.png')} alt="gym" />
                 <span>Gym</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/yoga.png')} alt="" />
+                <img src={withPrefix('/static/2020/yoga.png')} alt="yoga" />
                 <span>Yoga</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/meditation.png')} alt="" />
+                <img
+                  src={withPrefix('/static/2020/meditation.png')}
+                  alt="meditation"
+                />
                 <span>Meditation</span>
               </div>
               <div>
                 <img
                   src={withPrefix('/static/2020/community-events.png')}
-                  alt=""
+                  alt="community events"
                 />
                 <span>Community Events</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/swimming.png')} alt="" />
+                <img
+                  src={withPrefix('/static/2020/swimming.png')}
+                  alt="swimming"
+                />
                 <span>Swimming</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/zumba.png')} alt="" />
+                <img src={withPrefix('/static/2020/zumba.png')} alt="zumba" />
                 <span>Zumba</span>
               </div>
               <div>
-                <img src={withPrefix('/static/2020/mma.png')} alt="" />
+                <img src={withPrefix('/static/2020/mma.png')} alt="mma" />
                 <span>MMA</span>
               </div>
             </div>
             <div className="offer-facilities__item">
               <img
                 src={withPrefix('/static/2020/fitato-mobile-app.jpg')}
-                alt=""
+                alt="fitato mobile app"
               />
             </div>
           </div>

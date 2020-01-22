@@ -60,7 +60,7 @@ const StyledTopbar = styled.div`
   }
 
   a {
-    color: #ffffff;
+    /* color: #ffffff; */
 
     &:hover {
       border-bottom: 1px solid #ffffff;
