@@ -8,7 +8,7 @@ import GlobalStyles from 'css/global-styles';
 
 import MetaCommonHead from 'partials/MetaCommonHead';
 import OfferPopup from 'partials/OfferPopup/OfferPopup';
-import Snowfall from 'partials/Snowfall';
+// import Snowfall from 'partials/Snowfall';
 
 import Header from './header';
 import Footer from './footer';
@@ -19,7 +19,7 @@ const Index = ({ children, style, hideOfferPopup }) => (
       <GlobalStyles />
       <MetaCommonHead />
       <Header />
-      <Snowfall />
+      {/* <Snowfall /> */}
       <main style={style}>{children}</main>
       <Footer />
       {!hideOfferPopup && <OfferPopup />}

@@ -8,7 +8,7 @@ import MetaTitleDescription from 'partials/MetaTitleDescription';
 import { Page } from 'css/2020.styled';
 
 const Page2020 = () => (
-  <Layout>
+  <Layout hideOfferPopup>
     <MetaTitleDescription
       title="Contact Us | Fitato"
       description="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
@@ -127,9 +127,9 @@ const Page2020 = () => (
                   three months.
                 </p>
                 <p className="offers-page-plans__item--price-strike">₹6,599</p>
-                <p className="offers-page-plans__item--price">₹3,999</p>
+                <p className="offers-page-plans__item--price">₹4,949</p>
                 <p className="offers-page-plans__item--get-cb">
-                  Get Cashback: ₹1,649
+                  Get Cashback: ₹1,237
                 </p>
               </div>
               <div className="offers-page-plans__item--cta">
@@ -156,9 +156,9 @@ const Page2020 = () => (
                   months.
                 </p>
                 <p className="offers-page-plans__item--price-strike">₹4,599</p>
-                <p className="offers-page-plans__item--price">₹2,299</p>
+                <p className="offers-page-plans__item--price">₹3,449</p>
                 <p className="offers-page-plans__item--get-cb">
-                  Get Cashback: ₹1,149
+                  Get Cashback: ₹682
                 </p>
               </div>
               <div className="offers-page-plans__item--cta">
@@ -185,9 +185,9 @@ const Page2020 = () => (
                   month.
                 </p>
                 <p className="offers-page-plans__item--price-strike">₹2,499</p>
-                <p className="offers-page-plans__item--price">₹1,249</p>
+                <p className="offers-page-plans__item--price">₹1,874</p>
                 <p className="offers-page-plans__item--get-cb">
-                  Get Cashback: ₹624
+                  Get Cashback: ₹469
                 </p>
               </div>
               <div className="offers-page-plans__item--cta">
@@ -208,7 +208,7 @@ const Page2020 = () => (
           </small>
           <br />
           <small className="white">
-            Fitato wallet money can be used ofr payments.
+            Fitato wallet money can be used for payments.
           </small>
           <div className="offers-page-plans__help">
             <h4 className="white">Have questions? Let us help.</h4>
@@ -282,6 +282,60 @@ const Page2020 = () => (
           </div>
         </div>
       </section>
+
+      <section className="offer-clan">
+        <div className="container">
+          <h2 className="align-center">
+            Check out what the Fitato Clan was up to in recent months
+          </h2>
+          <div className="offer-clan__items">
+            <div className="offer-clan__item">
+              <img
+                src={withPrefix('/static/2020/Exclusive-Dec2019.jpg')}
+                alt="Fitato Exclusive Events (December 2019)"
+              />
+              <h3>Fitato Exclusive Events (December 2019)</h3>
+              <p>
+                The last month was no different for us than the rest of the
+                year. Like every other month, this month too we enjoyed a series
+                of fun fitess activities as a part.
+              </p>
+            </div>
+            <div className="offer-clan__item">
+              <img
+                src={withPrefix('/static/2020/Exclusive_NOV2019.jpg')}
+                alt="Fitato Exclusive Events (November 2019)"
+              />
+              <h3>Fitato Exclusive Events (November 2019)</h3>
+              <p>
+                From exciting Gokarting sessions to serene Yoga Carnival, here
+                are all the Fitato Exclusive Events we are a part of, in the
+                month of November 2019.
+              </p>
+            </div>
+            <div className="offer-clan__item">
+              <img
+                src={withPrefix('/static/2020/Exclusive_Oct2019.jpg')}
+                alt="Fitato Exclusive Events (October 2019)"
+              />
+              <h3>Fitato Exclusive Events (October 2019)</h3>
+              <p>
+                Here are all the amazing fitness events the Fitato Community
+                enjoyed in October as a part of the Fitato Exclusive Events.
+              </p>
+            </div>
+          </div>
+          <div className="align-center offer-clan--cta">
+            <a
+              href="https://blog.fitato.fit"
+              target="_blank"
+              rel="noopener noreferrer">
+              See All Posts
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="offer-game align-center">
         <div className="container">
           <h2 className="white">

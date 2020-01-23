@@ -32,10 +32,16 @@ const Topbar = () => {
     const distance =
       new Date('January 15, 2021 23:59:59').getTime() - new Date().getTime();
 
-    if (!(typeof sessionStorage === 'undefined'))
-      setShowTopbar(
-        distance > 0 && sessionStorage.getItem('show_topbar_fitato') !== 'hide',
-      );
+    if (!(typeof sessionStorage === 'undefined')) {
+      if (window.location.pathname.startsWith('/2020')) {
+        setShowTopbar(false);
+      } else {
+        setShowTopbar(
+          distance > 0 &&
+            sessionStorage.getItem('show_topbar_fitato') !== 'hide',
+        );
+      }
+    }
   }, []);
 
   return (

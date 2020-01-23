@@ -596,6 +596,56 @@ export const Page = styled.div`
       }
     }
 
+    &-clan {
+      padding: 100px 0;
+      background-color: #8cc2e3;
+
+      h2 {
+        font-size: 1.7em;
+      }
+
+      h3 {
+        font-size: 1.4em;
+      }
+
+      &__items {
+        display: flex;
+        padding: 30px 15px 20px;
+        margin: 30px 0 0;
+        background-color: #ffffff;
+        border-radius: 5px;
+
+        @media only screen and (max-width: 767px) {
+          flex-direction: column;
+        }
+      }
+
+      &__item {
+        flex: 1;
+        margin: 0 10px;
+
+        @media only screen and (max-width: 767px) {
+          margin: 0;
+        }
+      }
+
+      &--cta {
+        margin-top: 30px;
+
+        a {
+          color: initial;
+          border-bottom: 1px solid ${({ theme: { colors } }) =>
+            colors.darkGrey};
+          font-size: 1.2em;
+
+          &:hover {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+          }
+        }
+      }
+    }
+
     &-game {
       padding: 200px 0;
       background-image: url('${fitatoGame}');
