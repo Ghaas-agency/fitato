@@ -440,6 +440,10 @@ export const Page = styled.div`
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         border-radius: 15px;
 
+        img {
+          margin-bottom: 10px;
+        }
+
         & > div {
           padding: 20px 50px;
         }
@@ -606,6 +610,7 @@ export const Page = styled.div`
 
       h3 {
         font-size: 1.4em;
+        transition: all 0.2s;
       }
 
       &__items {
@@ -623,6 +628,15 @@ export const Page = styled.div`
       &__item {
         flex: 1;
         margin: 0 10px;
+        color: initial;
+
+        &:hover {
+          border: 0;
+          
+          h3 {
+            color: ${({ theme: { colors } }) => colors.red};
+          }
+        }
 
         @media only screen and (max-width: 767px) {
           margin: 0;

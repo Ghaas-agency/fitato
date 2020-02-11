@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, withPrefix } from 'gatsby';
+import { withPrefix } from 'gatsby';
 
 import StyledTopbar from './Topbar.styled';
 
@@ -58,13 +58,13 @@ const Topbar = () => {
             src={withPrefix('/static/icons/confetti.svg')}
             alt="fitato in hyderabad"
           /> */}
-          <span>
-            We have stepped up our fitness game in 2020. Are you ready for the
-            challenge?
-          </span>
-          <Link to="/2020/" className="button-inverted" onClick={handleClose}>
+          <span>Scared of commitment? Try Fitato for Free.</span>
+          <a
+            href="https://fitato.page.link/app"
+            className="button-inverted"
+            onClick={handleClose}>
             Know More
-          </Link>
+          </a>
           {/* <Link to="/partners/#hyderabad" onClick={handleClose}>
             We&apos;re now in Hyderabad. Check out our facility partners.
           </Link> */}

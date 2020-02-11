@@ -10,15 +10,15 @@ import { Page } from 'css/2020.styled';
 const Page2020 = () => (
   <Layout hideOfferPopup>
     <MetaTitleDescription
-      title="Contact Us | Fitato"
-      description="The Fitato Team is always here to help you out. Simply drop in your details and we'll get in touch ASAP."
+      title="Stepping Up to 2020. Together. | Fitato"
+      description="Presenting a new, improved Fitato to help you bring out the best of you."
     />
     <Page>
       <div className="offers-page-hero">
         <div className="red-triangle" />
         <div className="container">
           <div className="offers-page-hero__wrapper">
-            <h1>
+            <h1 title="Stepping up to 2020. Together.">
               <img
                 src={withPrefix('/static/2020/stepping-up.svg')}
                 alt="stepping up"
@@ -289,7 +289,11 @@ const Page2020 = () => (
             Check out what the Fitato Clan was up to in recent months
           </h2>
           <div className="offer-clan__items">
-            <div className="offer-clan__item">
+            <a
+              href="https://blog.fitato.fit/fitato-exclusive-events-december-2019/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="offer-clan__item">
               <img
                 src={withPrefix('/static/2020/Exclusive-Dec2019.jpg')}
                 alt="Fitato Exclusive Events (December 2019)"
@@ -300,8 +304,12 @@ const Page2020 = () => (
                 year. Like every other month, this month too we enjoyed a series
                 of fun fitess activities as a part.
               </p>
-            </div>
-            <div className="offer-clan__item">
+            </a>
+            <a
+              href="https://blog.fitato.fit/fitato-exclusive-events-november-2019/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="offer-clan__item">
               <img
                 src={withPrefix('/static/2020/Exclusive_NOV2019.jpg')}
                 alt="Fitato Exclusive Events (November 2019)"
@@ -312,8 +320,12 @@ const Page2020 = () => (
                 are all the Fitato Exclusive Events we are a part of, in the
                 month of November 2019.
               </p>
-            </div>
-            <div className="offer-clan__item">
+            </a>
+            <a
+              href="https://blog.fitato.fit/fitato-exclusive-events-october-2019/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="offer-clan__item">
               <img
                 src={withPrefix('/static/2020/Exclusive_Oct2019.jpg')}
                 alt="Fitato Exclusive Events (October 2019)"
@@ -323,7 +335,7 @@ const Page2020 = () => (
                 Here are all the amazing fitness events the Fitato Community
                 enjoyed in October as a part of the Fitato Exclusive Events.
               </p>
-            </div>
+            </a>
           </div>
           <div className="align-center offer-clan--cta">
             <a
