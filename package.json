@@ -7,7 +7,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "gatsby": "^2.18.15",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-nprogress": "^2.1.17",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-react-svg": "^2.1.2",
